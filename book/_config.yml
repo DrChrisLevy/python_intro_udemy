@@ -1,0 +1,12 @@
+# Book settings
+title: Learn to code with an Introduction to Python 3
+author: Chris Levy
+logo: logo_temp.png
+
+latex:
+  latex_documents:
+    targetname: book.tex
+
+sphinx:
+  config:
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

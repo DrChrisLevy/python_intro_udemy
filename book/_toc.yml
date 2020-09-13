@@ -1,0 +1,25 @@
+- file: content/book_intro
+
+- file: content/chapter1/intro
+  sections:
+  - file: content/chapter1/interactive_python_and_print
+  - file: content/chapter1/strings_concatenation
+  - file: content/chapter1/variables_and_types
+  - file: content/chapter1/numerical_data_types
+  - file: content/chapter1/string_formatting_indexing_slicing
+  - file: content/chapter1/user_input
+  - file: content/chapter1/string_float_int_conversion
+  - file: content/chapter1/practice_questions
+  - file: content/chapter1/practice_questions_solutions
+
+- file: content/chapter2/intro
+  sections:
+  - file: content/chapter2/bool_data_type
+  - file: content/chapter2/comparison_operators
+  - file: content/chapter2/logical_operators
+  - file: content/chapter2/if_elif_else
+  - file: content/chapter2/intro_to_lists
+  - file: content/chapter2/intro_to_loops
+  - file: content/chapter2/more_basic_operators
+  - file: content/chapter2/chapter2_practice_questions
+  - file: content/chapter2/chapter2_practice_questions_solutions
