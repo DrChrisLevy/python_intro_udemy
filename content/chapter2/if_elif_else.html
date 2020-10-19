@@ -1,0 +1,776 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>if, elif, and else statements &#8212; Learn to code with an Introduction to Python 3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Intro to Lists" href="intro_to_lists.html" />
+    <link rel="prev" title="Logical Operators" href="logical_operators.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo_temp.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Learn to code with an Introduction to Python 3</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../book_intro.html">
+   Book Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter1/intro.html">
+   Chapter 1
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="intro.html">
+   Chapter 2
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="bool_data_type.html">
+     Boolean Data Type
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="comparison_operators.html">
+     Comparison Operators
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="logical_operators.html">
+     Logical Operators
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       if
+      </span>
+     </code>
+     ,
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       elif
+      </span>
+     </code>
+     , and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       else
+      </span>
+     </code>
+     statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_to_lists.html">
+     Intro to Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_to_loops.html">
+     Intro to Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="more_basic_operators.html">
+     More Basic Python Operators
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice_intro.html">
+     Practice Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/content/chapter2/if_elif_else.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter2/if_elif_else.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/content/chapter2/if_elif_else.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#if-statement">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     if
+    </span>
+   </code>
+   statement
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#else-statement">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     else
+    </span>
+   </code>
+   statement
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#elif-statements">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     elif
+    </span>
+   </code>
+   statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-1-if">
+   Example 1:
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     if
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-2-if-else">
+   Example 2:
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     if
+    </span>
+   </code>
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     else
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-3-if-elif-else">
+   Example 3:
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     if
+    </span>
+   </code>
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     elif
+    </span>
+   </code>
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     else
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-4-multiple-true-conditions">
+   Example 4: multiple
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     True
+    </span>
+   </code>
+   conditions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-5-else-is-optional">
+   Example 5:
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     else
+    </span>
+   </code>
+   is optional
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-6">
+   Example 6:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nested-if-statements">
+   Nested
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     if
+    </span>
+   </code>
+   statements
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="if-elif-and-else-statements">
+<span id="if-elif-else"></span><h1><code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code> statements<a class="headerlink" href="#if-elif-and-else-statements" title="Permalink to this headline">¶</a></h1>
+<p>In this section we will learn about <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code> statements in Python.
+This is where things start to get interesting because now we will have
+the ability to use more complex logic and decision making in our
+Python code examples and programs.</p>
+<p>Create a new Jupyter Notebook called <strong>if_elif_else_statements</strong>. Follow along
+and write the code! You are encouraged to tinker with the code, change it, and even
+break it! It’s the only way to learn!</p>
+<div class="section" id="if-statement">
+<h2><code class="docutils literal notranslate"><span class="pre">if</span></code> statement<a class="headerlink" href="#if-statement" title="Permalink to this headline">¶</a></h2>
+<p>The syntax in general for the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="n">statements_to_execute</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">condition</span></code> is any valid python expression that evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.
+If the <code class="docutils literal notranslate"><span class="pre">condition</span></code> evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code>, then the statements in the <code class="docutils literal notranslate"><span class="pre">statements_to_execute</span></code>
+are executed. Otherwise the <code class="docutils literal notranslate"><span class="pre">statements_to_execute</span></code> are skipped all together. Notice also the use of the
+colon <code class="docutils literal notranslate"><span class="pre">:</span></code> after the <code class="docutils literal notranslate"><span class="pre">condition</span></code>.</p>
+<p>This is the first time we are seeing the use of white space and <em>indentation</em>.
+The use of white space and indentation is very important in Python.
+An indented white space (tab on keyboard) is used to start a block of code or statements
+and any code that is indented at that level is executed together as a <em>block of code</em>.</p>
+<p>To start practicing with <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code> statements,
+we will use the example of a student receiving a final grade
+and determining if they pass or not. The logic will begin
+very simple but then we continue to add to it.
+To start, suppose a grade of 50% is a passing grade.
+So if a student gets less than 50% they fail
+and if they get over 50% or over they pass.</p>
+<p>This is what we want the Python code to do in our first example.
+If the final grade is greater than or equal to 50, the code
+will print a message with their grade and the fact that they passed.
+We will also print a good bye message at the end.
+Here is what that would look like using the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">final_grade</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="k">if</span> <span class="n">final_grade</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Your final grade was </span><span class="si">{</span><span class="n">final_grade</span><span class="si">}</span><span class="s1"> so you passed!&#39;</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Good Bye, see you next year.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Your final grade was 60 so you passed!
+Good Bye, see you next year.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Since the expression <code class="docutils literal notranslate"><span class="pre">final_grade</span> <span class="pre">&gt;=</span> <span class="pre">50</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, the <strong>indented statement block</strong> (the line with the print)
+is executed. The alternative would be if
+<code class="docutils literal notranslate"><span class="pre">final_grade</span> <span class="pre">&gt;=</span> <span class="pre">50</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>. In that case the <strong>indented statement block</strong>
+would be skipped all together and not executed. Here is an example where <code class="docutils literal notranslate"><span class="pre">final_grade</span></code> is less than 50
+so the indented statement block is skipped and it goes straight to the good bye message.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">final_grade</span> <span class="o">=</span> <span class="mi">49</span>
+<span class="k">if</span> <span class="n">final_grade</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Your final grade was </span><span class="si">{</span><span class="n">final_grade</span><span class="si">}</span><span class="s1"> so you passed!&#39;</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Good Bye, see you next year.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Good Bye, see you next year.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Before continuing to the next example, play around with the above example.
+Try changing the <code class="docutils literal notranslate"><span class="pre">final_grade</span></code> to different values and seeing
+when the <code class="docutils literal notranslate"><span class="pre">if</span></code> block of code gets executed.</p>
+</div>
+<div class="section" id="else-statement">
+<h2><code class="docutils literal notranslate"><span class="pre">else</span></code> statement<a class="headerlink" href="#else-statement" title="Permalink to this headline">¶</a></h2>
+<p>In the previous example we saw that if the condition (<code class="docutils literal notranslate"><span class="pre">final_grade</span> <span class="pre">&gt;=</span> <span class="pre">50</span></code>) was
+<code class="docutils literal notranslate"><span class="pre">True</span></code> then the next indented code block was executed. If the conditon was <code class="docutils literal notranslate"><span class="pre">False</span></code>
+then it was skipped. There are times when we want to
+execute some alternative logic when the <code class="docutils literal notranslate"><span class="pre">condition</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.
+This is what the <code class="docutils literal notranslate"><span class="pre">else</span></code> statement is for. The general syntax is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="c1"># executed if condition is True</span>
+    <span class="n">statements_to_execute</span> 
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># executed if condition is False</span>
+    <span class="n">alternative_statements_to_execute</span> 
+</pre></div>
+</div>
+<p>Lets add to our example by using the <code class="docutils literal notranslate"><span class="pre">else</span></code> statement.
+Now, if the student has a failing grade (less than 50) than
+it prints a message saying the student failed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">final_grade</span> <span class="o">=</span> <span class="mi">49</span>
+<span class="k">if</span> <span class="n">final_grade</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Your final grade was </span><span class="si">{</span><span class="n">final_grade</span><span class="si">}</span><span class="s1"> so you passed!&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Your final grade was </span><span class="si">{</span><span class="n">final_grade</span><span class="si">}</span><span class="s1">. You failed. Try harder next time.&#39;</span><span class="p">)</span>    
+    
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Good Bye, see you next year.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Your final grade was 49. You failed. Try harder next time.
+Good Bye, see you next year.
+</pre></div>
+</div>
+</div>
+</div>
+<p>So just to say it one more time. If the <code class="docutils literal notranslate"><span class="pre">condition</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> then the first indented
+block of statements is executed. Otherwise, the statements indented after the <code class="docutils literal notranslate"><span class="pre">else</span></code>
+statement are executed. Never will it be the case that both blocks are executed. It’s one or the other only.
+Check it out in the above example by changing the <code class="docutils literal notranslate"><span class="pre">final_grade</span></code> to 50 or greater.</p>
+</div>
+<div class="section" id="elif-statements">
+<h2><code class="docutils literal notranslate"><span class="pre">elif</span></code> statements<a class="headerlink" href="#elif-statements" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">elif</span></code> statement is short for <strong>else if</strong>. It is used when we want to check for multiple conditions.
+If the first condition for <code class="docutils literal notranslate"><span class="pre">if</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>, then next condition for the <code class="docutils literal notranslate"><span class="pre">elif</span></code> block will be checked.
+If the <code class="docutils literal notranslate"><span class="pre">elif</span></code> condition is <code class="docutils literal notranslate"><span class="pre">True</span></code> than the indented statements for that <code class="docutils literal notranslate"><span class="pre">elif</span></code> block are executed.
+If the <code class="docutils literal notranslate"><span class="pre">elif</span></code> condition if <code class="docutils literal notranslate"><span class="pre">False</span></code> than the code in the <code class="docutils literal notranslate"><span class="pre">else</span></code> block is executed.
+There can be multiple <code class="docutils literal notranslate"><span class="pre">elif</span></code> statements. Among the <code class="docutils literal notranslate"><span class="pre">if</span></code> statements, <code class="docutils literal notranslate"><span class="pre">elif</span></code> statements,
+and <code class="docutils literal notranslate"><span class="pre">else</span></code> statements, only one block of statements will be executed.
+The <code class="docutils literal notranslate"><span class="pre">if</span></code> block can have only one <code class="docutils literal notranslate"><span class="pre">else</span></code> block but can have multiple <code class="docutils literal notranslate"><span class="pre">elif</span></code> blocks.
+The general syntax is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">first_condition</span><span class="p">:</span>
+    <span class="c1"># executed if first_condition is True</span>
+    <span class="n">first_statements_to_execute</span> 
+<span class="k">elif</span> <span class="n">second_condition</span><span class="p">:</span>
+    <span class="c1"># executed if first_condition is False and second_condition is True</span>
+    <span class="n">second_statements_to_execute</span> 
+<span class="k">elif</span> <span class="n">third_condition</span><span class="p">:</span>
+    <span class="c1"># executed if first_condition is False and second_condition is False and third_condition is True</span>
+    <span class="n">third_statements_to_execute</span> 
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">alternative_statements_to_execute</span> <span class="c1"># executed if all conditions above are False</span>
+</pre></div>
+</div>
+<p>It’s really important to remember that only one of the indented block
+statements will get executed (not multiple blocks). It all depends on what
+<code class="docutils literal notranslate"><span class="pre">condition</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>. If all the conditions are <code class="docutils literal notranslate"><span class="pre">False</span></code> than the <code class="docutils literal notranslate"><span class="pre">else</span></code>
+block gets executed.</p>
+<p>Let’s evolve our example with displaying the students grade.
+Now we will display a slightly different message based on the students <code class="docutils literal notranslate"><span class="pre">final_grade</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">final_grade</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="k">if</span> <span class="n">final_grade</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Your final grade was </span><span class="si">{</span><span class="n">final_grade</span><span class="si">}</span><span class="s1">. You did amazing work! You passed!&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">final_grade</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Your final grade was </span><span class="si">{</span><span class="n">final_grade</span><span class="si">}</span><span class="s1">. You did really good work! You passed!&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">final_grade</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Your final grade was </span><span class="si">{</span><span class="n">final_grade</span><span class="si">}</span><span class="s1">. You did good work! You passed!&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">final_grade</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Your final grade was </span><span class="si">{</span><span class="n">final_grade</span><span class="si">}</span><span class="s1">. You did okay work. You passed.&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Your final grade was </span><span class="si">{</span><span class="n">final_grade</span><span class="si">}</span><span class="s1">. You failed. Try harder next time.&#39;</span><span class="p">)</span>    
+   
+    
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Good Bye, see you next year.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Your final grade was 90. You did amazing work! You passed!
+Good Bye, see you next year.
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the above example we added multiple <code class="docutils literal notranslate"><span class="pre">elif</span></code> statements to show how they work.
+Take some time to play around with the code by changing the <code class="docutils literal notranslate"><span class="pre">final_grade</span></code> to different values such as
+<code class="docutils literal notranslate"><span class="pre">95</span></code>, <code class="docutils literal notranslate"><span class="pre">90</span></code>, <code class="docutils literal notranslate"><span class="pre">80</span></code>, <code class="docutils literal notranslate"><span class="pre">75</span></code>, <code class="docutils literal notranslate"><span class="pre">70</span></code>, <code class="docutils literal notranslate"><span class="pre">50</span></code>, and <code class="docutils literal notranslate"><span class="pre">45</span></code>. Execute the code for these different values
+and take note of what print statement gets executed.</p>
+<p>In closing, when using <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code> statements, you always start with an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.
+Both the <code class="docutils literal notranslate"><span class="pre">elif</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code> statements are optional. There can be multiple <code class="docutils literal notranslate"><span class="pre">elif</span></code> statements and only
+one <code class="docutils literal notranslate"><span class="pre">else</span></code>. Remember to use the colon <code class="docutils literal notranslate"><span class="pre">:</span></code> after each condition as well as the indented white space.</p>
+<p>Here are a few simple examples that you can play around with.</p>
+</div>
+<div class="section" id="example-1-if">
+<h2>Example 1: <code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#example-1-if" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;HELLO&#39;</span> <span class="c1"># change to &#39;hello&#39; to make the print statement execute</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s1">&#39;hello&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello world&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-2-if-else">
+<h2>Example 2: <code class="docutils literal notranslate"><span class="pre">if</span></code>  <code class="docutils literal notranslate"><span class="pre">else</span></code><a class="headerlink" href="#example-2-if-else" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">6</span> <span class="c1"># change to different values to see what blocks below get executed.</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="o">+</span><span class="mi">5</span><span class="si">}</span><span class="s1"> is strictly larger than 10.&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="o">+</span><span class="mi">5</span><span class="si">}</span><span class="s1"> is not strictly larger than 10.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11 is strictly larger than 10.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-3-if-elif-else">
+<h2>Example 3: <code class="docutils literal notranslate"><span class="pre">if</span></code> <code class="docutils literal notranslate"><span class="pre">elif</span></code> <code class="docutils literal notranslate"><span class="pre">else</span></code><a class="headerlink" href="#example-3-if-elif-else" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="c1"># change to different values to see what blocks below get executed.</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1"> is positive.&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1"> is negative.&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1"> is zero.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.1 is positive.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-4-multiple-true-conditions">
+<h2>Example 4: multiple <code class="docutils literal notranslate"><span class="pre">True</span></code> conditions<a class="headerlink" href="#example-4-multiple-true-conditions" title="Permalink to this headline">¶</a></h2>
+<p>Remember that even if multiple conditions are <code class="docutils literal notranslate"><span class="pre">True</span></code>, only
+one of the blocks will be executed (the first condition for which it is <code class="docutils literal notranslate"><span class="pre">True</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">101</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1"> is big.&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1"> is positive.&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1"> is negative.&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1"> is zero&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>101 is big.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-5-else-is-optional">
+<h2>Example 5: <code class="docutils literal notranslate"><span class="pre">else</span></code> is optional<a class="headerlink" href="#example-5-else-is-optional" title="Permalink to this headline">¶</a></h2>
+<p>Remember that <code class="docutils literal notranslate"><span class="pre">elif</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code> are optional.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1"> is big.&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1"> is positive.&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1"> is negative.&#39;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-6">
+<h2>Example 6:<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h2>
+<p>Here we will look at another example to practice
+with the <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code> statements. Suppose an employee
+has to work on Monday, Wednesday, and Friday and has to wear
+a different color uniform on each of those days. Red on Monday,
+blue on Wednesday, and green on Friday. Also suppose they have to remember
+to bring lunch on Monday and Wednesday but not on Fridays. We will write a simple
+program that prints what color to wear and if the employee needs to bring
+food, based on the day of the week.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">day</span> <span class="o">=</span> <span class="s1">&#39;Friday&#39;</span> <span class="c1"># can change to any day of the week. Capitalize only the first letter. </span>
+
+<span class="k">if</span> <span class="n">day</span> <span class="o">==</span> <span class="s1">&#39;Monday&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You need to wear red today.&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You also need to bring food.&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">day</span> <span class="o">==</span> <span class="s1">&#39;Wednesday&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You need to wear blue today.&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You also need to bring food.&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">day</span> <span class="o">==</span> <span class="s1">&#39;Friday&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You need to wear green today.&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You do not need to bring food.&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You do not work today. Have a good day off.&#39;</span><span class="p">)</span>    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You need to wear green today.
+You do not need to bring food.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Try changing the <code class="docutils literal notranslate"><span class="pre">day</span></code> to different days of the week
+and executing the above code to see how it all works.</p>
+</div>
+<div class="section" id="nested-if-statements">
+<h2>Nested <code class="docutils literal notranslate"><span class="pre">if</span></code> statements<a class="headerlink" href="#nested-if-statements" title="Permalink to this headline">¶</a></h2>
+<p>When you are working with indented code blocks, you can write any valid
+Python code within those indented code blocks. This means for example that
+you can <em>nest</em> <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code> statements within one another.
+When you have an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement inside
+another <code class="docutils literal notranslate"><span class="pre">if</span></code> statement and so on, this is called <em>nesting</em>.
+Here is a simple example.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">15</span> <span class="c1"># run the code with x as 15, 7, 4, and -2 to see the different blocks executed</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1"> is larger than 5&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;and is also larger than 10&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;but is not larger than 10&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1"> is smaller than 5&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;and is also negative&#39;</span><span class="p">)</span>
+        
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15 is larger than 5
+and is also larger than 10
+</pre></div>
+</div>
+</div>
+</div>
+<p>Before going onto the next section spend some time
+playing around with <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code> statements.
+Keep it simple and try to get the syntax down and memorized.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/chapter2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="logical_operators.html" title="previous page">Logical Operators</a>
+    <a class='right-next' id="next-link" href="intro_to_lists.html" title="next page">Intro to Lists</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Chris Levy<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

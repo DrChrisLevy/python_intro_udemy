@@ -1,0 +1,698 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro to Interactive Python &#8212; Python For Beginners</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Strings" href="section2.html" />
+    <link rel="prev" title="Chapter 1" href="intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Python For Beginners</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../book_intro.html">
+   Book Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="intro.html">
+   Chapter 1
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Intro to Interactive Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="section2.html">
+     Strings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="section3.html">
+     Variables and Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="section4.html">
+     Numerical Data Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="section5.html">
+     More on Strings
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="section6_user_input.html">
+     Getting Input From a User
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="section7_practice_questions.html">
+     Practice Questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="section7_practice_questions_solutions.html">
+     Practice Questions (Solutions)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter2/intro.html">
+   Chapter 2
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/content/chapter1/section1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter1/section1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/content/chapter1/section1.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#print-function-and-displaying-results-in-jupyter">
+   Print Function and Displaying Results in Jupyter
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="intro-to-interactive-python">
+<h1>Intro to Interactive Python<a class="headerlink" href="#intro-to-interactive-python" title="Permalink to this headline">¶</a></h1>
+<p>When you code in Python, you end end up writing lines of code across lots of different files.
+It is very common for larger Python projects to have thousands of lines of code.
+But when you are first starting to code, it is ideal to write some lines of code
+and then see what they do instantly. This experience is interactive and is
+ideal for learning and playing around with Python.</p>
+<p>There are couple of ways to start <em>interactive sessions</em> with Python.
+For example, if you have Python installed on your computer you can open
+up a terminal/shell and just type <code class="docutils literal notranslate"><span class="pre">python</span></code> or <code class="docutils literal notranslate"><span class="pre">python3</span></code>. Here is an example of
+what that looks like. <img alt="python3_terminal" src="../../_images/python3_terminal.png" /></p>
+<p>Each line starts with <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> and you can simply type some
+python code and then hit <strong>return</strong> on your keyboard to execute it.
+Here I typed <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">1</span></code> and then hit <strong>return</strong>.
+Then the code was executed instantly and the output was displayed on the screen, <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>
+<p>Try it out on your own! Open a terminal/shell and type <code class="docutils literal notranslate"><span class="pre">python3</span></code>.
+Then try adding two numbers together.
+You can type <code class="docutils literal notranslate"><span class="pre">quit()</span></code> and then <strong>return</strong> to exit the interactive python shell in the terminal.</p>
+<p>Another way to work in python in a very rich interactive environment is by using
+<strong>Jupyter Notebooks</strong>. If you have <strong>Jupyter</strong> installed you can just open
+a terminal/shell on your computer and type <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> and hit <strong>return</strong> on the keyboard.</p>
+<p><img alt="jupyter_notebook_terminal" src="../../_images/jupyter_notebook_terminal.png" /></p>
+<p>You can copy and paste the link <code class="docutils literal notranslate"><span class="pre">http://localhost:8889/?token=d844c610f304b048803cb24f809ece636c126c0dce446800</span></code> in your web browser. Or it might even open automatically. In the web browser you will see something like this: <img alt="jupyter_notebook_home" src="../../_images/jupyter_notebook_home.png" /></p>
+<p>You can click on the button <strong>new</strong> on the right and then click on <strong>Python 3</strong> as shown here.</p>
+<p><img alt="jupyter_note_book_python3" src="../../_images/jupyter_note_book_python3.png" /></p>
+<p>This will open up a blank <em>Untitled</em> Jupyter Notebook (also called Ipython Notebook).</p>
+<p><img alt="blank_notebook" src="../../_images/blank_notebook.png" /></p>
+<p>You can change the name of the notebook file by clicking on the title at the top and typing a new name.</p>
+<p><img alt="jupyter_title" src="../../_images/jupyter_title.png" /></p>
+<p>This will open up a window like this. Type the new name and then click <strong>Rename</strong>.</p>
+<p><img alt="jupyter_title_rename" src="../../_images/jupyter_title_rename.png" /></p>
+<p>A notebook is made of individual cells in which you can type python code in.
+You can add more cells by clicking on the <strong>+</strong> sign on the left beside the <em>save</em> button.
+Here I clicked it 5 times which created 5 new cells.</p>
+<p><img alt="five_new_cells" src="../../_images/five_new_cells.png" /></p>
+<p>Let’s start to learn some python! Click on the first cell and type the following code
+in the first cell. After typing your code in a cell you can hit <strong>shift</strong> plus <strong>return</strong>
+on your keyboard to execute the code in that cell. Or you can click the button <strong>Run</strong> on
+the top tool bar but it’s better to use the keyboard shortcuts.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Trying creating some more cells and typing some mathematical expressions in them.
+Don’t forget to execute the code. In Python we can use the following symbols for addition,
+subtraction, multiplication, and division:</p>
+<ul class="simple">
+<li><p>+ for addition</p></li>
+<li><p>- for subtraction</p></li>
+<li><p>* for multiplication (<strong>shift</strong> + <strong>8</strong> on the keyboard)</p></li>
+<li><p>/ for division  (the forward slash on the key with the <strong>?</strong> symbol)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">105</span> <span class="o">-</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">6</span> <span class="o">/</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">9</span> <span class="o">*</span> <span class="mi">9</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>81
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">*</span> <span class="mi">9</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>86
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">*</span> <span class="mi">9</span> <span class="o">-</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-14
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">6</span> <span class="o">-</span> <span class="mi">9</span><span class="o">/</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span><span class="o">/</span><span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span><span class="o">/</span><span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.25
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that Python obeys the <a class="reference external" href="https://en.wikipedia.org/wiki/Order_of_operations">standard mathematical order of operations</a>. That is, multiplication and division come before addition and subtraction.</p>
+<p>For example the proper way to do,</p>
+<div class="math notranslate nohighlight">
+\[2 + 3 × 4\]</div>
+<p>is to do</p>
+<div class="math notranslate nohighlight">
+\[2 + (3 × 4)\]</div>
+<p>which is</p>
+<div class="math notranslate nohighlight">
+\[2 + 12\]</div>
+<p>which is</p>
+<div class="math notranslate nohighlight">
+\[14\]</div>
+<p>The wrong order of operations would be to first calculate <span class="math notranslate nohighlight">\(2+3\)</span> which is <span class="math notranslate nohighlight">\(5\)</span> and then do <span class="math notranslate nohighlight">\(5 × 4\)</span> to get the incorrect
+answer <span class="math notranslate nohighlight">\(20\)</span>. Python executes the correct order of operations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14
+</pre></div>
+</div>
+</div>
+</div>
+<p>When writing complicated mathematical expressions in Python code it’s really useful
+to make use of brackets. Just like you do when writing math on paper. For example you might work out this
+on paper as:</p>
+<div class="math notranslate nohighlight">
+\[(10 + (5 × 5) - (50 / 5)) × 2\]</div>
+<div class="math notranslate nohighlight">
+\[(10 + 25 - 10) × 2\]</div>
+<div class="math notranslate nohighlight">
+\[(35 - 10) × 2\]</div>
+<div class="math notranslate nohighlight">
+\[25 × 2\]</div>
+<div class="math notranslate nohighlight">
+\[50\]</div>
+<p>In Python, to work out this exact same math problem you must you brackets.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">10</span> <span class="o">+</span> <span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="mi">5</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">50</span> <span class="o">/</span> <span class="mi">5</span><span class="p">))</span> <span class="o">*</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="print-function-and-displaying-results-in-jupyter">
+<h2>Print Function and Displaying Results in Jupyter<a class="headerlink" href="#print-function-and-displaying-results-in-jupyter" title="Permalink to this headline">¶</a></h2>
+<p>Consider the following simple code in Python.
+Do not worry if you do not quite understand what it does.
+We will explain more later. Go ahead and create a
+new <strong>Jupyter Notebook</strong> and name it <strong>printing_in_python</strong>.
+In the first cell type this Python code and then execute
+the cell by pressing <strong>shift</strong> and <strong>return</strong> on the keyboard
+together.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>What happened? You may be thinking that nothing happened because
+no results were printed or displayed to the screen.
+Well in reality, something <em>did</em> happen. Those two lines
+of code were executed in Python. It’s just that nothing
+was printed or displayed. Now add a third line to the code,
+<code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">y</span></code>, and then execute the cell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Interesting, it printed the output <code class="docutils literal notranslate"><span class="pre">3</span></code>.
+Now change the third line, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">y</span></code> to <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">y</span></code> and
+then execute the code. Did anything get printed or displayed? Nope!
+Why do you think that is?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, add one more line of code like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="n">z</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>It printed/displayed the number <code class="docutils literal notranslate"><span class="pre">3</span></code>!</p>
+<p>Typically, python programs do not print any output to the screen
+unless you tell them to. But when working in Jupyter Notebooks,
+the ouput of a single cell will sometimes be displayed.
+Only the output of the last line of code executed in the cell can be displayed.
+Sometimes nothing will be displayed at all.</p>
+<p>For example, here are five lines of code. Write this out
+in your Jupyter Notebook. Notice that only the last line, <code class="docutils literal notranslate"><span class="pre">5</span></code>,
+is displayed on the screen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this next example though, nothing is displayed.
+Run this code to verify that is the case.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="n">a</span><span class="o">=</span><span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Do not worry about why or why not something
+gets displayed by Jupyter at the moment.
+Just know that,</p>
+<ol class="simple">
+<li><p>Even if nothing is displayed, know that the code was still executed.</p></li>
+<li><p>If any output is displayed, it will only be output from the last line.</p></li>
+</ol>
+<p>You may be wondering how to <strong>print</strong> or display
+any results from within a Python program or code.
+Well it turns out you can do this with the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function.
+It’s very easy! Type the following in a cell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span> <span class="o">/</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+10
+2.0
+0.3333333333333333
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now type this code in a cell.
+Before executing the code, try and guess
+what the output will be.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+3
+</pre></div>
+</div>
+</div>
+</div>
+<p>In Python, you can print the result of some code
+by simply wrapping it within the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function.
+We will learn more about functions later.
+You have to use the opening <code class="docutils literal notranslate"><span class="pre">(</span></code> and closing <code class="docutils literal notranslate"><span class="pre">)</span></code> brackets.
+If you do not, you will get an error like this for example.
+We will learn more about Python errors later.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-21-c94594b6b28f&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="nb">print</span> <span class="mi">1</span>
+          <span class="o">^</span>
+<span class="ne">SyntaxError</span>: Missing parentheses in call to &#39;print&#39;. Did you mean print(1)?
+</pre></div>
+</div>
+</div>
+</div>
+<p>Spend some time printing some results on your own.
+Make up some simple math questions.
+Do them on paper and then check your work
+by printing the results using
+Python code in the Jupyter Notebook.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/chapter1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Chapter 1</a>
+    <a class='right-next' id="next-link" href="section2.html" title="next page">Strings</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Chris Levy<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>
