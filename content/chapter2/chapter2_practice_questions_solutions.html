@@ -334,55 +334,62 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hint">
-     HINT
+    <a class="reference internal nav-link" href="#id15">
+     SOLUTION
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id15">
+  <a class="reference internal nav-link" href="#id16">
    9.
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id16">
-     HINT
+    <a class="reference internal nav-link" href="#id17">
+     Solution
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id17">
+  <a class="reference internal nav-link" href="#id18">
    10.
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id18">
-     HINT
+    <a class="reference internal nav-link" href="#id19">
+     SOLUTION
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id19">
+  <a class="reference internal nav-link" href="#id20">
    11.
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id20">
-     HINT
+    <a class="reference internal nav-link" href="#id21">
+     SOLUTION
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id21">
+  <a class="reference internal nav-link" href="#id22">
    12.
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id23">
+     SOLUTION
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id22">
+  <a class="reference internal nav-link" href="#id24">
    13.
   </a>
  </li>
@@ -890,28 +897,33 @@ can be in any order.</p>
 </div>
 <div class="section" id="id14">
 <h2>8.<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
-<p>Write a program that iterates/loops over a list of items
+<p>Write a program that iterates/loops over a list of numbers
 and print how many <code class="docutils literal notranslate"><span class="pre">0</span></code>’s are in the list.
-For example if the list was <code class="docutils literal notranslate"><span class="pre">[True,</span> <span class="pre">False,</span> <span class="pre">'hello',</span> <span class="pre">1,2,0,10,0]</span></code>
+For example if the list was <code class="docutils literal notranslate"><span class="pre">[1,2,0,10,0]</span></code>
 then it would print <code class="docutils literal notranslate"><span class="pre">2</span></code> because there are two <code class="docutils literal notranslate"><span class="pre">0</span></code>’s in the list.</p>
-<div class="section" id="hint">
-<h3>HINT<a class="headerlink" href="#hint" title="Permalink to this headline">¶</a></h3>
-<p>Try the question first before revealing the hint.</p>
+<div class="section" id="id15">
+<h3>SOLUTION<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <div class="cell tag_hide-cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_zeroes</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">list_of_stuff</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">list_of_stuff</span><span class="p">:</span>
-    <span class="c1"># check if x is 0. If so, then increase num_zeroes by 1</span>
-    <span class="k">pass</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_of_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">list_of_numbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1"># count += 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="id15">
-<h2>9.<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id16">
+<h2>9.<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
 <p>Suppose you have two lists of the same length and that there are only numbers in both the lists.
 For example,</p>
 <p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[33,</span> <span class="pre">49,</span> <span class="pre">101,</span> <span class="pre">9]</span></code></p>
@@ -926,42 +938,46 @@ wise and then sum the results. In other words, the program should compute</p>
 <p>which would lead to</p>
 <div class="math notranslate nohighlight">
 \[1*5 + 2*6 + 3*7 + 4*8 = 70.\]</div>
-<div class="section" id="id16">
-<h3>HINT<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
-<p>Try the question first before revealing the hint.</p>
+<div class="section" id="id17">
+<h3>Solution<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <div class="cell tag_hide-cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
-<span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">33</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]</span>
 <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>
-    <span class="c1"># i is the index/position</span>
-    <span class="c1"># workout x[i] * y[i] and add to result each time through loop.</span>
-    <span class="k">pass</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+    <span class="n">result</span> <span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1"># or simply ---&gt;    result = result + x[i] * y[i] </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11938
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="id17">
-<h2>10.<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id18">
+<h2>10.<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
 <p>Write some code which gets a string from user input.
 Then print something to the screen saying whether the string
 they entered is a palindrome or not. Palindromes are words which are spelled
 the same way frontwards and backwards such as <code class="docutils literal notranslate"><span class="pre">racecar</span></code>, <code class="docutils literal notranslate"><span class="pre">level</span></code>, <code class="docutils literal notranslate"><span class="pre">rotator</span></code> and so on.</p>
-<div class="section" id="id18">
-<h3>HINT<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
-<p>Try the question first before revealing the hint.</p>
-<div class="toggle docutils container">
-<p>Remember you can reverse a string <code class="docutils literal notranslate"><span class="pre">x</span></code> by doing <code class="docutils literal notranslate"><span class="pre">x[::-1]</span></code>.</p>
-</div>
-</div>
-</div>
 <div class="section" id="id19">
-<h2>11.<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<h3>SOLUTION<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Please enter a word: &#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">word</span> <span class="o">==</span> <span class="n">word</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Yes, </span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s1"> is a palindrome&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;No, </span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s1"> is not a palindrome&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id20">
+<h2>11.<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
 <p>In this question we will use code to generate a random integer between
 1 and 10. Then we will ask a user to guess the number.
 The code/program should allow the user to keep guessing
@@ -974,78 +990,50 @@ Execute this code several times to see different values of <code class="docutils
 We will learn more about <code class="docutils literal notranslate"><span class="pre">import</span></code> and modules (such as <code class="docutils literal notranslate"><span class="pre">random</span></code>)
 later in the course. For now, just know this can generate a random
 integer between 1 and 10. This is the first step.</p>
-<div class="cell tag_hide-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="n">i</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
-</pre></div>
-</div>
-</div>
-</div>
-<p>Next, use a loop and the <code class="docutils literal notranslate"><span class="pre">input</span></code> function to ask the user to guess a number between 1 and 10.
-If they guess too low, then print that the guess it to low and get them to guess again.
-If they guess too high, then print that the guess is to high and get them to guess again.
-If they guess the correct number (the value of <code class="docutils literal notranslate"><span class="pre">i</span></code>) then print that they got it and stop the program.</p>
-<div class="section" id="id20">
-<h3>HINT<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
-<p>Try the question first before revealing the hint.</p>
-<div class="toggle docutils container">
-<p>You will need to use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop because you do not know how many guess are required.</p>
-</div>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="n">i</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-
-<span class="c1"># remove the far left comments.</span>
-
-<span class="c1"># while True:</span>
-<span class="c1">#     guess = input(&#39;Guess a number between 1 and 10. Type &quot;stop&quot; to exit.&#39;)</span>
-<span class="c1">#     # Then do some logic like this</span>
-<span class="c1">#     # if guess == stop then break the loop and print a message saying all done.</span>
-<span class="c1">#     # Otherwise, guess should be a number. Remember you need to convert inputs to integers.</span>
-<span class="c1">#     # Check if the guess is the same as i or too high or too low and use break in proper place.</span>
-<span class="c1">#     pass</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="n">i</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-
-<span class="c1"># remove the far left comments.</span>
-
-<span class="c1"># while True:</span>
-<span class="c1">#     guess = input(&#39;Guess a number between 1 and 10. Type &quot;stop&quot; to exit.&#39;)</span>
-<span class="c1">#     if guess == &#39;stop&#39;:</span>
-<span class="c1">#         print(&#39;See you later!&#39;)</span>
-<span class="c1">#         break</span>
-<span class="c1">#     # convert to integer</span>
-<span class="c1">#     guess = int(guess)</span>
-<span class="c1">#     # finish the logic by checking guess with the random value i</span>
-<span class="c1">#     pass</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div class="section" id="id21">
-<h2>12.<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
+<h3>SOLUTION<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">max_number</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># make this number higher to make it more challenging</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_number</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Please guess a number between 1 and </span><span class="si">{</span><span class="n">max_number</span><span class="si">}</span><span class="s1">. Type &quot;stop&quot; to quit.&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="s1">&#39;stop&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;See you later!&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+    
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">guess</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="n">i</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;YOU GOT IT!&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="k">elif</span> <span class="n">guess</span> <span class="o">&gt;</span> <span class="n">i</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;That is too high. Guess a lower number. Guess again!&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;That is too low. Guess a higher number. Guess again!&#39;</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Come back again soon!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id22">
+<h2>12.<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
 <p>Ask a user to enter a number.
 Then print True if the number is 4 or 5 or 6. Otherwise print False.
 Use the <code class="docutils literal notranslate"><span class="pre">==</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code> operators.</p>
+<div class="section" id="id23">
+<h3>SOLUTION<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;please enter a number:&#39;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">4</span> <span class="ow">or</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">5</span> <span class="ow">or</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="id22">
-<h2>13.<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<div class="section" id="id24">
+<h2>13.<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
 <p>Get the user to input three numbers</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;enter a number&#39;</span><span class="p">))</span>
 <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;enter a number&#39;</span><span class="p">))</span>
