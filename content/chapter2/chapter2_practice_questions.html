@@ -1,0 +1,833 @@
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Questions &#8212; Learn to code with an Introduction to Python 3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="More Basic Python Operators" href="more_basic_operators.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo_temp.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Learn to code with an Introduction to Python 3</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../book_intro.html">
+   Book Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter1/intro.html">
+   Chapter 1
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="intro.html">
+   Chapter 2
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="bool_data_type.html">
+     Boolean Data Type
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="comparison_operators.html">
+     Comparison Operators
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="logical_operators.html">
+     Logical Operators
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="if_elif_else.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       if
+      </span>
+     </code>
+     ,
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       elif
+      </span>
+     </code>
+     , and
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       else
+      </span>
+     </code>
+     statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_to_lists.html">
+     Intro to Lists
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_to_loops.html">
+     Intro to Loops
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="more_basic_operators.html">
+     More Basic Python Operators
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Practice Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/content/chapter2/chapter2_practice_questions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter2/chapter2_practice_questions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/content/chapter2/chapter2_practice_questions.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   1.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hint">
+     HINT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   2.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     HINT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   3.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     HINT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   4.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     HINT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id8">
+   5.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     HINT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id10">
+   6.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     HINT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id12">
+   7.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     HINT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id14">
+   8.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     HINT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id16">
+   9.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id17">
+     HINT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id18">
+   10.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id19">
+     HINT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id20">
+   11.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id21">
+     HINT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id22">
+   12.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id23">
+   13.
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="practice-questions">
+<h1>Practice Questions<a class="headerlink" href="#practice-questions" title="Permalink to this headline">¶</a></h1>
+<p>There is so much new stuff we learned this past chapter.
+We introduced you to boolean data types, comparison operators,
+logical operators, <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, and <code class="docutils literal notranslate"><span class="pre">else</span></code> statements,
+lists, as well as <code class="docutils literal notranslate"><span class="pre">for</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code> loops. There is actually
+more we could say about all of these things. But now is a good time
+to get coding. The best way to learn is by doing. Moreover, it is good
+to work on problems which mix all these ideas and tools together. It is going to be
+hard at first! It takes practice. But as you start solving small problems,
+you will learn and become more confident. As you spend more time coding,
+you will learn tricks and things that you can apply to other problems.</p>
+<div class="section" id="id1">
+<h2>1.<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Ask the user to enter a number using the <code class="docutils literal notranslate"><span class="pre">input</span></code> function. If the number is even
+then print a message that displays the number and that it is even. If the number is not
+even then change the message to say that the number is odd. For example, if the user enters
+a 10 the message might read <code class="docutils literal notranslate"><span class="pre">'The</span> <span class="pre">number</span> <span class="pre">10</span> <span class="pre">is</span> <span class="pre">even'</span></code>. If the user enters an odd number such as 13, then
+the message might read <code class="docutils literal notranslate"><span class="pre">'The</span> <span class="pre">number</span> <span class="pre">13</span> <span class="pre">is</span> <span class="pre">odd'</span></code>.</p>
+<div class="section" id="hint">
+<h3>HINT<a class="headerlink" href="#hint" title="Permalink to this headline">¶</a></h3>
+<p>Try the question first before revealing the hint.</p>
+<div class="toggle docutils container">
+<p>The <code class="docutils literal notranslate"><span class="pre">input()</span></code> function always returns a string. You can convert a string to an integer using
+the <code class="docutils literal notranslate"><span class="pre">int()</span></code> function. You can read this <a class="reference internal" href="more_basic_operators.html#mod-operator"><span class="std std-ref">section</span></a> if you forget how to check if a number is even. Finally, refer back to this <a class="reference internal" href="if_elif_else.html#if-elif-else"><span class="std std-ref">section</span></a> on how to use <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>2.<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Suppose you are given a list <code class="docutils literal notranslate"><span class="pre">nums</span> <span class="pre">=</span> <span class="pre">[6,</span> <span class="pre">7,</span> <span class="pre">7,</span> <span class="pre">10,</span> <span class="pre">12,</span> <span class="pre">1,</span> <span class="pre">3,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">5,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9,</span> <span class="pre">12,</span> <span class="pre">20]</span></code>. Write code
+that prints all the numbers that are strictly greater than <code class="docutils literal notranslate"><span class="pre">5</span></code> and strictly less than <code class="docutils literal notranslate"><span class="pre">9</span></code>, one line at a time. The code should work for any list (not just this example list). For example the output should look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">6</span>
+<span class="mi">7</span>
+<span class="mi">7</span>
+<span class="mi">7</span>
+<span class="mi">8</span>
+</pre></div>
+</div>
+<p>If the list was for example  <code class="docutils literal notranslate"><span class="pre">nums</span> <span class="pre">=</span> <span class="pre">[1,2,6,20]</span></code>  the output would be</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">6</span>
+</pre></div>
+</div>
+<p>If the list was <code class="docutils literal notranslate"><span class="pre">nums</span> <span class="pre">=</span> <span class="pre">[1,2,5,20]</span></code> then nothing would be printed.</p>
+<div class="section" id="id3">
+<h3>HINT<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Try the question first before revealing the hint.</p>
+<div class="toggle docutils container">
+<p>Read the <a class="reference internal" href="intro_to_loops.html#for-loop"><span class="std std-ref">section</span></a> on <code class="docutils literal notranslate"><span class="pre">for</span></code> loops to recall how to iterate through items in a list.
+You will want to make use of the logical <code class="docutils literal notranslate"><span class="pre">and</span></code> <a class="reference internal" href="logical_operators.html#and-operator"><span class="std std-ref">operator</span></a> as well as <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">else</span></code> <a class="reference internal" href="if_elif_else.html#if-elif-else"><span class="std std-ref">section</span></a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>3.<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>Repeat question number 2 by adding in this difference. Instead of printing the numbers one by one, make a new list that has all the numbers strictly greater than <code class="docutils literal notranslate"><span class="pre">5</span></code> and strictly less than <code class="docutils literal notranslate"><span class="pre">9</span></code> from the original list. Then just print the new list.</p>
+<div class="section" id="id5">
+<h3>HINT<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Try the question first before revealing the hint.</p>
+<div class="toggle docutils container">
+<p>You can refer back to the section on the <code class="docutils literal notranslate"><span class="pre">.append()</span></code> <a class="reference internal" href="intro_to_lists.html#append-list"><span class="std std-ref">method</span></a>.</p>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<span class="n">new_nums</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+    <span class="c1"># if the number is between 5 and 9, then append x to new_nums</span>
+    <span class="k">pass</span> <span class="c1"># this just indicates unfinished code and pass is used to simply skip over</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>4.<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>Write code that takes the list <code class="docutils literal notranslate"><span class="pre">colors</span> <span class="pre">=</span> <span class="pre">['green','red','orange','blue','yellow']</span></code>
+and prints the first item and the last item in the list. No <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is needed here (just list indexing).</p>
+<div class="section" id="id7">
+<h3>HINT<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>Try the question first before revealing the hint.</p>
+<div class="toggle docutils container">
+<p>Check out the <a class="reference internal" href="intro_to_lists.html#list-index-slice"><span class="std std-ref">section</span></a> on how to access values in a list by indexing and or slicing.</p>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>5.<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>Write a program that prints the numbers from 1 to 100.</p>
+<div class="section" id="id9">
+<h3>HINT<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>Try the question first before revealing the hint.</p>
+<div class="toggle docutils container">
+<p>Use the <a class="reference internal" href="intro_to_loops.html#intro-range"><span class="std std-ref">range</span></a> function.</p>
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>6.<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>Write a program that prints the numbers from 1 to 100 but with these modifications. If the number is a multiple of 3 print <strong>Fizz</strong> instead of the number. If the number is a multiple of 5 then print <strong>Buzz</strong>. However, if the number is both a multiple of 3 and a multiple of 5 print <strong>FizzBuzz</strong>. The output should look something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<span class="mi">2</span>
+<span class="n">Fizz</span>
+<span class="mi">4</span>
+<span class="n">Buzz</span>
+<span class="n">Fizz</span>
+<span class="mi">7</span>
+<span class="mi">8</span>
+<span class="n">Fizz</span>
+<span class="n">Buzz</span>
+<span class="mi">11</span>
+<span class="n">Fizz</span>
+<span class="mi">13</span>
+<span class="mi">14</span>
+<span class="n">FizzBuzz</span>
+<span class="mi">16</span>
+<span class="mi">17</span>
+<span class="n">Fizz</span>
+<span class="mi">19</span>
+<span class="n">Buzz</span>
+<span class="n">Fizz</span>
+<span class="mi">22</span>
+<span class="mi">23</span>
+<span class="n">Fizz</span>
+<span class="n">Buzz</span>
+<span class="mi">26</span>
+<span class="n">Fizz</span>
+<span class="mi">28</span>
+<span class="mi">29</span>
+<span class="n">FizzBuzz</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="mi">91</span>
+<span class="mi">92</span>
+<span class="n">Fizz</span>
+<span class="mi">94</span>
+<span class="n">Buzz</span>
+<span class="n">Fizz</span>
+<span class="mi">97</span>
+<span class="mi">98</span>
+<span class="n">Fizz</span>
+<span class="n">Buzz</span>
+</pre></div>
+</div>
+<div class="section" id="id11">
+<h3>HINT<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>Try the question first before revealing the hint</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">):</span>
+    <span class="c1"># if i is divisible by 3 and i is divisible by 5 then print(&#39;FizzBuzz&#39;)</span>
+    <span class="c1"># else if i is divisible by 3 then print(&#39;Fizz&#39;)</span>
+    <span class="c1"># else if i is divisible by 5 then print(&#39;Buzz&#39;)</span>
+    <span class="c1"># else then print i</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>7.<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<p>Suppose you have two lists <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> which may not be the same length.
+Write code which will find the items that are common between both <code class="docutils literal notranslate"><span class="pre">a</span></code>
+and <code class="docutils literal notranslate"><span class="pre">b</span></code> and puts them in a new list <code class="docutils literal notranslate"><span class="pre">c</span></code>. Also make sure that <code class="docutils literal notranslate"><span class="pre">c</span></code> does not have
+the same item more than once (no duplicates). So the list <code class="docutils literal notranslate"><span class="pre">c</span></code> will be a unique
+list of only the items that were in both <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>. The items you put in <code class="docutils literal notranslate"><span class="pre">c</span></code>
+can be in any order.</p>
+<p>For example,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="c1"># then c would be</span>
+<span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;carrot&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span><span class="s1">&#39;chris&#39;</span><span class="p">,</span><span class="mi">9</span><span class="p">,]</span>
+<span class="c1"># then c would be</span>
+<span class="p">[</span><span class="s1">&#39;orange&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="c1"># then c would be</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="o">-</span><span class="mi">6</span><span class="p">]</span>
+<span class="c1"># then c would be</span>
+<span class="p">[]</span>
+</pre></div>
+</div>
+<div class="section" id="id13">
+<h3>HINT<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p>Try the question first before revealing the hint.</p>
+<div class="toggle docutils container">
+<p>You will want to review the sections on <a class="reference internal" href="intro_to_lists.html#append-list"><span class="std std-ref">appending to a list</span></a>, <a class="reference internal" href="intro_to_lists.html#membership-operators"><span class="std std-ref">membership operators</span></a>, and <a class="reference internal" href="intro_to_loops.html#for-loop"><span class="std std-ref">stuff</span></a> about <code class="docutils literal notranslate"><span class="pre">for</span></code> loops.</p>
+<p>There is another hint below but have another good attempt before looking.</p>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the list a and b. You will want to test some different lists.</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="c1"># define an empty list c</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+    <span class="c1"># if item in b and item not in c then append item to c</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>8.<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<p>Write a program that iterates/loops over a list of items
+and print how many <code class="docutils literal notranslate"><span class="pre">0</span></code>’s are in the list.
+For example if the list was <code class="docutils literal notranslate"><span class="pre">[True,</span> <span class="pre">False,</span> <span class="pre">'hello',</span> <span class="pre">1,2,0,10,0]</span></code>
+then it would print <code class="docutils literal notranslate"><span class="pre">2</span></code> because there are two <code class="docutils literal notranslate"><span class="pre">0</span></code>’s in the list.</p>
+<div class="section" id="id15">
+<h3>HINT<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<p>Try the question first before revealing the hint.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_zeroes</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">list_of_stuff</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">list_of_stuff</span><span class="p">:</span>
+    <span class="c1"># check if x is 0. If so, then increase num_zeroes by 1</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id16">
+<h2>9.<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<p>Suppose you have two lists of the same length and that there are only numbers in both the lists.
+For example,</p>
+<p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[33,</span> <span class="pre">49,</span> <span class="pre">101,</span> <span class="pre">9]</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">[10,</span> <span class="pre">12,</span> <span class="pre">20,</span> <span class="pre">1000]</span></code></p>
+<p>Write a program that will multiply the numbers from list <code class="docutils literal notranslate"><span class="pre">x</span></code> by the numbers in list <code class="docutils literal notranslate"><span class="pre">y</span></code> element
+wise and then sum the results. In other words, the program should compute</p>
+<div class="math notranslate nohighlight">
+\[33*10 + 49*12 + 101*20 + 9*1000 = 11938.\]</div>
+<p>The code should work for any lists with numbers that are the same length. Another example would be</p>
+<p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4]</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">[5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8]</span></code></p>
+<p>which would lead to</p>
+<div class="math notranslate nohighlight">
+\[1*5 + 2*6 + 3*7 + 4*8 = 70.\]</div>
+<div class="section" id="id17">
+<h3>HINT<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<p>Try the question first before revealing the hint.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>
+    <span class="c1"># i is the index/position</span>
+    <span class="c1"># workout x[i] * y[i] and add to result each time through loop.</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id18">
+<h2>10.<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<p>Write some code which gets a string from user input.
+Then print something to the screen saying whether the string
+they entered is a palindrome or not. Palindromes are words which are spelled
+the same way frontwards and backwards such as <code class="docutils literal notranslate"><span class="pre">racecar</span></code>, <code class="docutils literal notranslate"><span class="pre">level</span></code>, <code class="docutils literal notranslate"><span class="pre">rotator</span></code> and so on.</p>
+<div class="section" id="id19">
+<h3>HINT<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<p>Try the question first before revealing the hint.</p>
+<div class="toggle docutils container">
+<p>Remember you can reverse a string <code class="docutils literal notranslate"><span class="pre">x</span></code> by doing <code class="docutils literal notranslate"><span class="pre">x[::-1]</span></code>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="id20">
+<h2>11.<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<p>In this question we will use code to generate a random integer between
+1 and 10. Then we will ask a user to guess the number.
+The code/program should allow the user to keep guessing
+until they guess the correct number. Or they can type <code class="docutils literal notranslate"><span class="pre">'stop'</span></code> to quit guessing.
+Also, the program should tell the user after each guess whether they should
+guess lower or higher. When they guess the correct number the program stops
+or if they type <code class="docutils literal notranslate"><span class="pre">stop</span></code>.</p>
+<p>You can use code below to generate a random integer between 1 and 10.
+Execute this code several times to see different values of <code class="docutils literal notranslate"><span class="pre">i</span></code>.
+We will learn more about <code class="docutils literal notranslate"><span class="pre">import</span></code> and modules (such as <code class="docutils literal notranslate"><span class="pre">random</span></code>)
+later in the course. For now, just know this can generate a random
+integer between 1 and 10. This is the first step.</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, use a loop and the <code class="docutils literal notranslate"><span class="pre">input</span></code> function to ask the user to guess a number between 1 and 10.
+If they guess too low, then print that the guess it to low and get them to guess again.
+If they guess too high, then print that the guess is to high and get them to guess again.
+If they guess the correct number (the value of <code class="docutils literal notranslate"><span class="pre">i</span></code>) then print that they got it and stop the program.</p>
+<div class="section" id="id21">
+<h3>HINT<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<p>Try the question first before revealing the hint.</p>
+<div class="toggle docutils container">
+<p>You will need to use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop because you do not know how many guess are required.</p>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># remove the far left comments.</span>
+
+<span class="c1"># while True:</span>
+<span class="c1">#     guess = input(&#39;Guess a number between 1 and 10. Type &quot;stop&quot; to exit.&#39;)</span>
+<span class="c1">#     # Then do some logic like this</span>
+<span class="c1">#     # if guess == stop then break the loop and print a message saying all done.</span>
+<span class="c1">#     # Otherwise, guess should be a number. Remember you need to convert inputs to integers.</span>
+<span class="c1">#     # Check if the guess is the same as i or too high or too low and use break in proper place.</span>
+<span class="c1">#     pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># remove the far left comments.</span>
+
+<span class="c1"># while True:</span>
+<span class="c1">#     guess = input(&#39;Guess a number between 1 and 10. Type &quot;stop&quot; to exit.&#39;)</span>
+<span class="c1">#     if guess == &#39;stop&#39;:</span>
+<span class="c1">#         print(&#39;See you later!&#39;)</span>
+<span class="c1">#         break</span>
+<span class="c1">#     # convert to integer</span>
+<span class="c1">#     guess = int(guess)</span>
+<span class="c1">#     # finish the logic by checking guess with the random value i</span>
+<span class="c1">#     pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id22">
+<h2>12.<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<p>Ask a user to enter a number.
+Then print True if the number is 4 or 5 or 6. Otherwise print False.
+Use the <code class="docutils literal notranslate"><span class="pre">==</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code> operators.</p>
+</div>
+<div class="section" id="id23">
+<h2>13.<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<p>Get the user to input three numbers</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;enter a number&#39;</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;enter a number&#39;</span><span class="p">))</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;enter a number&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Then write code to print which number is the largest.
+Do not use the built in <code class="docutils literal notranslate"><span class="pre">max</span></code> function (we have not even learned this yet anyway).
+Just use  logical operators, comparison operators, and <code class="docutils literal notranslate"><span class="pre">if,else</span></code> like statements.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/chapter2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="more_basic_operators.html" title="previous page">More Basic Python Operators</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Chris Levy<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>
