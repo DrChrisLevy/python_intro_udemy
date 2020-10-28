@@ -392,6 +392,13 @@
   <a class="reference internal nav-link" href="#id24">
    13.
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id25">
+     SOLUTION
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1043,6 +1050,24 @@ Use the <code class="docutils literal notranslate"><span class="pre">==</span></
 <p>Then write code to print which number is the largest.
 Do not use the built in <code class="docutils literal notranslate"><span class="pre">max</span></code> function (we have not even learned this yet anyway).
 Just use  logical operators, comparison operators, and <code class="docutils literal notranslate"><span class="pre">if,else</span></code> like statements.</p>
+<div class="section" id="id25">
+<h3>SOLUTION<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;enter a number&#39;</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;enter a number&#39;</span><span class="p">))</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;enter a number&#39;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="n">b</span><span class="p">:</span>
+    <span class="n">largest</span> <span class="o">=</span> <span class="n">a</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">largest</span> <span class="o">=</span> <span class="n">b</span>
+
+<span class="k">if</span> <span class="n">c</span> <span class="o">&gt;=</span> <span class="n">largest</span><span class="p">:</span>
+    <span class="n">largest</span> <span class="o">=</span> <span class="n">c</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The largest number is </span><span class="si">{</span><span class="n">largest</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
