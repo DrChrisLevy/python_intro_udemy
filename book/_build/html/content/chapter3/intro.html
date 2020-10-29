@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boolean Data Type &#8212; Learn to code with an Introduction to Python 3</title>
+    <title>Chapter 3 &#8212; Learn to code with an Introduction to Python 3</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -37,8 +37,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Comparison Operators" href="comparison_operators.html" />
-    <link rel="prev" title="Chapter 2" href="intro.html" />
+    <link rel="next" title="Intro to Functions" href="intro_to_functions.html" />
+    <link rel="prev" title="Practice Questions (Solutions)" href="../chapter2/chapter2_practice_questions_solutions.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -84,79 +84,22 @@
    Chapter 1
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="intro.html">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter2/intro.html">
    Chapter 2
   </a>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Boolean Data Type
-    </a>
-   </li>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Chapter 3
+  </a>
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="comparison_operators.html">
-     Comparison Operators
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="logical_operators.html">
-     Logical Operators
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="if_elif_else.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       if
-      </span>
-     </code>
-     ,
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       elif
-      </span>
-     </code>
-     , and
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       else
-      </span>
-     </code>
-     statements
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="intro_to_lists.html">
-     Intro to Lists
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="intro_to_loops.html">
-     Intro to Loops
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="more_basic_operators.html">
-     More Basic Python Operators
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chapter2_practice_questions.html">
-     Practice Questions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chapter2_practice_questions_solutions.html">
-     Practice Questions (Solutions)
+    <a class="reference internal" href="intro_to_functions.html">
+     Intro to Functions
     </a>
    </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter3/intro.html">
-   Chapter 3
-  </a>
  </li>
 </ul>
 
@@ -200,7 +143,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/content/chapter2/bool_data_type.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/content/chapter3/intro.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -224,7 +167,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter2/bool_data_type.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter3/intro.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -232,7 +175,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/content/chapter2/bool_data_type.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/jupyter-book/blob/master/content/chapter3/intro.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -258,75 +201,30 @@
         
               <div>
                 
-  <div class="section" id="boolean-data-type">
-<h1>Boolean Data Type<a class="headerlink" href="#boolean-data-type" title="Permalink to this headline">¶</a></h1>
-<p>In computer programming, a <strong>boolean</strong> data type is a data type that
-can have one of <em>two</em> values which are usually denoted as <em>true</em>
-and <em>false</em>. In Python the syntax for these two values are <code class="docutils literal notranslate"><span class="pre">True</span></code>
-and <code class="docutils literal notranslate"><span class="pre">False</span></code>. These two values are built into the Python
-programming language and are of type <strong>boolean</strong> or <strong>bool</strong>
-for short.</p>
-<p>Create a new Jupyter Notebook and call it <strong>booleans_comparison_logical_operators</strong>.
-Type out the code as you read and go through this. Play around with code
-because it will help you to learn!</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span>
-</pre></div>
+  <div class="section" id="chapter-3">
+<h1>Chapter 3<a class="headerlink" href="#chapter-3" title="Permalink to this headline">¶</a></h1>
+<p>In this chapter of the course we will learn about
+functions in Python. Knowing how to use functions and
+create your own function is very important when coding.
+Functions allow you to write modular code, write code that is easier to read,
+and write reusable code. Some of the concepts we will learn in
+this chapter include:</p>
+<ul class="simple">
+<li><p>What are functions and why do we use them?</p></li>
+<li><p>Examples of functions that are built into Python.</p></li>
+<li><p>Defining your own functions.</p></li>
+<li><p>Function arguments</p>
+<ul>
+<li><p>positional arguments</p></li>
+<li><p>keyword arguments</p></li>
+<li><p>default arguments</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">return</span></code> statement</p></li>
+<li><p>Local and global scope</p></li>
+</ul>
+<div class="toctree-wrapper compound">
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bool
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bool
-</pre></div>
-</div>
-</div>
-</div>
-<p>They are case sensitive. If you try writing for example, <code class="docutils literal notranslate"><span class="pre">true</span></code>, or <code class="docutils literal notranslate"><span class="pre">FALSE</span></code>, or some variation
-you will get an error.</p>
-<p>So why is this important? Well, often programs are made up
-of lots of tiny decisions that depend on various outcomes.
-For example, you might want to perform some logic <em>if something is <code class="docutils literal notranslate"><span class="pre">True</span></code></em>
-or perform different logic <em>if something is <code class="docutils literal notranslate"><span class="pre">False</span></code></em>. This is why
-boolean data types are so important.</p>
-<p>You may be wondering how does something evaluate to <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>?
-To start learning more about this we are going to introduce
-the Python <em>comparision operators</em>.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -342,7 +240,7 @@ the Python <em>comparision operators</em>.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content/chapter2"
+            path: "./content/chapter3"
         },
         predefinedOutput: true
     }
@@ -357,8 +255,8 @@ the Python <em>comparision operators</em>.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Chapter 2</a>
-    <a class='right-next' id="next-link" href="comparison_operators.html" title="next page">Comparison Operators</a>
+    <a class='left-prev' id="prev-link" href="../chapter2/chapter2_practice_questions_solutions.html" title="previous page">Practice Questions (Solutions)</a>
+    <a class='right-next' id="next-link" href="intro_to_functions.html" title="next page">Intro to Functions</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

@@ -23,3 +23,7 @@
   - file: content/chapter2/more_basic_operators
   - file: content/chapter2/chapter2_practice_questions
   - file: content/chapter2/chapter2_practice_questions_solutions
+
+- file: content/chapter3/intro
+  sections:
+  - file: content/chapter3/intro_to_functions
