@@ -1,16 +1,24 @@
-# Book Introduction
+#!/usr/bin/env python
+# coding: utf-8
 
-- The intro will be completed when the book is finished.
+# # Book Introduction
+# 
+# - The intro will be completed when the book is finished.
 
-
-
-
-```{toctree}
-:hidden:
-:titlesonly:
+# In[ ]:
 
 
-chapter1/intro
-chapter2/intro
-chapter3/intro
-```
+
+
+
+# 
+# ```{toctree}
+# :hidden:
+# :titlesonly:
+# 
+# 
+# chapter1/intro
+# chapter2/intro
+# chapter3/intro
+# ```
+# 

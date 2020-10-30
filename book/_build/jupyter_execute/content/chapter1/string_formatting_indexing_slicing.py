@@ -1,62 +1,84 @@
-# More on Strings
+#!/usr/bin/env python
+# coding: utf-8
 
-In this section we will learn more about strings. Create a 
-new Jupter Notebook and name it **string_formatting_and_indexing**
-so you can follow along with the code.
+# # More on Strings
+# 
+# In this section we will learn more about strings. Create a 
+# new Jupter Notebook and name it **string_formatting_and_indexing**
+# so you can follow along with the code.
+# 
+# ## String Formatting
+# 
+# It is often the case that we want to substitute some variable
+# or Python expression into a string. This is called string formatting.
+# There is multiple ways to do this
+# in Python. There is the "old way" of doing it and the newer way
+# in Python 3.6. The easiest method is to use *f-strings* which will use a lot
+# in this book. But here we will first show the old way of doing it to
+# because you might see it while reading Python code.
+# 
+# ### String Formatting with the (% Operator)
+# 
+# This is the old way of doing it and we will not use
+# it much. But it's still good to know about.
+# The `%s` is used to substitute the value
+# of the variable `name` into the string.
+# So if you ever see this in Python code
+# that is what is happening (string formatting).
+# 
+# 
 
-## String Formatting
-
-It is often the case that we want to substitute some variable
-or Python expression into a string. This is called string formatting.
-There is multiple ways to do this
-in Python. There is the "old way" of doing it and the newer way
-in Python 3.6. The easiest method is to use *f-strings* which will use a lot
-in this book. But here we will first show the old way of doing it to
-because you might see it while reading Python code.
-
-### String Formatting with the (% Operator)
-
-This is the old way of doing it and we will not use
-it much. But it's still good to know about.
-The `%s` is used to substitute the value
-of the variable `name` into the string.
-So if you ever see this in Python code
-that is what is happening (string formatting).
-
+# In[1]:
 
 
 name = 'chris'
 print('my name is %s' %name)
 
-### String Formatting with .format
-This is a newer way of formatting strings.
-Again, we will not use this method because
-we will opt to use **f-strings**. It's
-still good to know about. You can
-see the syntax is nicer because 
-it does not require the use of `%s`.
+
+# ### String Formatting with .format
+# This is a newer way of formatting strings.
+# Again, we will not use this method because
+# we will opt to use **f-strings**. It's
+# still good to know about. You can
+# see the syntax is nicer because 
+# it does not require the use of `%s`.
+# 
+
+# In[2]:
 
 
 print('my name is {}'.format(name))
 
-### f-strings
 
-This is the preferred method to
-format strings and substitute 
-variables and other Python expressions 
-into strings. Learn and know this method
-because it is very useful!.
-They are called **string literals**
-or **f-strings**. Here is an example.
+# ### f-strings
+# 
+# This is the preferred method to
+# format strings and substitute 
+# variables and other Python expressions 
+# into strings. Learn and know this method
+# because it is very useful!.
+# They are called **string literals**
+# or **f-strings**. Here is an example.
+
+# In[3]:
+
 
 print(f'my name is {name}')
 
-And that's it! You simply put an `f`
-at the beginning of the string in front of the quote.
-You then use the braces `{}` and put the Python expression
-between the braces. Here are some more examples.
+
+# And that's it! You simply put an `f`
+# at the beginning of the string in front of the quote.
+# You then use the braces `{}` and put the Python expression
+# between the braces. Here are some more examples.
+
+# In[4]:
+
 
 print(f'one plus two is {1 + 2}')
+
+
+# In[5]:
+
 
 name = "Chris"
 age = 35
@@ -64,17 +86,25 @@ province = 'Nova Scotia'
 country = 'Canada'
 print(f"Hey there! My name is {name} and I am from {province}, {country}. I am {age} years old.")
 
-Notice in the above example we were able to substitute an integer object, `age` directly 
-into the string with the use of **f-strings**. If we had to do the above with
-string concatenation it would look more complex. We would also have to convert the 
-the `age` to a string with the `str()` function. But when using **f-strings** Python
-will take care of these smaller details.
+
+# Notice in the above example we were able to substitute an integer object, `age` directly 
+# into the string with the use of **f-strings**. If we had to do the above with
+# string concatenation it would look more complex. We would also have to convert the 
+# the `age` to a string with the `str()` function. But when using **f-strings** Python
+# will take care of these smaller details.
+
+# In[6]:
+
 
 print("Hey there! My name is "  + name + " and I am from " +  province + ", " + country + ". I am " + str(age) + " years old.")
 
-It is much easier to code it using the `f-string` method! 
 
-The f-strings work in multiline strings too.
+# It is much easier to code it using the `f-string` method! 
+# 
+# The f-strings work in multiline strings too.
+
+# In[7]:
+
 
 my_multi_line_string = f"""
 Name: {name}
@@ -87,21 +117,25 @@ Country: {country}
 """
 print(my_multi_line_string)
 
-## Indexing and Slicing Strings
 
-Python strings are sequences made up of one or more individual characters.
-You can access a specific character in a string at any position
-by using its index. Index numbers allow us to access specific characters within a string.
-You use the square brackets `[]` and the index number to get a character at the
-position/index in the string.
-Let's look at some examples. 
-```{note}
-We will start using Python comments in our code.
-Comments are lines in your python code that are not
-executed. They are any line that begins with a `#` symbol.
-Comments can be used to explain Python code, make it more readable,
-and can prevent execution when testing.
-```
+# ## Indexing and Slicing Strings
+# 
+# Python strings are sequences made up of one or more individual characters.
+# You can access a specific character in a string at any position
+# by using its index. Index numbers allow us to access specific characters within a string.
+# You use the square brackets `[]` and the index number to get a character at the
+# position/index in the string.
+# Let's look at some examples. 
+# ```{note}
+# We will start using Python comments in our code.
+# Comments are lines in your python code that are not
+# executed. They are any line that begins with a `#` symbol.
+# Comments can be used to explain Python code, make it more readable,
+# and can prevent execution when testing.
+# ```
+
+# In[8]:
+
 
 # These lines are an example of a Python comment. It is
 # text in your Python code that is not executed. 
@@ -127,22 +161,30 @@ print(hello_str[9])
 print(hello_str[10])
 print(hello_str[11])
 
-If we try to index a string at a position that
-is outside the length of the string we will get an index error.
-The string in the above example, `hello_str` has a length of 12
-because it has 12 characters. `hello_str[0]` is the first character,
-`hello_str[1]` is the second character, and `hello_str[11]` is the last character.
-Here we try and access `hello_str[12]` which will raise an error.
-It's an `IndexError` because we are trying to access index 12
-which is outside the range of the string.
+
+# If we try to index a string at a position that
+# is outside the length of the string we will get an index error.
+# The string in the above example, `hello_str` has a length of 12
+# because it has 12 characters. `hello_str[0]` is the first character,
+# `hello_str[1]` is the second character, and `hello_str[11]` is the last character.
+# Here we try and access `hello_str[12]` which will raise an error.
+# It's an `IndexError` because we are trying to access index 12
+# which is outside the range of the string.
+
+# In[9]:
+
 
 hello_str[12]
 
-You can even use negative numbers for indexes
-starting with `-1` which will be the index
-for the last character of a string. 
-`-2` will be the index for the second last
-character and so on.
+
+# You can even use negative numbers for indexes
+# starting with `-1` which will be the index
+# for the last character of a string. 
+# `-2` will be the index for the second last
+# character and so on.
+
+# In[10]:
+
 
 print(hello_str[-1])
 print(hello_str[-2])
@@ -157,27 +199,55 @@ print(hello_str[-10])
 print(hello_str[-11])
 print(hello_str[-12]) 
 
+
+# In[11]:
+
+
 print(f"""The first character of '{hello_str}' is {hello_str[0]},
 the 5th character is {hello_str[4]} and the last character is 
 {hello_str[-1]}.""")
 
-You can also access a slice of a string using the notation
-`[a:b]` which will get every character from index `a`
-up to index `b` but **not** including `b`.
+
+# You can also access a slice of a string using the notation
+# `[a:b]` which will get every character from index `a`
+# up to index `b` but **not** including `b`.
+
+# In[12]:
+
 
 print(hello_str[0:5]) # gets the characters at index 0,1,2,3,4
 
+
+# In[13]:
+
+
 print(hello_str[6:11]) # gets the characters at index 6,7,8,9,10,
+
+
+# In[14]:
+
 
 print(hello_str[6:]) # will index everything from index 6 and after
 
+
+# In[15]:
+
+
 print(hello_str[6:20]) # when slicing, you can access outside the range and it won't throw an error
+
+
+# In[16]:
+
 
 print(hello_str[-5:-2]) # you can even use negative indexes when slicing
 
-We can also set a **stride** when slicing strings.
-By default this stride is equal to one as we have not been specifying it 
-in the above examples.
+
+# We can also set a **stride** when slicing strings.
+# By default this stride is equal to one as we have not been specifying it 
+# in the above examples.
+
+# In[17]:
+
 
 # This third number 2 is called the stride.
 # Here we are using a stride of 2.
@@ -190,8 +260,13 @@ print(hello_str[0:12:1]) # stride of 1 does no skipping
 print(hello_str[0:12]) # stride of 1 by default
 print(hello_str[0:12:3]) # stride of 3 example
 
-You can even set a negative value for the stride.
+
+# You can even set a negative value for the stride.
+
+# In[18]:
+
 
 print(hello_str[-1:-12:-2])
 print(hello_str[::-2]) # same thing as directly above.
 print(hello_str[::-1]) # a stride of -1 is an easy way to reverse a string.
+
