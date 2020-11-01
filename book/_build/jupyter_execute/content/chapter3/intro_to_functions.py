@@ -41,14 +41,14 @@ x = len([0,1,2,3,4])
 print(x)
 
 
-# ## Built-in Python Functions
+# # Built-in Python Functions
 # 
 # Python has a number of functions built into it that are always available. You can get a list
 # [here](https://docs.python.org/3/library/functions.html) for example. Using this link, you can click
 # on the different functions to see what they do and how they are defined in the documentation.
 # We will cover some of them here.
 # 
-# ### `abs()`
+# ## `abs()`
 # Used to get the absolute value of a number.
 
 # In[3]:
@@ -63,7 +63,7 @@ abs(5)
 abs(-5)
 
 
-# ### `max()` and `min()`
+# ## `max()` and `min()`
 # The `max()` function will return the largest number in an iterable
 # and the `min()` function will return the smallest. 
 # There are different ways to use these. For example:
@@ -104,7 +104,7 @@ max([1,10,12,10,50,-10,100,-100,1000]) # an example of passing a single list arg
 min([1,10,12,10,50,-10,100,-100,1000]) # an example of passing a single list argument
 
 
-# ### `round()`
+# ## `round()`
 # This function can be used to round to the nearest integer
 # or round to a specific number of decimal points.
 
@@ -150,7 +150,7 @@ round(10.12346,4)
 round(10.12344,4)
 
 
-# ### `sum()`
+# ## `sum()`
 # For example, to get the sum of the numbers in an iterable (such as a list).
 
 # In[18]:
@@ -159,7 +159,7 @@ round(10.12344,4)
 sum([1,2,3])
 
 
-# ### `enumerate()`
+# ## `enumerate()`
 # This function is very useful when looping over lists and so on.
 # Consider the following loop:
 
@@ -193,7 +193,7 @@ for i, x in enumerate([0,2,4,6,8,10]):
     print(f'The position of the item is {i} and the value of the item is {x}.')
 
 
-# ### `zip()`
+# ## `zip()`
 # This is a neat little function. Here are a couple examples of using it.
 # Don't worry too much about the details for now.
 
@@ -217,13 +217,13 @@ for a,b,c in zip(x,y,z):
     print(a,b,c)
 
 
-# ## Defining your own functions
+# # Defining your own functions
 # It is very common to define your own functions in Python.
 # When you are creating programs and applications
 # it's normal to have lots of functions defined across
 # multiple files. 
 # 
-# ### DRY (Don't Repeat Yourself)
+# ## DRY (Don't Repeat Yourself)
 # 
 # One reason for using functions is so you **don't repeat yourself**. 
 # This is such a common expression across coding and software engineering
@@ -236,6 +236,8 @@ for a,b,c in zip(x,y,z):
 # Let's look at an example with the following code. I know this example is simple
 # but try and imagine having more complicated code repeated through out larger projects.
 # The same ideas/tools we use here apply to bigger projects as well.
+# This is also a great example of our user defined function calling 
+# another user defined function (a perfectly normal and common thing to do).
 
 # In[24]:
 
@@ -300,7 +302,7 @@ print_person_info(name5, age5)
 
 
 # Also, suppose we wanted to change the string that is printed. Instead of changing it in 5 places,
-# we can just change it one single place, the function definition. Let's add some more words to
+# we can just change it in one single place, the function definition. Let's add some more words to
 # the string/sentence that is printed.
 
 # In[27]:
@@ -368,9 +370,9 @@ for person in people:
 
 # We went from code that was about 15 lines long and had lots of repetition to code that is
 # 6 lines long and has no repetition. All by using a user defined function and a `for` loop.
-# The code is more readable and easier to maintain.
+# The code is more readable and easier to maintain. 
 
-# ### Lets's start simple
+# ## Lets's start simple
 # 
 # Okay so lets dive more into what functions in Python are 
 # and how to define them. Lets start simple with functions
@@ -413,7 +415,7 @@ hello_world2()
 # Above we saw how to use/call the functions. You use the function name and you also require 
 # the brackets `()`.
 # 
-# You can not use a function before having a it
+# You can not use a function before having it
 # defined and available to the Python program/code.
 # For example,
 
@@ -427,7 +429,7 @@ hello_world3()
 # has no idea what `hello_world3` is and returns a `NameError`.
 # You need to define the function before you use it.
 
-# In[69]:
+# In[35]:
 
 
 def hello_world3():
@@ -435,7 +437,7 @@ def hello_world3():
 hello_world3()
 
 
-# ### Test your Functions!
+# ## Test your Functions!
 # You can have a bug in your function code and you
 # may not even know it until you go and use/call the function. 
 # 
@@ -449,13 +451,13 @@ hello_world3()
 # When doing division you can never divide by 0.
 # If you attempt this in Python you will get an error.
 
-# In[70]:
+# In[36]:
 
 
 1 / 0
 
 
-# In[71]:
+# In[37]:
 
 
 def do_something():
@@ -471,7 +473,7 @@ def do_something():
 # because the code above is simply defining the function. The code within the function is not executed.
 # It will not be executed until you call the function (which means to use it).
 
-# In[72]:
+# In[38]:
 
 
 do_something()
@@ -488,7 +490,7 @@ do_something()
 # 
 # Always remember to test your functions.
 
-# ### Local variables
+# ## Local variables
 # 
 # Variables that are defined within a function definition
 # are local to that function and can only be accessed within
@@ -496,7 +498,7 @@ do_something()
 # They can not be accessed outside function definition in
 # other code.
 
-# In[73]:
+# In[39]:
 
 
 def add_w_and_q():
@@ -505,19 +507,19 @@ def add_w_and_q():
     print(f'{q} + {w} is equal to {q + w}')
 
 
-# In[74]:
+# In[40]:
 
 
 add_w_and_q()
 
 
-# In[75]:
+# In[41]:
 
 
 print(w)
 
 
-# In[76]:
+# In[42]:
 
 
 print(q)
@@ -533,7 +535,7 @@ print(q)
 # it can actually be accessed within the local
 # function definition.
 
-# In[77]:
+# In[43]:
 
 
 def add_w_and_q():
@@ -542,7 +544,7 @@ def add_w_and_q():
     print(f'{q} + {w} is equal to {q + w}. The value of x is {x}.')
 
 
-# In[78]:
+# In[44]:
 
 
 x = 5
@@ -564,26 +566,26 @@ add_w_and_q()
 # the value of `x` defined outside the function. In general,
 # try to avoid this coding pattern.
 
-# In[79]:
+# In[45]:
 
 
-def add_w_and_q():
+def print_local_x_value():
     x = -99
     print(f'The value of x defined in the function is {x}.')
 
 
-# In[80]:
+# In[46]:
 
 
 x = 5
-add_w_and_q()
+print_local_x_value()
 print(f'The value of x outside the function is {x}')
 x = 33
-add_w_and_q()
+print_local_x_value()
 print(f'The value of x outside the function is {x}')
 
 
-# ### `return` statement
+# ## `return` statement
 # 
 # So far we know that functions execute a block of code
 # and that code can do anything we want it to.
@@ -591,7 +593,7 @@ print(f'The value of x outside the function is {x}')
 # A lot of the time we want the function to return
 # a Python object. To do this we use the `return` statement.
 
-# In[81]:
+# In[47]:
 
 
 def add_x_and_y():
@@ -601,19 +603,19 @@ def add_x_and_y():
     return result
 
 
-# In[82]:
+# In[48]:
 
 
 add_x_and_y()
 
 
-# In[83]:
+# In[49]:
 
 
 z = add_x_and_y()
 
 
-# In[84]:
+# In[50]:
 
 
 print(z)
@@ -633,7 +635,7 @@ print(z)
 # any remaining code in the function definition 
 # will be skipped over. For example:
 
-# In[85]:
+# In[51]:
 
 
 def example_return():
@@ -647,17 +649,17 @@ def example_return():
         return y # will never be executed 
 
 
-# In[86]:
+# In[52]:
 
 
 example_return()
 
 
-# ### Positional Arguments
+# ## Positional Arguments
 
 # Consider the following function `subtract_numbers`.
 
-# In[87]:
+# In[53]:
 
 
 def subtract_numbers():
@@ -666,7 +668,7 @@ def subtract_numbers():
     return x - y
 
 
-# In[88]:
+# In[54]:
 
 
 subtract_numbers()
@@ -687,7 +689,7 @@ subtract_numbers()
 # two arguments `x` and `y` which must be passed to the
 # function when calling it.
 
-# In[89]:
+# In[55]:
 
 
 def subtract_numbers(x, y):
@@ -697,7 +699,7 @@ def subtract_numbers(x, y):
 # This will raise an error because we did not pass
 # any values for the arguments.
 
-# In[90]:
+# In[56]:
 
 
 subtract_numbers()
@@ -711,25 +713,25 @@ subtract_numbers()
 # the value for `x` and the second argument is the
 # value for `y`.
 
-# In[91]:
+# In[57]:
 
 
 subtract_numbers(10, 7)
 
 
-# In[92]:
+# In[58]:
 
 
 subtract_numbers(7, 10)
 
 
-# In[93]:
+# In[59]:
 
 
 subtract_numbers(10, 20)
 
 
-# In[94]:
+# In[60]:
 
 
 subtract_numbers(20, 10)
@@ -737,7 +739,7 @@ subtract_numbers(20, 10)
 
 # Here is a function that returns `True` if the number is even and `False` otherwise.
 
-# In[95]:
+# In[61]:
 
 
 def is_even(number):
@@ -748,19 +750,19 @@ def is_even(number):
     
 
 
-# In[96]:
+# In[62]:
 
 
 is_even(9)
 
 
-# In[97]:
+# In[63]:
 
 
 is_even(8)
 
 
-# ### Keyword Arguments
+# ## Keyword Arguments
 # 
 # We just learned about positional arguments where the position/order
 # of the arguments is important. You can also use **keyword** arguments
@@ -768,7 +770,7 @@ is_even(8)
 # Lets change the definition of `subtract_numbers` to take three arguments
 # and subtract `x - y - z` and return the result.
 
-# In[98]:
+# In[64]:
 
 
 def subtract_numbers(x, y, z):
@@ -779,7 +781,7 @@ def subtract_numbers(x, y, z):
 
 # This is an example of passing positional arguments.
 
-# In[99]:
+# In[65]:
 
 
 subtract_numbers(10, 5, 3)
@@ -791,7 +793,7 @@ subtract_numbers(10, 5, 3)
 # the argument name on the left of the `=`
 # and the value on the right.
 
-# In[100]:
+# In[66]:
 
 
 subtract_numbers(x=10, y=5, z=3)
@@ -800,7 +802,7 @@ subtract_numbers(x=10, y=5, z=3)
 # When using all keyword arguments you can pass the arguments
 # in any order. Notice that we get the same result as above.
 
-# In[101]:
+# In[67]:
 
 
 subtract_numbers(z=3, x=10, y=5)
@@ -810,13 +812,13 @@ subtract_numbers(z=3, x=10, y=5)
 # but **positional arguments must be specified before keyword arguments**.
 # For example:
 
-# In[102]:
+# In[68]:
 
 
 subtract_numbers(10, 5, z=3)
 
 
-# In[103]:
+# In[69]:
 
 
 subtract_numbers(10, y=5, z=3)
@@ -824,13 +826,13 @@ subtract_numbers(10, y=5, z=3)
 
 # You can not put keyword arguments before positional arguments.
 
-# In[104]:
+# In[70]:
 
 
 subtract_numbers(x=10, y=5, 3)
 
 
-# ### Default arguments
+# ## Default arguments
 # It is often convenient to define default values for arguments.
 # These are called default arguments. Consider the following
 # function which computed the cost of something after taxes
@@ -838,7 +840,7 @@ subtract_numbers(x=10, y=5, 3)
 # the `tax_rate` is a float between 0 and 1. So a value of
 # `0.15` for `tax_rate` means 15% tax.
 
-# In[105]:
+# In[71]:
 
 
 def cost_after_tax(cost_before_tax, tax_rate):
@@ -846,44 +848,44 @@ def cost_after_tax(cost_before_tax, tax_rate):
     return total_cost
 
 
-# In[106]:
+# In[72]:
 
 
 cost_after_tax(100, 0.15)
 
 
-# In[107]:
+# In[73]:
 
 
 cost_after_tax(cost_before_tax=500, tax_rate=0.50)
 
 
-# In[108]:
+# In[74]:
 
 
 cost_after_tax(tax_rate=.25, cost_before_tax=1000)
 
 
-# In[109]:
+# In[75]:
 
 
 cost_after_tax(100, tax_rate=0.35)
 
 
-# Okay so seems to be working. The above examples show different examples
+# The above examples show different examples
 # of calling the function with just positional arguments, just keyword arguments,
 # and a mixture of both.
 # 
 # But what if we wanted to have a default tax value? For example,
 # depending on where you live the tax rate is probably very consistent.
 # For example, the tax rate might be 15%. Then you don't want to have to
-# provide that argument every time you use the function. But you you will want
+# provide that argument every time you use the function. But you will want
 # the ability to change it when it suits your needs. This is the use case of
 # **default** arguments. When you define your function you can provide
 # default arguments by providing the argument name on the left of the `=`
 # sign and the default value on the right. Like this:
 
-# In[110]:
+# In[76]:
 
 
 def cost_after_tax(cost_before_tax, tax_rate=0.15):
@@ -891,13 +893,13 @@ def cost_after_tax(cost_before_tax, tax_rate=0.15):
     return total_cost
 
 
-# In[111]:
+# In[77]:
 
 
 cost_after_tax(100)
 
 
-# In[112]:
+# In[78]:
 
 
 cost_after_tax(cost_before_tax=100)
@@ -905,7 +907,7 @@ cost_after_tax(cost_before_tax=100)
 
 # Since there is not a default value for `cost_before_tax` it must be provided.
 
-# In[113]:
+# In[79]:
 
 
 cost_after_tax()
@@ -914,13 +916,274 @@ cost_after_tax()
 # So if we don't provide the value for `tax_rate` it will default to 0.15.
 # If we provide it, then that provided value will be used.
 
-# In[114]:
+# In[80]:
 
 
 cost_after_tax(100, 0.2)
 
 
-# ## Examples
+# ## Docstrings
+# 
+# Docstrings are strings which document your functions. 
+# They are like comments in your code that tell you
+# about a function, its arguments, and its return values.
+# It's really important to document code because code is
+# read more than it is written.
+# 
+# Remember we can use `#` to create in line comments
+# in our Python code. But docstrings for a function are different.
+# You can create them with `""""""`. 
+# These docstrings are built-in strings that
+# help you and other users of your code document thee code. 
+# Python also has a built in function `help()` that 
+# can print the docstring of a function. Try
+# executing `help(str)` or `help(float)` and so on.
+# You will see the functions documentation printed.
+
+# In[ ]:
+
+
+
+
+
+# In[81]:
+
+
+def my_func(a,b,c):
+    """One line intro.
+    
+    Longer description if needed.
+    
+    :param int a: descripton for the first argument/parameter
+    :param int b: descripton for the second argument/parameter
+    :param int c: descripton for the third argument/parameter
+    :return: description for what the function returns
+    """
+    
+    return a + b + c
+
+
+# In[82]:
+
+
+help(my_func)
+
+
+# There is a lot more to say about docstrings but will save this until
+# later when we start to use a proper editor to write Python code.
+# For now, feel free to document your functions with docstrings but
+# stick to the format above. The syntax, use of `:` and spacing and new lines
+# is quite important. We will use docstrings in the below examples too.
+
+# # Examples
+# In this section we will show some examples which use functions. Spend time reading the code, typing the code, and using the code. 
+# This is a good way to learn.
+# By going through these examples, hopefully you will get more comfortable
+# with the idea of working with functions and defining your own.
+# 
+# ## Example 1
+# This is an example of a function that does not return anything.
+
+# In[83]:
+
+
+def greeting(name, message):
+    """Print a simple greeting message.
+    
+    :param str name: The name of the person to greet.
+    :param str message: A simple message to print to the user.
+    """
+    print(f'Hello {name}!')
+    print(message)
+
+
+# In[84]:
+
+
+help(greeting)
+
+
+# In[85]:
+
+
+greeting('Chris','Good morning! I hope you have a great day!')
+
+
+# In[86]:
+
+
+greeting(message='Do not forget your lunch today for school.', name='Isaac')
+
+
+# In[87]:
+
+
+greeting('Hazel', message='Good Bye!')
+
+
+# ## Example 2
+# This function computes the area of a circle given it's radius.
+# 
+
+# In[88]:
+
+
+def area_circle(radius):
+    """Compute the area of a circle."""
+    
+    pi = 3.1459
+    area = pi * radius * radius
+    return area
+
+
+# In[89]:
+
+
+area_circle(2.5)
+
+
+# In[90]:
+
+
+area_circle(radius=1)
+
+
+# ## Example 3
+# A function to return a random list of numbers
+# of any length where all the numbers are between
+# a minimum and maximum value.
+
+# In[91]:
+
+
+import random
+
+def generate_random_list(list_length, minimum, maximum):
+    """Generate a list of random integers.
+    
+    The length of the list can be specified as well
+    as the range (minium, maximum) of the numbers that will be used.
+    
+    :param int list_length: The length of the list to be returned.
+    :param int minimum: The smallest possible value for any of the numbers.
+    :param int maximum: The largest possible value for any of the numbers.
+    :return: The list of random numbers.
+    :rtype: list
+    """
+    
+    list_of_numbers = []
+    for i in range(list_length):
+        i = random.randint(minimum, maximum)
+        list_of_numbers.append(i)
+    return list_of_numbers
+
+
+# In[92]:
+
+
+generate_random_list(7, 0, 10)
+
+
+# In[93]:
+
+
+generate_random_list(list_length=10, minimum=100, maximum=109)
+
+
+# In[94]:
+
+
+generate_random_list(2, 100000, maximum=200000)
+
+
+# ## Example 4
+# 
+# In this example we will create two functions. One for determining if a number is 
+# prime and another for getting the list of prime numbers up to a specific number.
+# It is certainly possibly to code all the logic in a single function. However, it's a better
+# design for functions to be responsible for a single task. This way those functions can
+# used again in other programs for particular tasks and it generally makes the code easier
+# to read and easier to test and debug. So always keep that in mind when coding. Try and think
+# of your functions as individual units that are responsible for doing one thing specific thing.
+# It's not a hard rule but a good general rule of thumb.
+
+# In[95]:
+
+
+def is_prime(number):
+    """Determines if a number is prime or not"""
+    if number <=3:
+        return True
+            
+    for i in range(2, number):
+        if number % i == 0:
+            return False
+    
+    return True
+
+def find_primes(up_to=100):
+    """Returns a list of all the prime numbers up to some point."""
+    primes = []
+    for i in range(1, up_to + 1):
+        if is_prime(i):
+            primes.append(i)
+    return primes
+            
+
+
+# In[96]:
+
+
+is_prime(1)
+
+
+# In[97]:
+
+
+is_prime(2)
+
+
+# In[98]:
+
+
+is_prime(3)
+
+
+# In[99]:
+
+
+is_prime(4)
+
+
+# In[100]:
+
+
+is_prime(53)
+
+
+# In[101]:
+
+
+is_prime(100)
+
+
+# In[102]:
+
+
+find_primes()
+
+
+# In[103]:
+
+
+find_primes(40)
+
+
+# In[ ]:
+
+
+
+
 
 # In[ ]:
 
