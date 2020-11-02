@@ -3,6 +3,8 @@
 
 # # Intro to Functions
 # 
+# Create a new Jupyter Notebook called **intro_to_functions** and follow along!
+# 
 # So what is a function anyway? 
 # 
 # ```{admonition} Functions
@@ -236,8 +238,6 @@ for a,b,c in zip(x,y,z):
 # Let's look at an example with the following code. I know this example is simple
 # but try and imagine having more complicated code repeated through out larger projects.
 # The same ideas/tools we use here apply to bigger projects as well.
-# This is also a great example of our user defined function calling 
-# another user defined function (a perfectly normal and common thing to do).
 
 # In[24]:
 
@@ -1106,6 +1106,8 @@ generate_random_list(2, 100000, maximum=200000)
 # to read and easier to test and debug. So always keep that in mind when coding. Try and think
 # of your functions as individual units that are responsible for doing one thing specific thing.
 # It's not a hard rule but a good general rule of thumb.
+# This is also a great example of our user defined function calling 
+# another user defined function (a perfectly normal and common thing to do).
 
 # In[95]:
 
