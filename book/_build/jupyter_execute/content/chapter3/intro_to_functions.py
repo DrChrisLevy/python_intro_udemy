@@ -372,7 +372,7 @@ for person in people:
 # 6 lines long and has no repetition. All by using a user defined function and a `for` loop.
 # The code is more readable and easier to maintain. 
 
-# ## Lets's start simple
+# ## Let's start simple
 # 
 # Okay so lets dive more into what functions in Python are 
 # and how to define them. Lets start simple with functions
@@ -1179,16 +1179,4 @@ find_primes()
 
 
 find_primes(40)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
 
