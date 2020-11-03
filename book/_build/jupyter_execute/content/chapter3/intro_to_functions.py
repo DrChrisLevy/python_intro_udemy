@@ -835,7 +835,7 @@ subtract_numbers(x=10, y=5, 3)
 # ## Default arguments
 # It is often convenient to define default values for arguments.
 # These are called default arguments. Consider the following
-# function which computed the cost of something after taxes
+# function which computes the cost of something after taxes
 # given the cost before tax and the tax rate. We will assume
 # the `tax_rate` is a float between 0 and 1. So a value of
 # `0.15` for `tax_rate` means 15% tax.
