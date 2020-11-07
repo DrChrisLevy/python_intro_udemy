@@ -1073,7 +1073,7 @@ def generate_random_list(list_length, minimum, maximum):
     
     list_of_numbers = []
     for i in range(list_length):
-        i = random.randint(minimum, maximum)
+        random_int = random.randint(minimum, maximum)
         list_of_numbers.append(i)
     return list_of_numbers
 
@@ -1098,8 +1098,13 @@ generate_random_list(2, 100000, maximum=200000)
 
 # ## Example 4
 # 
-# In this example we will create two functions. One for determining if a number is 
-# prime and another for getting the list of prime numbers up to a specific number.
+# In this example we will create a few functions. One for determining if a number is 
+# prime, another for getting the list of prime numbers up to a specific number, and the final
+# one for finding the first so many primes. Remember a prime number is any number larger than 1
+# that is only divisible by 1 and itself. For example, here are some prime numbers
+# 
+# $$2,3,5,7,11,13,17,19,23,29,...$$
+# 
 # It is certainly possibly to code all the logic in a single function. However, it's a better
 # design for functions to be responsible for a single task. This way those functions can
 # used again in other programs for particular tasks and it generally makes the code easier
@@ -1113,7 +1118,10 @@ generate_random_list(2, 100000, maximum=200000)
 
 
 def is_prime(number):
-    """Determines if a number is prime or not"""
+    """Determines if a number is prime or not
+    
+    Assumes number >= 2.
+    """
     if number <=3:
         return True
             
@@ -1123,60 +1131,87 @@ def is_prime(number):
     
     return True
 
-def find_primes(up_to=100):
+def find_primes_up_to(up_to=100):
     """Returns a list of all the prime numbers up to some point."""
     primes = []
-    for i in range(1, up_to + 1):
+    for i in range(2, up_to + 1):
         if is_prime(i):
             primes.append(i)
+    return primes            
+
+def find_first_n_primes(n=100):
+    primes = []
+    i = 2
+    while len(primes) < n:
+        if is_prime(i):
+            primes.append(i)
+        i += 1
     return primes
-            
+        
 
 
 # In[96]:
 
 
-is_prime(1)
+is_prime(2)
 
 
 # In[97]:
 
 
-is_prime(2)
+is_prime(3)
 
 
 # In[98]:
 
 
-is_prime(3)
+is_prime(4)
 
 
 # In[99]:
 
 
-is_prime(4)
+is_prime(53)
 
 
 # In[100]:
 
 
-is_prime(53)
+is_prime(100)
 
 
 # In[101]:
 
 
-is_prime(100)
+find_primes_up_to()
 
 
 # In[102]:
 
 
-find_primes()
+find_primes_up_to(40)
 
 
 # In[103]:
 
 
-find_primes(40)
+find_primes_up_to(10000)[-5:]
+
+
+# In[104]:
+
+
+find_first_n_primes(10)
+
+
+# In[105]:
+
+
+find_first_n_primes(20)
+
+
+# In[106]:
+
+
+find_first_n_primes(1000)[-1] # the 1000th prime number
 
