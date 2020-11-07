@@ -121,19 +121,19 @@ fruits[0:10]
 fruits[10] # error because outside the index range
 
 
-# In[16]:
+# In[ ]:
 
 
 print(another_list)
 
 
-# In[17]:
+# In[16]:
 
 
 another_list[::2] # from start to end and taking every 2nd element
 
 
-# In[18]:
+# In[17]:
 
 
 another_list[::-1] # reversed list
@@ -146,7 +146,7 @@ another_list[::-1] # reversed list
 # for which we can use `len()` are *strings* and 
 # *lists*.
 
-# In[19]:
+# In[18]:
 
 
 # getting the length of a list
@@ -154,14 +154,14 @@ print(numbers)
 print(len(numbers)) # there are 4 items in the list
 
 
-# In[20]:
+# In[19]:
 
 
 print(another_list)
 print(len(another_list)) # there are 8 items in the list
 
 
-# In[21]:
+# In[20]:
 
 
 # getting the length of a string
@@ -186,7 +186,7 @@ print(len(x)) # there are 13 characters in the string
 # it for now. Just know there exists a *method* called `append` and here you will see
 # how to use it.
 
-# In[22]:
+# In[21]:
 
 
 my_list = ['sunny day',-5]
@@ -194,7 +194,7 @@ print(len(my_list))
 print(my_list)
 
 
-# In[23]:
+# In[22]:
 
 
 my_list.append(2.71)
@@ -202,7 +202,7 @@ print(len(my_list))
 print(my_list)
 
 
-# In[24]:
+# In[23]:
 
 
 my_list.append('bye')
@@ -216,7 +216,7 @@ my_list
 # Just like we concatenated strings with the `+` operator,
 # we can also do a similar thing with lists.
 
-# In[25]:
+# In[24]:
 
 
 a = [1,2,3]
@@ -227,7 +227,7 @@ print(b)
 print(c)
 
 
-# In[26]:
+# In[25]:
 
 
 c = a + a + a + a
@@ -238,7 +238,7 @@ print(c)
 # The `extend()` method adds all the elements of a list to the end of the list.
 # It modifies the list in place. Let's look at an example.
 
-# In[27]:
+# In[26]:
 
 
 # we already defined these two lists
@@ -246,7 +246,7 @@ print(f'a is {a}')
 print(f'b is {b}')
 
 
-# In[28]:
+# In[27]:
 
 
 a.extend(b)
@@ -268,7 +268,7 @@ print(a) # the items from b were added to a
 
 
 
-# In[29]:
+# In[28]:
 
 
 list1 = [1,2,3]
@@ -282,7 +282,7 @@ print(list2)
 print(list1) # list1 and list2 both are references to the same object and are both mutable
 
 
-# In[30]:
+# In[29]:
 
 
 # here is another example using .extend
@@ -297,7 +297,7 @@ print(list2)
 print(list1) # list1 and list2 both are references to the same object and are both mutable
 
 
-# In[31]:
+# In[30]:
 
 
 # here is another example using  + 
@@ -319,61 +319,61 @@ print(list1) # list1 and list2 are references to different objects
 # check if something is in a list or even in a string.
 # It returns a boolean value `True` or `False`.
 
-# In[32]:
+# In[31]:
 
 
 print(my_list)
 
 
-# In[33]:
+# In[32]:
 
 
 -2 in my_list # the object -2 is not one of the items in my_list
 
 
-# In[34]:
+# In[33]:
 
 
 -2 not in my_list # the object -2 is not one of the items in my_list
 
 
-# In[35]:
+# In[34]:
 
 
 4 in my_list # the object 4 is not one of the items in my_list
 
 
-# In[36]:
+# In[35]:
 
 
 4 not in my_list # the object 4 is not one of the items in my_list
 
 
-# In[37]:
+# In[36]:
 
 
 'sunny day' in my_list # the object 'sunny day' is one of the items in my_list
 
 
-# In[38]:
+# In[37]:
 
 
 'sunny day' not in my_list # the object 'sunny day' is one of the items in my_list
 
 
-# In[39]:
+# In[38]:
 
 
 2.71 in my_list # the object 2.71 is one of the items in my_list
 
 
-# In[40]:
+# In[39]:
 
 
 2.71 not in my_list # the object 2.71 is one of the items in my_list
 
 
-# In[41]:
+# In[40]:
 
 
 name = 'chris'
@@ -386,32 +386,32 @@ else:
 
 # You can also use the `in` and `not in` operators with strings.
 
-# In[42]:
+# In[41]:
 
 
 s = 'chris is nice'
 print(s)
 
 
-# In[43]:
+# In[42]:
 
 
 'chris' in s
 
 
-# In[44]:
+# In[43]:
 
 
 'Chris' in s # because of the capital C
 
 
-# In[45]:
+# In[44]:
 
 
 'is  ' not in s # because two spaces 
 
 
-# In[46]:
+# In[45]:
 
 
 'is is ni' in s
@@ -419,101 +419,107 @@ print(s)
 
 # (change-value-list)=
 # ## Change Item Value in List
-# We just saw how lists objects are immutable.
+# We just saw how lists objects are **mutable**.
 # This means you can change them or edit them
 # after they are created. You can change the item
 # in a list using indexing and assignment with the `=` 
 # operator.
 
-# In[47]:
+# In[46]:
 
 
 print(my_list)
 
 
-# In[48]:
+# In[47]:
 
 
 print(my_list[1])
 
 
-# In[49]:
+# In[48]:
 
 
 my_list[1] = 5 # we are changing the item at index 1 to 5.
 
 
-# In[50]:
+# In[49]:
 
 
 print(my_list)
 
 
-# In[51]:
+# In[50]:
 
 
 my_list[-1] = 'chris'
 
 
-# In[52]:
+# In[51]:
 
 
 my_list
 
 
-# In[53]:
+# In[52]:
 
 
 my_list.append(5*6)
 my_list
 
 
-# In[54]:
+# In[53]:
 
 
 new_list = [1,2,3]
 
 
-# In[55]:
+# In[54]:
 
 
 my_list.append(new_list) # you can append any object to the list my_list, even another list new_list!
 
 
-# In[56]:
+# In[55]:
 
 
 my_list
 
 
-# In[57]:
+# In[56]:
 
 
 my_list[-1]
 
 
-# In[58]:
+# In[57]:
 
 
 my_list[-1].append(4)
 
 
-# In[59]:
+# In[58]:
 
 
 my_list
 
 
-# In[60]:
+# In[59]:
 
 
 new_list # oh wow it changed! We will talk more about this later.
 
 
-# In[61]:
+# In[60]:
 
 
 [1, 2, 3, 4] in my_list
 
 
 # There is a lot more to learn about lists but we will do so later.
+
+# In[ ]:
+
+
+
+
