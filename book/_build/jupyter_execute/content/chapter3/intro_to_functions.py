@@ -161,6 +161,7 @@ round(10.12344,4)
 sum([1,2,3])
 
 
+# (enumerate)=
 # ## `enumerate()`
 # This function is very useful when looping over lists and so on.
 # Consider the following loop:
