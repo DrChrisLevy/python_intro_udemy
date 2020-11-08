@@ -35,5 +35,6 @@
 # 
 # intro_to_functions
 # chapter_3_practice_questions
+# chapter_3_practice_questions_solutions
 # ```
 # 
