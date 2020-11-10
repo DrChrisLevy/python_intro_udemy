@@ -29,3 +29,7 @@
   - file: content/chapter3/intro_to_functions
   - file: content/chapter3/chapter_3_practice_questions
   - file: content/chapter3/chapter_3_practice_questions_solutions
+
+- file: content/chapter4/intro
+  sections:
+  - file: content/chapter4/data_structures
