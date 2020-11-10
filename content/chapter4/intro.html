@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Getting Input From a User &#8212; Learn to code with an Introduction to Python 3</title>
+    <title>Chapter 4 &#8212; Learn to code with an Introduction to Python 3</title>
     
   <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -57,8 +57,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Converting Strings and Floats and Integers" href="string_float_int_conversion.html" />
-    <link rel="prev" title="More on Strings" href="string_formatting_indexing_slicing.html" />
+    <link rel="next" title="Data Structures" href="data_structures.html" />
+    <link rel="prev" title="Practice Questions (Solutions)" href="../chapter3/chapter_3_practice_questions_solutions.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -99,57 +99,10 @@
  </li>
 </ul>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="intro.html">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter1/intro.html">
    Chapter 1
   </a>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="interactive_python_and_print.html">
-     Intro to Interactive Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="strings_concatenation.html">
-     Strings
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="variables_and_types.html">
-     Variables and Types
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="numerical_data_types.html">
-     Numerical Data Types
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="string_formatting_indexing_slicing.html">
-     More on Strings
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Getting Input From a User
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="string_float_int_conversion.html">
-     Converting Strings and Floats and Integers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="practice_questions.html">
-     Practice Questions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="practice_questions_solutions.html">
-     Practice Questions (Solutions)
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter2/intro.html">
@@ -161,10 +114,22 @@
    Chapter 3
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter4/intro.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Chapter 4
   </a>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data_structures.html">
+     Data Structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data_structures.html#list">
+     List
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -208,7 +173,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/content/chapter1/user_input.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/content/chapter4/intro.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -233,7 +198,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter1/user_input.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter4/intro.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -257,38 +222,36 @@
         
               <div>
                 
-  <div class="section" id="getting-input-from-a-user">
-<h1>Getting Input From a User<a class="headerlink" href="#getting-input-from-a-user" title="Permalink to this headline">¶</a></h1>
-<p>In Python you can get input from a user with the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function.
-Create a Jupyter Notebook called <strong>user_input</strong> and follow along
-to see how it works. Note that I can not use the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function
-in this book and have it displayed properly.
-Therefore I will provide a screenshot when using that function.</p>
-<p>In a Jupter Notebook type the following code in a cell
-and then execute the cell.</p>
-<p><code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">=</span> <span class="pre">input('Enter</span> <span class="pre">your</span> <span class="pre">name:</span> <span class="pre">')</span></code></p>
-<p>You will be presented with an input box where you
-can enter some text.
-<img alt="user_input" src="../../_images/user_input.png" /></p>
-<p>Type your name in the box.</p>
-<p><img alt="user_input_with_name" src="../../_images/user_input_with_name.png" /></p>
-<p>Then hit <strong>return</strong> on the keyboard.
-What this does is reads in the input
-as a string (it always converts whatever you enter to a string).
-Here we store the results with the variable <code class="docutils literal notranslate"><span class="pre">name</span></code> in this
-case. You can than use <code class="docutils literal notranslate"><span class="pre">name</span></code> like any regular Python variable.
-Here we print the type and value of <code class="docutils literal notranslate"><span class="pre">name</span></code>.
-<img alt="user_input_print" src="../../_images/user_input_print.png" /></p>
-<p>Here is another example:
-<img alt="input_age" src="../../_images/input_age.png" /></p>
-<p>After typing your age and then hitting return:</p>
-<p><img alt="input_age_print" src="../../_images/input_age_print.png" /></p>
-<p>Notice that you entered a number but the type of <code class="docutils literal notranslate"><span class="pre">age</span></code> is string.
-This is because the <code class="docutils literal notranslate"><span class="pre">input()</span></code> function converts whatever
-the user types to a string object. That’s it for the <code class="docutils literal notranslate"><span class="pre">input()</span></code>
-function. It provides a simple way to collect input from a user
-which can be fun to play around with in simple programs
-while learning and practicing Python.</p>
+  <div class="section" id="chapter-4">
+<h1>Chapter 4<a class="headerlink" href="#chapter-4" title="Permalink to this headline">¶</a></h1>
+<p>In this chapter we will learn about the common <strong>data structures</strong> used in Python.</p>
+<ul class="simple">
+<li><p>list</p></li>
+<li><p>tuple</p></li>
+<li><p>dictionary</p></li>
+<li><p>set</p></li>
+</ul>
+<p>In this chapter you will begin with learning more about lists. Then we will move on to
+tuples, dictionaries, and sets. We will also learn more about functions and how to use <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs**</span></code>. Here are some of the things you will learn at a high level.</p>
+<ul class="simple">
+<li><p>lists</p>
+<ul>
+<li><p>more list methods</p></li>
+<li><p>list comprehensions</p></li>
+</ul>
+</li>
+<li><p>tuples</p></li>
+<li><p>dictionaries</p>
+<ul>
+<li><p>keys and values</p></li>
+<li><p>ways of iterating over dictionaries</p></li>
+</ul>
+</li>
+<li><p>sets</p></li>
+<li><p>using <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> in function definitions</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -304,7 +267,7 @@ while learning and practicing Python.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content/chapter1"
+            path: "./content/chapter4"
         },
         predefinedOutput: true
     }
@@ -319,8 +282,8 @@ while learning and practicing Python.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="string_formatting_indexing_slicing.html" title="previous page">More on Strings</a>
-    <a class='right-next' id="next-link" href="string_float_int_conversion.html" title="next page">Converting Strings and Floats and Integers</a>
+    <a class='left-prev' id="prev-link" href="../chapter3/chapter_3_practice_questions_solutions.html" title="previous page">Practice Questions (Solutions)</a>
+    <a class='right-next' id="next-link" href="data_structures.html" title="next page">Data Structures</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
