@@ -22,7 +22,7 @@ x[0] = 2
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mTypeError[0m                                 Traceback (most recent call last)
-[0;32m<ipython-input-50-ebac946b3580>[0m in [0;36m<module>[0;34m[0m
+[0;32m<ipython-input-55-ebac946b3580>[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mx[0m[0;34m[[0m[0;36m0[0m[0;34m][0m [0;34m=[0m [0;36m2[0m[0;34m[0m[0m
 [0m
 [0;31mTypeError[0m: 'tuple' object does not support item assignment
