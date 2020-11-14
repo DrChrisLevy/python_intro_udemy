@@ -6,7 +6,7 @@
 # There are many types of data structures in Python.
 # Data structures are used for storing and organizing data.
 # In this chapter we will learn about some of the most common
-# data structures in Python such as list, tuple, dictionary, and set.
+# data structures in Python such as lists, tuples, dictionaries, and sets.
 # 
 # Create a new Jupyter Notebook called **data_structures** and follow along.
 # 
@@ -259,7 +259,7 @@ even_numbers = [x for x in numbers if x % 2 == 0]
 print(even_numbers)
 
 
-# You can use enumerate too in list comprehensions
+# You can use enumerate in list comprehensions as well:
 
 # In[30]:
 
@@ -288,10 +288,8 @@ some_stuff = ['Chris', True, False, 1, 2, 10.8]
 # In[34]:
 
 
-[(i,x) for i,x in enumerate(some_stuff)]
+[[i,x] for i,x in enumerate(some_stuff)]
 
-
-# In that last example we had to use the round brackets, parenthesis, which is known as a **tuple**. We will learn about those shortly in the next section.  
 
 # In[35]:
 
@@ -310,7 +308,7 @@ print(country_stats)
 # In[36]:
 
 
-country_stats = [ [c,p] for c,p in zip(countries, populations)]
+country_stats = [[c,p] for c,p in zip(countries, populations)]
 print(country_stats)
 
 
@@ -422,13 +420,13 @@ x
 x[0] = 2
 
 
-# In[258]:
+# In[ ]:
 
 
 x.append(10)
 
 
-# In[259]:
+# In[51]:
 
 
 x.pop(1)
@@ -438,19 +436,19 @@ x.pop(1)
 
 # When you input a tuple you can do so without entering the round brackets.
 
-# In[260]:
+# In[52]:
 
 
 y = 1,1,1
 
 
-# In[261]:
+# In[53]:
 
 
 print(y)
 
 
-# In[262]:
+# In[54]:
 
 
 type(y)
@@ -461,31 +459,31 @@ type(y)
 
 # You can nest tuples just like you did with lists.
 
-# In[263]:
+# In[55]:
 
 
 nested_tuple = ((0, 0), (1, 2), (1, 3), (9, 9))
 
 
-# In[264]:
+# In[56]:
 
 
 nested_tuple[-1]
 
 
-# In[265]:
+# In[57]:
 
 
 nested_tuple[-2]
 
 
-# In[266]:
+# In[58]:
 
 
 nested_tuple[-2][0]
 
 
-# In[267]:
+# In[59]:
 
 
 nested_tuple[-2][1]
@@ -493,19 +491,19 @@ nested_tuple[-2][1]
 
 # One thing to watch out for is the syntax when creating a tuple with a single element.
 
-# In[268]:
+# In[60]:
 
 
 x = (1) # this is not a tuple !
 
 
-# In[269]:
+# In[61]:
 
 
 type(x) # it's just an integer
 
 
-# In[270]:
+# In[62]:
 
 
 print(x)
@@ -513,31 +511,31 @@ print(x)
 
 # To create a tuple with a single element you must put a trailing comma.
 
-# In[271]:
+# In[63]:
 
 
 x = (1,)
 
 
-# In[272]:
+# In[64]:
 
 
 type(x)
 
 
-# In[273]:
+# In[65]:
 
 
 print(x)
 
 
-# In[274]:
+# In[66]:
 
 
 x[0]
 
 
-# In[275]:
+# In[67]:
 
 
 x[1] # only has one element so this index is out of range
@@ -545,25 +543,25 @@ x[1] # only has one element so this index is out of range
 
 # Tuple **packing** is when you pack things together in a tuple. For example:
 
-# In[276]:
+# In[68]:
 
 
 t = ('hello world', 1, True, False, 'Bye')
 
 
-# In[277]:
+# In[69]:
 
 
 print(t)
 
 
-# In[278]:
+# In[70]:
 
 
 type(t)
 
 
-# In[279]:
+# In[71]:
 
 
 len(t)
@@ -571,38 +569,38 @@ len(t)
 
 # You can unpack the tuple `t` like this for example:
 
-# In[280]:
+# In[72]:
 
 
 print(t)
 a, b, c, d, e = t
 
 
-# In[281]:
+# In[73]:
 
 
 a
 
 
-# In[282]:
+# In[74]:
 
 
 b
 
 
-# In[283]:
+# In[75]:
 
 
 c
 
 
-# In[284]:
+# In[76]:
 
 
 d
 
 
-# In[285]:
+# In[77]:
 
 
 e
@@ -610,19 +608,19 @@ e
 
 # Tuples are used with enumerate.
 
-# In[286]:
+# In[78]:
 
 
 print(some_stuff)
 
 
-# In[287]:
+# In[79]:
 
 
 [type(x) for x in enumerate(some_stuff)]
 
 
-# In[288]:
+# In[80]:
 
 
 [x for x in enumerate(some_stuff)]
@@ -630,13 +628,13 @@ print(some_stuff)
 
 # To grab just the second element (or first) in each tuple you could do:
 
-# In[289]:
+# In[81]:
 
 
 [b for a,b in enumerate(some_stuff)]
 
 
-# In[290]:
+# In[82]:
 
 
 [a for a,b in enumerate(some_stuff)]
@@ -644,13 +642,13 @@ print(some_stuff)
 
 # Here is a list of tuples.
 
-# In[291]:
+# In[83]:
 
 
 data = [(0,-1,2), (0,4,8), (-2,-2,5), (4,5,6)]
 
 
-# In[292]:
+# In[84]:
 
 
 for d in data:
@@ -659,7 +657,7 @@ for d in data:
 
 # Or we can unpack each tuple in the loop like this:
 
-# In[293]:
+# In[85]:
 
 
 for a,b,c in data:
@@ -668,37 +666,37 @@ for a,b,c in data:
 
 # Because `data` is a list we can change it.
 
-# In[294]:
+# In[86]:
 
 
 data.append('Chris')
 
 
-# In[295]:
+# In[87]:
 
 
 print(data)
 
 
-# In[296]:
+# In[88]:
 
 
 data.pop(0)
 
 
-# In[297]:
+# In[89]:
 
 
 data
 
 
-# In[298]:
+# In[90]:
 
 
 data[2] = False
 
 
-# In[299]:
+# In[91]:
 
 
 data
@@ -706,13 +704,13 @@ data
 
 # But we still can not change one of the tuple items directly.
 
-# In[300]:
+# In[92]:
 
 
 data[0]
 
 
-# In[301]:
+# In[93]:
 
 
 data[0][-1] = 9
@@ -732,25 +730,25 @@ data[0][-1] = 9
 # Here is an example of a dictionary with a persons name as the key and their
 # age as the value.
 
-# In[302]:
+# In[94]:
 
 
 ages = {'Chris': 35, 'Joanna': 37, 'Penny': 11}
 
 
-# In[303]:
+# In[95]:
 
 
 print(ages)
 
 
-# In[304]:
+# In[96]:
 
 
 type(ages)
 
 
-# In[305]:
+# In[97]:
 
 
 len(ages)
@@ -759,13 +757,13 @@ len(ages)
 # ## `keys()`
 # To list the keys in a dictionary you can use the `keys()` method.
 
-# In[306]:
+# In[98]:
 
 
 ages.keys()
 
 
-# In[307]:
+# In[99]:
 
 
 list(ages.keys())
@@ -774,13 +772,13 @@ list(ages.keys())
 # ## `values()`
 # To get the values you can use the `values()` method.
 
-# In[308]:
+# In[100]:
 
 
 ages.values()
 
 
-# In[309]:
+# In[101]:
 
 
 list(ages.values())
@@ -788,7 +786,7 @@ list(ages.values())
 
 # If you wrap a dictionary within `list` you will only get the keys.
 
-# In[310]:
+# In[102]:
 
 
 list(ages)
@@ -814,7 +812,7 @@ list(ages)
 
 # To extract the value of a key you do this:
 
-# In[311]:
+# In[103]:
 
 
 ages['Penny']
@@ -824,13 +822,13 @@ ages['Penny']
 # But instead of indexing the position, which is an integer, you
 # use the *key* as the index.
 
-# In[312]:
+# In[104]:
 
 
 ages['Chris']
 
 
-# In[313]:
+# In[105]:
 
 
 ages['Joanna']
@@ -839,7 +837,7 @@ ages['Joanna']
 # If you try to get the value of a key that is not in the dictionary
 # you will get an error. In particular, a `KeyError`.
 
-# In[314]:
+# In[106]:
 
 
 ages['Hazel']
@@ -848,49 +846,49 @@ ages['Hazel']
 # Dictionaries are **mutable** so we can keep adding additional key value pairs.
 # This is how you store a value with some key.
 
-# In[315]:
+# In[107]:
 
 
 ages['Hazel'] = 7
 
 
-# In[316]:
+# In[108]:
 
 
 print(ages)
 
 
-# In[317]:
+# In[109]:
 
 
 ages['Isaac'] = 9
 
 
-# In[318]:
+# In[110]:
 
 
 print(ages)
 
 
-# In[319]:
+# In[111]:
 
 
 print(list(ages.keys()))
 
 
-# In[320]:
+# In[112]:
 
 
 print(list(ages.values()))
 
 
-# In[321]:
+# In[113]:
 
 
 ages['Isaac']
 
 
-# In[322]:
+# In[114]:
 
 
 ages['Hazel']
@@ -899,13 +897,13 @@ ages['Hazel']
 # ## `in` 
 # You can use the `in` membership operator to see if a key is in a dictionary.
 
-# In[323]:
+# In[115]:
 
 
 names = ['Larry', 'Joanna', 'Karen', 'Hazel', 'Isaac', 'Penny', 'Chris', 'Matt', 'Jen']
 
 
-# In[324]:
+# In[116]:
 
 
 for name in names:
@@ -921,13 +919,13 @@ for name in names:
 # 
 # You can use `dict` to build a dictionary from a list of key-value pairs.
 
-# In[325]:
+# In[117]:
 
 
 list_of_ages = [('Joanna', 37), ('Chris', 35), ('Penny', 11)] # list of tuples
 
 
-# In[326]:
+# In[118]:
 
 
 dict(list_of_ages)
@@ -935,7 +933,7 @@ dict(list_of_ages)
 
 # If the keys are simple strings then you can even use keyword arguments like this.
 
-# In[327]:
+# In[119]:
 
 
 dict(Joanna=1, Chris=35, Penny=11) # only works when the keys will be strings
@@ -944,7 +942,7 @@ dict(Joanna=1, Chris=35, Penny=11) # only works when the keys will be strings
 # You can use **dict comprehension** to build dictionaries too. Suppose we wanted to create
 # a dictionary with the keys as integers and the values as those integers squared (the number times it self).
 
-# In[328]:
+# In[120]:
 
 
 numbers_squared = {
@@ -962,7 +960,7 @@ numbers_squared = {
 numbers_squared
 
 
-# In[329]:
+# In[121]:
 
 
 numbers_squared[6]
@@ -970,7 +968,7 @@ numbers_squared[6]
 
 # We can use a dict comprehension to generate the above dictionary.
 
-# In[330]:
+# In[122]:
 
 
 {x: x * x for x in range(10)}
@@ -980,19 +978,19 @@ numbers_squared[6]
 # Now we will look at some looping techniques when working
 # with dictionaries.
 
-# In[331]:
+# In[123]:
 
 
 ages
 
 
-# In[332]:
+# In[124]:
 
 
 numbers_squared
 
 
-# In[333]:
+# In[125]:
 
 
 # this will only give the keys
@@ -1000,7 +998,7 @@ for k in ages:
     print(k)
 
 
-# In[334]:
+# In[126]:
 
 
 # this will only give the keys
@@ -1008,14 +1006,14 @@ for k in numbers_squared:
     print(k)
 
 
-# In[335]:
+# In[127]:
 
 
 for k in ages:
     print(k, ages[k])
 
 
-# In[336]:
+# In[128]:
 
 
 for k in numbers_squared:
@@ -1025,14 +1023,14 @@ for k in numbers_squared:
 # You can use `items()` method to iterate over a dictionary
 # and get the key and value at the same time.
 
-# In[337]:
+# In[129]:
 
 
 for k,v in ages.items():
     print(k,v)
 
 
-# In[338]:
+# In[130]:
 
 
 for k,v in numbers_squared.items():
@@ -1041,31 +1039,31 @@ for k,v in numbers_squared.items():
 
 # You can create an empty dictionary like this
 
-# In[339]:
+# In[131]:
 
 
 ages = {}
 
 
-# In[340]:
+# In[132]:
 
 
 print(ages)
 
 
-# In[341]:
+# In[133]:
 
 
 names_list = ['Larry', 'Joanna', 'Karen', 'Hazel', 'Isaac', 'Penny', 'Chris', 'Matt', 'Jen']
 
 
-# In[342]:
+# In[134]:
 
 
 ages_list = [60, 37, 58, 7, 9, 11, 35, 38, 40]
 
 
-# In[343]:
+# In[135]:
 
 
 for name,age in zip(names_list,ages_list):
@@ -1075,7 +1073,7 @@ for name,age in zip(names_list,ages_list):
 # We can add these names and ages to the empty dict ages,
 # and populate it within a loop.
 
-# In[344]:
+# In[136]:
 
 
 ages = {}
@@ -1083,7 +1081,7 @@ for name,age in zip(names_list,ages_list):
     ages[name] = age
 
 
-# In[345]:
+# In[137]:
 
 
 ages
@@ -1091,44 +1089,44 @@ ages
 
 # ## Keys are unique
 
-# In[346]:
+# In[138]:
 
 
 list(ages.keys())
 
 
-# In[347]:
+# In[139]:
 
 
 list(ages.values())
 
 
-# In[348]:
+# In[140]:
 
 
 ages['Larry']
 
 
-# In[349]:
+# In[141]:
 
 
 ages['Chris']
 
 
-# In[350]:
+# In[142]:
 
 
 ages['Henry'] # not a key in the dict
 
 
-# In[351]:
+# In[143]:
 
 
 # add the key and a value
 ages['Henry'] = 'eleven years old'
 
 
-# In[352]:
+# In[144]:
 
 
 ages
@@ -1138,25 +1136,25 @@ ages
 # must be unique. So if you assign a value to a key that
 # is already in the dictionary it will be updated.
 
-# In[353]:
+# In[145]:
 
 
 ages['Henry']
 
 
-# In[354]:
+# In[146]:
 
 
 ages['Henry'] = 11
 
 
-# In[355]:
+# In[147]:
 
 
 ages
 
 
-# In[356]:
+# In[148]:
 
 
 for k, v in ages.items():
@@ -1168,7 +1166,7 @@ for k, v in ages.items():
 # 
 # Python sets are quite simple but can be very useful in certain situations. A set is an unordered collection with no duplicate elements. 
 
-# In[357]:
+# In[149]:
 
 
 fruits_list = [ 'oranges', 'grapefruits', 'mandarins', 'limes', 'limes', 'apple', 'apple']
@@ -1178,7 +1176,7 @@ print(fruits_list)
 # With a regular list, like the list of `fruits_list` above, you can have duplicates.
 # You can use `set` to get the unique items.
 
-# In[358]:
+# In[150]:
 
 
 fruits_set = set(fruits_list)
@@ -1188,7 +1186,7 @@ type(fruits_set)
 
 # You see that a set is a list of item between curly braces `{}`.
 
-# In[359]:
+# In[151]:
 
 
 my_set_of_stuff = {'Hello', 10, 20, True, False, 3.1459, 'a', False, True, 20}
@@ -1197,13 +1195,13 @@ my_set_of_stuff # see how the duplicates were removed
 
 # You can create an empty set like this:
 
-# In[360]:
+# In[152]:
 
 
 x = set()
 
 
-# In[361]:
+# In[153]:
 
 
 type(x)
@@ -1211,13 +1209,13 @@ type(x)
 
 # Don't use `{}` to create any empty set because it will actually create an empty dictionary.
 
-# In[362]:
+# In[154]:
 
 
 y = {}
 
 
-# In[363]:
+# In[155]:
 
 
 type(y)
@@ -1226,49 +1224,49 @@ type(y)
 # ## `add()`
 # You can use the `add()` method to add items to a set.
 
-# In[364]:
+# In[156]:
 
 
 x = set() # empty set
 
 
-# In[365]:
+# In[157]:
 
 
 x.add('HELLO')
 
 
-# In[366]:
+# In[158]:
 
 
 x
 
 
-# In[367]:
+# In[159]:
 
 
 x.add(True)
 
 
-# In[368]:
+# In[160]:
 
 
 x
 
 
-# In[369]:
+# In[161]:
 
 
 x.add(True) # is already in the set
 
 
-# In[370]:
+# In[162]:
 
 
 x
 
 
-# In[371]:
+# In[163]:
 
 
 for i in range(11):
@@ -1277,31 +1275,31 @@ for i in range(11):
         
 
 
-# In[372]:
+# In[164]:
 
 
 len(x)
 
 
-# In[373]:
+# In[165]:
 
 
 x
 
 
-# In[374]:
+# In[166]:
 
 
 5 in x
 
 
-# In[375]:
+# In[167]:
 
 
 4 in x
 
 
-# In[376]:
+# In[168]:
 
 
 7 in x
@@ -1309,37 +1307,37 @@ x
 
 # ## `remove`
 
-# In[377]:
+# In[169]:
 
 
 print(x)
 
 
-# In[378]:
+# In[170]:
 
 
 x.remove(8) # not in the set so raises error
 
 
-# In[379]:
+# In[171]:
 
 
 x.remove('HELLO')
 
 
-# In[380]:
+# In[172]:
 
 
 x
 
 
-# In[381]:
+# In[173]:
 
 
 x.remove(5)
 
 
-# In[382]:
+# In[174]:
 
 
 x
@@ -1352,9 +1350,272 @@ x
 # it requires some knowledge of tuples and dictionaries.
 # 
 # # Function `*args` and `**kwargs`
+# 
+# In this section we show how you can have a variable number of
+# positional arguments or keyword arguments with the use of
+# `*args` and `**kwargs`. Sometimes you don't know exactly the future
+# use cases of a function or you may need to have support for additional
+# arguments without defining them up front. These are examples where 
+# you can use a variable number of arguments which means
+# you do not specify the exact number of arguments. Let's look at some examples.
 
-# In[ ]:
+# ## `*args`
+# 
+# `*args` is used for positional arguments.
+
+# In[175]:
 
 
+def add_numbers(a, b):
+    return a + b
 
 
+# In[176]:
+
+
+add_numbers(1,2)
+
+
+# The above function takes two arguments and adds them together.
+# But what if we wanted to have any number of arguments and add them all
+# together? You can do that with the unpacking operator `*`. First we will
+# use `*args` which supports any number of positional arguments.
+# The function will not add the arguments yet. First we will
+# see that by using`*args`, you can pass any number of positional arguments
+# and `args` is a tuple in the function definition.
+
+# In[177]:
+
+
+def add_numbers(*args):
+    print(args)
+    print(type(args))
+
+
+# In[178]:
+
+
+add_numbers()
+
+
+# In[179]:
+
+
+add_numbers(1)
+
+
+# In[180]:
+
+
+add_numbers(1,2)
+
+
+# In[181]:
+
+
+add_numbers(1,2,4)
+
+
+# In[182]:
+
+
+add_numbers(1,2,4,-9)
+
+
+# You see? We can pass any number of positional arguments
+# to the function and they are all available within a variable name 
+# called `args` which is a tuple. So to actually add the numbers
+# we can just sum the elements in the tuple.
+
+# In[183]:
+
+
+def add_numbers(*args):
+    return sum(args)
+
+
+# In[184]:
+
+
+add_numbers()
+
+
+# In[185]:
+
+
+add_numbers(1,2,3)
+
+
+# In[186]:
+
+
+add_numbers(10,20,30,40,50,60)
+
+
+# Here is another example.
+
+# In[187]:
+
+
+def do_stuff_with_args(*args):
+    print(f'You passed {len(args)} positional arguments.')
+    print(f'These positional arguments are available in the tuple {args}.')
+    for i,x in enumerate(args):
+        print(f'The argument at position {i} is {x}.')
+    print('We will return the last argument:')
+    return args[-1]
+
+
+# In[188]:
+
+
+do_stuff_with_args(1,2,3)
+
+
+# In[189]:
+
+
+do_stuff_with_args('HI', 'BYE', True, False, 3.14159)
+
+
+# And it's typical to use the name `args` but you can actually use any name at all
+# provided that you use the unpacking `*` operator. For example:
+
+# In[190]:
+
+
+def do_stuff_with_args(*stuff):
+    print(f'You passed {len(stuff)} arguments.')
+    print(f'There are available in the tuple {stuff}')
+    for i,x in enumerate(stuff):
+        print(f'The argument at position {i} is {x}')
+    print('We will return the last argument:')
+    return stuff[-1]
+
+
+# In[191]:
+
+
+do_stuff_with_args(3+4,6+4)
+
+
+# ## `**kwargs`
+# 
+# `**kwargs` is similar to `*args` but instead is used for 
+# a variable number of keyword arguments. Instead of a tuple,
+# `kwargs` is a dictionary.
+
+# In[192]:
+
+
+def get_person_details(**kwargs):
+    print(kwargs)
+    print(type(kwargs))
+
+
+# In[193]:
+
+
+get_person_details(name='Chris', age=36, city='Halifax')
+
+
+# In[194]:
+
+
+def get_person_details(**kwargs):
+    for k,v in kwargs.items():
+        print(f'The argument {k} has the value {v}.')
+        
+
+
+# In[195]:
+
+
+get_person_details(name='Chris', age=36, city='Halifax')
+
+
+# So that's how you can pass a variable number (i.e. any number)
+# of keyword arguments using `**kwargs`. And you can use any other name
+# as long as you use the `**`. For example
+
+# In[196]:
+
+
+def get_person_details(**details):
+    for k,v in details.items():
+        print(f'The argument {k} has the value {v}.')
+        
+
+
+# In[197]:
+
+
+get_person_details(name='Chris', age=36, city='Halifax', country='Canada')
+
+
+# It's just common to see `*args` and `**kwargs` but you can use any names
+# for these that you want. 
+# 
+# - `*` is for positional arguments and are accessed with a tuple 
+# - `**` is for keyword arguments and are accessed with a dictionary
+
+# ## Ordering of arguments
+# 
+# We saw in an earlier section that positional
+# arguments must come before keyword arguments.
+# So that means `*args` must come before `**kwargs`.
+
+# In[198]:
+
+
+def get_person_details(*args, **kwargs):
+    print(args)
+    print(kwargs)
+
+
+# In[199]:
+
+
+get_person_details('Chris', 36, city='Halifax', country='Canada')
+
+
+# Just remember that positional arguments
+# come before keyword arguments. In general the ordering for arguments is:
+# 
+#  - regular positional arguments
+#  - *args
+#  - regular keyword arguments
+#  - **kwargs
+#  
+# Like in this example:
+
+# In[200]:
+
+
+def get_person_details(name, age, *args, country='Canada', **kwargs):
+    print(f'Name is {name}.')
+    print(f'Age is {age}.')
+    print(f'Country is {country}.')
+    
+    print(f'Other positional arguments given were: {args}.')
+    
+    print(f'Other keyword arguments given were:')
+    for k,v in kwargs.items():
+        print(f'{k}: {v}')
+
+
+# In[201]:
+
+
+get_person_details('Chris',
+                   35,
+                   'Short hair',
+                   '6 feet tall', 
+                   hair_color='brown', 
+                   eye_color='blue',
+                   sport='basketball',
+                   movie='LOTR')
+
+
+# Okay so that's an introduction to `*args` and `**kwargs`. I'm sure
+# we will use them later throughout the course. It's good to be aware of them.

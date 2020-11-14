@@ -402,6 +402,31 @@
     </span>
    </code>
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#args">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       *args
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kwargs">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       **kwargs
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ordering-of-arguments">
+     Ordering of arguments
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -419,7 +444,7 @@
 <p>There are many types of data structures in Python.
 Data structures are used for storing and organizing data.
 In this chapter we will learn about some of the most common
-data structures in Python such as list, tuple, dictionary, and set.</p>
+data structures in Python such as lists, tuples, dictionaries, and sets.</p>
 <p>Create a new Jupyter Notebook called <strong>data_structures</strong> and follow along.</p>
 </div>
 <div class="section" id="lists">
@@ -810,7 +835,7 @@ One approach would be this:</p>
 </div>
 </div>
 </div>
-<p>You can use enumerate too in list comprehensions</p>
+<p>You can use enumerate in list comprehensions as well:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">some_stuff</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Chris&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">10.8</span><span class="p">]</span>
@@ -856,17 +881,16 @@ One approach would be this:</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">some_stuff</span><span class="p">)]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">i</span><span class="p">,</span><span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">some_stuff</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(0, &#39;Chris&#39;), (1, True), (2, False), (3, 1), (4, 2), (5, 10.8)]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0, &#39;Chris&#39;], [1, True], [2, False], [3, 1], [4, 2], [5, 10.8]]
 </pre></div>
 </div>
 </div>
 </div>
-<p>In that last example we had to use the round brackets, parenthesis, which is known as a <strong>tuple</strong>. We will learn about those shortly in the next section.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">countries</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Canada&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;Mexico&#39;</span><span class="p">]</span>
@@ -888,7 +912,7 @@ One approach would be this:</p>
 <p>With list comprehensions you can do the above in one line.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_stats</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="n">c</span><span class="p">,</span><span class="n">p</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span><span class="p">,</span><span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">countries</span><span class="p">,</span> <span class="n">populations</span><span class="p">)]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_stats</span> <span class="o">=</span> <span class="p">[[</span><span class="n">c</span><span class="p">,</span><span class="n">p</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span><span class="p">,</span><span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">countries</span><span class="p">,</span> <span class="n">populations</span><span class="p">)]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">country_stats</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1094,16 +1118,6 @@ can not change them or their values etc.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">258</span><span class="o">-</span><span class="n">c90c8611637b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-
-<span class="ne">AttributeError</span>: &#39;tuple&#39; object has no attribute &#39;append&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1114,7 +1128,7 @@ can not change them or their values etc.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">259</span><span class="o">-</span><span class="n">c18350cddf27</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">51</span><span class="o">-</span><span class="n">c18350cddf27</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">x</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="ne">AttributeError</span>: &#39;tuple&#39; object has no attribute &#39;pop&#39;
@@ -1298,7 +1312,7 @@ the code is easier to read. Also, sometimes its necessary.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">275</span><span class="o">-</span><span class="n">a81caa627b71</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">67</span><span class="o">-</span><span class="n">a81caa627b71</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># only has one element so this index is out of range</span>
 
 <span class="ne">IndexError</span>: tuple index out of range
@@ -1612,7 +1626,7 @@ the code is easier to read. Also, sometimes its necessary.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">301</span><span class="o">-</span><span class="mi">2</span><span class="n">b4bf7263d17</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">93</span><span class="o">-</span><span class="mi">2</span><span class="n">b4bf7263d17</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9</span>
 
 <span class="ne">TypeError</span>: &#39;tuple&#39; object does not support item assignment
@@ -1807,7 +1821,7 @@ you will get an error. In particular, a <code class="docutils literal notranslat
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">314</span><span class="o">-</span><span class="n">bde46f9036a6</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">106</span><span class="o">-</span><span class="n">bde46f9036a6</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ages</span><span class="p">[</span><span class="s1">&#39;Hazel&#39;</span><span class="p">]</span>
 
 <span class="ne">KeyError</span>: &#39;Hazel&#39;
@@ -2323,7 +2337,7 @@ and populate it within a loop.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">350</span><span class="o">-</span><span class="n">e2b0d9f786ff</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">142</span><span class="o">-</span><span class="n">e2b0d9f786ff</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ages</span><span class="p">[</span><span class="s1">&#39;Henry&#39;</span><span class="p">]</span> <span class="c1"># not a key in the dict</span>
 
 <span class="ne">KeyError</span>: &#39;Henry&#39;
@@ -2455,7 +2469,7 @@ You can use <code class="docutils literal notranslate"><span class="pre">set</sp
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;apple&#39;, &#39;limes&#39;, &#39;oranges&#39;, &#39;grapefruits&#39;, &#39;mandarins&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;apple&#39;, &#39;oranges&#39;, &#39;grapefruits&#39;, &#39;limes&#39;, &#39;mandarins&#39;}
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>set
@@ -2678,7 +2692,7 @@ You can use <code class="docutils literal notranslate"><span class="pre">set</sp
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">378</span><span class="o">-</span><span class="n">ed5a54533654</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">170</span><span class="o">-</span><span class="n">ed5a54533654</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">x</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="c1"># not in the set so raises error</span>
 
 <span class="ne">KeyError</span>: 8
@@ -2732,6 +2746,424 @@ it requires some knowledge of tuples and dictionaries.</p>
 </div>
 <div class="section" id="function-args-and-kwargs">
 <h1>Function <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code><a class="headerlink" href="#function-args-and-kwargs" title="Permalink to this headline">¶</a></h1>
+<p>In this section we show how you can have a variable number of
+positional arguments or keyword arguments with the use of
+<code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>. Sometimes you don’t know exactly the future
+use cases of a function or you may need to have support for additional
+arguments without defining them up front. These are examples where
+you can use a variable number of arguments which means
+you do not specify the exact number of arguments. Let’s look at some examples.</p>
+<div class="section" id="args">
+<h2><code class="docutils literal notranslate"><span class="pre">*args</span></code><a class="headerlink" href="#args" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">*args</span></code> is used for positional arguments.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add_numbers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>The above function takes two arguments and adds them together.
+But what if we wanted to have any number of arguments and add them all
+together? You can do that with the unpacking operator <code class="docutils literal notranslate"><span class="pre">*</span></code>. First we will
+use <code class="docutils literal notranslate"><span class="pre">*args</span></code> which supports any number of positional arguments.
+The function will not add the arguments yet. First we will
+see that by using<code class="docutils literal notranslate"><span class="pre">*args</span></code>, you can pass any number of positional arguments
+and <code class="docutils literal notranslate"><span class="pre">args</span></code> is a tuple in the function definition.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">args</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add_numbers</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>()
+&lt;class &#39;tuple&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add_numbers</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1,)
+&lt;class &#39;tuple&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add_numbers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 2)
+&lt;class &#39;tuple&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add_numbers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 2, 4)
+&lt;class &#39;tuple&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add_numbers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 2, 4, -9)
+&lt;class &#39;tuple&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>You see? We can pass any number of positional arguments
+to the function and they are all available within a variable name
+called <code class="docutils literal notranslate"><span class="pre">args</span></code> which is a tuple. So to actually add the numbers
+we can just sum the elements in the tuple.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add_numbers</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add_numbers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add_numbers</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">60</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>210
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is another example.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">do_stuff_with_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;You passed </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="si">}</span><span class="s1"> positional arguments.&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;These positional arguments are available in the tuple </span><span class="si">{</span><span class="n">args</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The argument at position </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We will return the last argument:&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">args</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">do_stuff_with_args</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You passed 3 positional arguments.
+These positional arguments are available in the tuple (1, 2, 3).
+The argument at position 0 is 1.
+The argument at position 1 is 2.
+The argument at position 2 is 3.
+We will return the last argument:
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">do_stuff_with_args</span><span class="p">(</span><span class="s1">&#39;HI&#39;</span><span class="p">,</span> <span class="s1">&#39;BYE&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mf">3.14159</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You passed 5 positional arguments.
+These positional arguments are available in the tuple (&#39;HI&#39;, &#39;BYE&#39;, True, False, 3.14159).
+The argument at position 0 is HI.
+The argument at position 1 is BYE.
+The argument at position 2 is True.
+The argument at position 3 is False.
+The argument at position 4 is 3.14159.
+We will return the last argument:
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.14159
+</pre></div>
+</div>
+</div>
+</div>
+<p>And it’s typical to use the name <code class="docutils literal notranslate"><span class="pre">args</span></code> but you can actually use any name at all
+provided that you use the unpacking <code class="docutils literal notranslate"><span class="pre">*</span></code> operator. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">do_stuff_with_args</span><span class="p">(</span><span class="o">*</span><span class="n">stuff</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;You passed </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">stuff</span><span class="p">)</span><span class="si">}</span><span class="s1"> arguments.&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;There are available in the tuple </span><span class="si">{</span><span class="n">stuff</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">stuff</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The argument at position </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We will return the last argument:&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">stuff</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">do_stuff_with_args</span><span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="o">+</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You passed 2 arguments.
+There are available in the tuple (7, 10)
+The argument at position 0 is 7
+The argument at position 1 is 10
+We will return the last argument:
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="kwargs">
+<h2><code class="docutils literal notranslate"><span class="pre">**kwargs</span></code><a class="headerlink" href="#kwargs" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> is similar to <code class="docutils literal notranslate"><span class="pre">*args</span></code> but instead is used for
+a variable number of keyword arguments. Instead of a tuple,
+<code class="docutils literal notranslate"><span class="pre">kwargs</span></code> is a dictionary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_person_details</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">kwargs</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_person_details</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Chris&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">36</span><span class="p">,</span> <span class="n">city</span><span class="o">=</span><span class="s1">&#39;Halifax&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;Chris&#39;, &#39;age&#39;: 36, &#39;city&#39;: &#39;Halifax&#39;}
+&lt;class &#39;dict&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_person_details</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The argument </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1"> has the value </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+        
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_person_details</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Chris&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">36</span><span class="p">,</span> <span class="n">city</span><span class="o">=</span><span class="s1">&#39;Halifax&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The argument name has the value Chris.
+The argument age has the value 36.
+The argument city has the value Halifax.
+</pre></div>
+</div>
+</div>
+</div>
+<p>So that’s how you can pass a variable number (i.e. any number)
+of keyword arguments using <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>. And you can use any other name
+as long as you use the <code class="docutils literal notranslate"><span class="pre">**</span></code>. For example</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_person_details</span><span class="p">(</span><span class="o">**</span><span class="n">details</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">details</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The argument </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1"> has the value </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+        
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_person_details</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Chris&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">36</span><span class="p">,</span> <span class="n">city</span><span class="o">=</span><span class="s1">&#39;Halifax&#39;</span><span class="p">,</span> <span class="n">country</span><span class="o">=</span><span class="s1">&#39;Canada&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The argument name has the value Chris.
+The argument age has the value 36.
+The argument city has the value Halifax.
+The argument country has the value Canada.
+</pre></div>
+</div>
+</div>
+</div>
+<p>It’s just common to see <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> but you can use any names
+for these that you want.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code> is for positional arguments and are accessed with a tuple</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">**</span></code> is for keyword arguments and are accessed with a dictionary</p></li>
+</ul>
+</div>
+<div class="section" id="ordering-of-arguments">
+<h2>Ordering of arguments<a class="headerlink" href="#ordering-of-arguments" title="Permalink to this headline">¶</a></h2>
+<p>We saw in an earlier section that positional
+arguments must come before keyword arguments.
+So that means <code class="docutils literal notranslate"><span class="pre">*args</span></code> must come before <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_person_details</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_person_details</span><span class="p">(</span><span class="s1">&#39;Chris&#39;</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="n">city</span><span class="o">=</span><span class="s1">&#39;Halifax&#39;</span><span class="p">,</span> <span class="n">country</span><span class="o">=</span><span class="s1">&#39;Canada&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;Chris&#39;, 36)
+{&#39;city&#39;: &#39;Halifax&#39;, &#39;country&#39;: &#39;Canada&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Just remember that positional arguments
+come before keyword arguments. In general the ordering for arguments is:</p>
+<ul class="simple">
+<li><p>regular positional arguments</p></li>
+<li><p>*args</p></li>
+<li><p>regular keyword arguments</p></li>
+<li><p>**kwargs</p></li>
+</ul>
+<p>Like in this example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_person_details</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">country</span><span class="o">=</span><span class="s1">&#39;Canada&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Name is </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Age is </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Country is </span><span class="si">{</span><span class="n">country</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Other positional arguments given were: </span><span class="si">{</span><span class="n">args</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Other keyword arguments given were:&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">get_person_details</span><span class="p">(</span><span class="s1">&#39;Chris&#39;</span><span class="p">,</span>
+                   <span class="mi">35</span><span class="p">,</span>
+                   <span class="s1">&#39;Short hair&#39;</span><span class="p">,</span>
+                   <span class="s1">&#39;6 feet tall&#39;</span><span class="p">,</span> 
+                   <span class="n">hair_color</span><span class="o">=</span><span class="s1">&#39;brown&#39;</span><span class="p">,</span> 
+                   <span class="n">eye_color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span>
+                   <span class="n">sport</span><span class="o">=</span><span class="s1">&#39;basketball&#39;</span><span class="p">,</span>
+                   <span class="n">movie</span><span class="o">=</span><span class="s1">&#39;LOTR&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Name is Chris.
+Age is 35.
+Country is Canada.
+Other positional arguments given were: (&#39;Short hair&#39;, &#39;6 feet tall&#39;).
+Other keyword arguments given were:
+hair_color: brown
+eye_color: blue
+sport: basketball
+movie: LOTR
+</pre></div>
+</div>
+</div>
+</div>
+<p>Okay so that’s an introduction to <code class="docutils literal notranslate"><span class="pre">*args</span></code> and <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code>. I’m sure
+we will use them later throughout the course. It’s good to be aware of them.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
