@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Practice Questions
+# # Practice Questions (Solutions)
 
 # ## 1.
 # 
@@ -21,6 +21,20 @@
 # 
 # 
 # and would return [-4, 5, 10, 10, 78].
+# 
+# ### Solution
+
+# In[1]:
+
+
+def get_list_details(l):
+    print(f'The list is {l}.')
+    l.sort()
+    print(f'The list sorted is {l}.')
+    return l
+
+get_list_details([10, -4, 5, 10, 78])
+
 
 # ## 2.
 # 
@@ -40,7 +54,45 @@
 # `count_items([1, 1, 1, 2, 2, 2, 2, 4])` would return `{1: 3, 2: 4, 4: 1}`.
 # 
 # 
-# 
+# ### Solution
+
+# In[2]:
+
+
+def count_items_v1(x):
+    counts = {}
+    for i in x:
+        count = x.count(i)
+        counts[i] = count
+    return counts
+
+# this method is better because it only counts each unique number once
+def count_items_v2(x):
+    counts = {}
+    unique_numbers = set(x) # b/c of this step here
+    for i in unique_numbers:
+        counts[i] = x.count(i)
+        print(i, x.count(i))
+    return counts
+
+
+# In[3]:
+
+
+count_items_v2([1, 2, 3, 4, 5])
+
+
+# In[4]:
+
+
+count_items_v2([1, 1, 1])
+
+
+# In[5]:
+
+
+count_items_v2([1, 1, 1, 2, 2, 2, 2, 4])
+
 
 # ## 3.
 # 
@@ -56,6 +108,36 @@
 # `remove_first_and_last([1, 2])` would return `([], [1, 2])`.
 # 
 # `remove_first_and_last([-10, 20, 50])` would return `([20], [-10, 50])`.
+# 
+# ### Solution
+
+# In[6]:
+
+
+def remove_first_and_last(w):
+    numbers_removed = [w.pop(0), w.pop()]
+    return w, numbers_removed # can put tuple brackets i.e. () if you want
+    
+    
+
+
+# In[7]:
+
+
+remove_first_and_last([1,2,3,4])
+
+
+# In[8]:
+
+
+remove_first_and_last([1,2])
+
+
+# In[9]:
+
+
+remove_first_and_last([-10, 20, 50])
+
 
 # ## 4.
 # 
@@ -66,6 +148,42 @@
 # c) Given the list `x = [1, 2, 'hello world', -3, 5]` use list comprehensions and `enumerate` to create a new list `[(0, 1), (1, 2), (2, 'hello world'), (3, -3), (4, 5)]`.
 # 
 # d) Given a list of numbers in a variable called `numbers`, use list comprehensions to extract all the numbers with a position/index that is a multiple of 3. For example, if `numbers` was the list `[7, 5, 6, 9, 4, 5, 2]` then the list comprehension would create the list `[7, 9, 2]` because those numbers were at positions 0,3,6. Remember that you can use conditionals in list comprehensions and you can use `n % 3 == 0` to check if a number `n` is a multiple of 3. Also, you will want to use `enumerate` in the list comprehension so that you have the position of each item. 
+# 
+# ### Solution
+
+# #### a)
+
+# In[10]:
+
+
+[x for x in range(16,58)]
+
+
+# #### b)
+
+# In[11]:
+
+
+[x for x in range(11,32) if x % 2 == 1]
+
+
+# #### c)
+
+# In[12]:
+
+
+x = [1, 2, 'hello world', -3, 5]
+[z for z in enumerate(x)]
+
+
+# #### d)
+
+# In[13]:
+
+
+numbers = [7, 5, 6, 9, 4, 5, 2]
+[x for i,x in enumerate(numbers) if i % 3 == 0]
+
 
 # ## 5.
 # 
@@ -77,12 +195,76 @@
 # For example if `a=(1,2,3)` and `b=(4,5,6,6)` then `c` would be `(1,2,3,4,5,6,6)`.
 # 
 # d) Create a function that takes two arguments. The first argument is a tuple of numbers. The second argument is a number. The function should print a message which says if the number (second argument) is in the tuple (first argument) or not.
+# 
+# ### Solution
+
+# #### a)
+
+# In[14]:
+
+
+(5,7,8,6436.5325,'hello world', True, False, [1,2,3,4], (9,9,9,9,9))
+
+
+# #### b)
+
+# In[15]:
+
+
+x = ('hello there', False, [9,8,7])
+
+
+# In[16]:
+
+
+a,b,c = x
+print(a)
+print(b)
+print(c)
+
+
+# #### c)
+# 
+
+# In[17]:
+
+
+a=(1,2,3)
+b=(4,5,6,6)
+c = a + b
+c
+
+
+# #### d)
+
+# In[18]:
+
+
+def is_in_tuple(numbers, num):
+    if num in numbers:
+        print(f'YES, {num} is in {numbers}.')
+    else:
+        print(f'NO, {num} is not in {numbers}.')
+    
+
+
+# In[19]:
+
+
+is_in_tuple((1,2,8,5,7), 8)
+
+
+# In[20]:
+
+
+is_in_tuple((1,2,8,5,7), 123)
+
 
 # ## 6.
 # 
 # Given the following lists for example:
 
-# In[1]:
+# In[21]:
 
 
 instruments = ['guitar', 'drums', 'piano']
@@ -96,6 +278,31 @@ colors = ['red', 'black', 'white']
 # 
 # Your code should work on any three lists in this format. Try doing this question with
 # and without using list comprehensions. Also, use the `zip()` method.
+# 
+# ### Solution
+
+# In[22]:
+
+
+# without list comprehension and unpacking
+results = []
+for instrument, price, color in zip(instruments, prices, colors):
+    results.append((instrument, color, price))
+print(results)
+
+# without list comprehension and no packing
+results = []
+for x in zip(instruments, colors, prices):
+    results.append(x)
+print(results)
+
+
+# In[23]:
+
+
+# with list comprehensions
+[x for x in zip(instruments, colors, prices)]
+
 
 # ## 7.
 # 
@@ -119,6 +326,30 @@ colors = ['red', 'black', 'white']
 #  'Jen': 34.45,
 #  'Matt': 0.0}
 # ```
+# 
+# ### Solution
+
+# In[24]:
+
+
+def total_payments(data):
+    names = set([d[0] for d in data])
+    sum_payments = {name: 0 for name in names}
+    
+    for name, payment in data:
+        sum_payments[name] = sum_payments[name] + payment
+    return sum_payments
+
+
+# In[25]:
+
+
+data = [('Chris', 3245.53), ('Joanna', 3498.43), ('Penny', 134.00), ('Isaac', 583.35),
+('Chris', 4300.54), ('Joanna', 3498.43), ('Penny', 957.97), ('Isaac', 0.00),
+('Henry', 10.10), ('Jen', 34.45), ('Matt', 0.00)]
+
+total_payments(data)
+
 
 # ## 8.
 # 
@@ -163,6 +394,87 @@ colors = ['red', 'black', 'white']
 # 
 # You can display the results however you want and feel free to write 
 # some functions as well.
+# 
+# ### Solution
+
+# In[26]:
+
+
+data = [
+ {'name': 'Steph Curry',
+ 'team': 'Golden State Warriors',
+ 'points_per_game': 23.5},
+ 
+ {'name': 'Lebron James',
+ 'team': 'Los Angeles Lakers',
+ 'points_per_game': 27.1},
+ 
+ {'name': 'James Harden',
+ 'team': 'Houstan Rockets',
+ 'points_per_game': 25.2},
+ 
+ {'name': 'Kawhi Leonard',
+ 'team': 'Los Angeles Clippers',
+ 'points_per_game': 18.7},
+ 
+ {'name': 'Paul George',
+ 'team': 'Los Angeles Clippers',
+ 'points_per_game': 20.0},
+ 
+ {'name': 'Kevin Durant',
+ 'team': 'Brooklyn Nets',
+ 'points_per_game': 27.0}
+]
+data
+
+
+# In[27]:
+
+
+list(set([d['name'] for d in data]))
+
+
+# In[28]:
+
+
+list(set([d['team'] for d in data]))
+
+
+# In[29]:
+
+
+# highest score
+highest_score = data[0]
+for d in data[1:]:
+    if d['points_per_game'] >= highest_score['points_per_game']:
+        highest_score = d
+print(highest_score)
+    
+    
+
+
+# In[30]:
+
+
+# lowest score
+lowest_score = data[0]
+for d in data[1:]:
+    if d['points_per_game'] <= lowest_score['points_per_game']:
+        lowest_score = d
+print(lowest_score)
+    
+    
+
+
+# In[31]:
+
+
+scores = [d['points_per_game'] for d in data]
+scores.sort()
+print(scores)
+mean = sum(scores)/len(scores)
+print(mean)
+
 
 # ## 9.
 # 
@@ -177,6 +489,36 @@ colors = ['red', 'black', 'white']
 # `stats(2,4)` should return `(2, 4, 3)`
 # 
 # `stats(12.423,86.234, 98375, 100.2345)` should return `(12.423, 98375, 24643.472875000003)`
+# 
+# ### Solution
+
+# In[32]:
+
+
+def stats(*numbers):
+    smallest = min(numbers)
+    largest = max(numbers)
+    average = sum(numbers)/len(numbers)
+    return (smallest, largest, average)
+
+
+# In[33]:
+
+
+stats(9,5,6,10,4)
+
+
+# In[34]:
+
+
+stats(2,4)
+
+
+# In[35]:
+
+
+stats(12.423,86.234, 98375, 100.2345)
+
 
 # ## 10.
 # 
@@ -203,3 +545,30 @@ colors = ['red', 'black', 'white']
 # 
 # `get_car_details(color='blue')` should raise a `TypeError` because it's missing the
 # two required positional arguments `year` and `make`.
+
+# In[36]:
+
+
+def get_car_details(year, make, **kwargs):
+    kwargs['year'] = year
+    kwargs['make'] = make
+    return kwargs
+
+
+# In[37]:
+
+
+get_car_details(2009, 'BMW', color='black')
+
+
+# In[38]:
+
+
+get_car_details(2009, 'honda')
+
+
+# In[39]:
+
+
+get_car_details(2020, 'ford', color='red', doors=4)
+
