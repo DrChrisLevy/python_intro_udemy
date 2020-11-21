@@ -57,6 +57,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Practice Questions (Solutions)" href="practice_questions_solutions.html" />
     <link rel="prev" title="Data Structures" href="data_structures.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -162,6 +163,11 @@
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Practice Questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice_questions_solutions.html">
+     Practice Questions (Solutions)
     </a>
    </li>
   </ul>
@@ -346,12 +352,13 @@ the values as the number of times those numbers appear in the list.</p>
 <div class="section" id="id3">
 <h2>3.<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>Write a function that takes a list as input and removes the first
-item and the last item in the list. Then the list with the removed
-items is returned. You should use the <code class="docutils literal notranslate"><span class="pre">pop()</span></code> method.</p>
+item and the last item from the list. The function should return a tuple of length two.
+The first item in the tuple should be the list without the items that were removed.
+The second item in the tuple should be the list with only the two numbers that were removed. You should use the <code class="docutils literal notranslate"><span class="pre">pop()</span></code> method.</p>
 <p>For example,</p>
-<p><code class="docutils literal notranslate"><span class="pre">remove_first_and_last([1,2,3,4])</span></code> would return <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">3]</span></code>.</p>
-<p><code class="docutils literal notranslate"><span class="pre">remove_first_and_last([1,</span> <span class="pre">2])</span></code> would return <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p>
-<p><code class="docutils literal notranslate"><span class="pre">remove_first_and_last([-10,</span> <span class="pre">20,</span> <span class="pre">50])</span></code> would return <code class="docutils literal notranslate"><span class="pre">[20]</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">remove_first_and_last([1,2,3,4])</span></code> would return <code class="docutils literal notranslate"><span class="pre">([2,</span> <span class="pre">3],</span> <span class="pre">[1,</span> <span class="pre">4])</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">remove_first_and_last([1,</span> <span class="pre">2])</span></code> would return <code class="docutils literal notranslate"><span class="pre">([],</span> <span class="pre">[1,</span> <span class="pre">2])</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">remove_first_and_last([-10,</span> <span class="pre">20,</span> <span class="pre">50])</span></code> would return <code class="docutils literal notranslate"><span class="pre">([20],</span> <span class="pre">[-10,</span> <span class="pre">50])</span></code>.</p>
 </div>
 <div class="section" id="id4">
 <h2>4.<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
@@ -509,6 +516,7 @@ two required positional arguments <code class="docutils literal notranslate"><sp
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="data_structures.html" title="previous page">Data Structures</a>
+    <a class='right-next' id="next-link" href="practice_questions_solutions.html" title="next page">Practice Questions (Solutions)</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
