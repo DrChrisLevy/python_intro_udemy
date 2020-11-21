@@ -1075,7 +1075,7 @@ def generate_random_list(list_length, minimum, maximum):
     list_of_numbers = []
     for i in range(list_length):
         random_int = random.randint(minimum, maximum)
-        list_of_numbers.append(i)
+        list_of_numbers.append(random_int)
     return list_of_numbers
 
 
@@ -1215,4 +1215,10 @@ find_first_n_primes(20)
 
 
 find_first_n_primes(1000)[-1] # the 1000th prime number
+
+
+# In[ ]:
+
+
+
 
