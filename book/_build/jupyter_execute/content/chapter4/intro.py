@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Chapter 4
+# # Chapter 4: Data Structures
 # 
 # In this chapter we will learn about the common **data structures** used in Python.
 # 

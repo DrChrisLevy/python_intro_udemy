@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro to Virtual Environments &#8212; Learn to code with an Introduction to Python 3</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="The import Statement" href="intro_to_imports.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo_temp.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Learn to code with an Introduction to Python 3</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../book_intro.html">
+   Book Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter1/intro.html">
+   Chapter 1: Intro To Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter2/intro.html">
+   Chapter 2: Control Flow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter3/intro.html">
+   Chapter 3: Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter4/intro.html">
+   Chapter 4: Data Structures
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="intro.html">
+   Chapter 5: Virtual Environments, Packages, Pycharm IDE
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_to_imports.html">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       import
+      </span>
+     </code>
+     Statement
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Intro to Virtual Environments
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/content/chapter5/intro_virtual_envs.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter5/intro_virtual_envs.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#venv">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     venv
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-usage">
+     Basic Usage
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="intro-to-virtual-environments">
+<h1>Intro to Virtual Environments<a class="headerlink" href="#intro-to-virtual-environments" title="Permalink to this headline">¶</a></h1>
+<p>In the previous section we learned how to import modules or libraries
+from the Python Standard Library. In this section you will learn how to
+install external packages for use within Python. This is a very common task
+and is essential to do when your working on specific projects.
+For example, when you first started this course/book you needed to install
+Jupyter Notebook. You typed <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">notebook</span></code> to install Jupyter Notebook.</p>
+<p><strong>PIP</strong> is a package manager for Python packages and modules.
+You use the <code class="docutils literal notranslate"><span class="pre">pip</span></code> command in the terminal shell to install
+packages from the <a class="reference external" href="https://pypi.org/">The Python Package Index (PyPI)</a>.</p>
+<p>For example, if you were working on a data science or machine learning project you may need packages such as:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pypi.org/project/numpy/">numpy</a>, <a class="reference external" href="https://numpy.org/">official docs</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/pandas/">pandas</a>, <a class="reference external" href="https://pandas.pydata.org/docs/index.html">official docs</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/scikit-learn/">scikit-learn</a>, <a class="reference external" href="https://scikit-learn.org/stable/index.html">official docs</a></p></li>
+</ul>
+<p>Or for example, if you were working on a backend web application you may need the package:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pypi.org/project/Flask/">flask</a>, <a class="reference external" href="https://flask.palletsprojects.com/en/1.1.x/">official docs</a></p></li>
+</ul>
+<p>Do not attempt to install these packages yet because we need to learn about virtual environments first. The main point here is that Python has a super rich ecosystem of
+external libraries you can install and use. It is perfectly normal and safe to do so.
+It is completely expected to have such requirements for different projects.</p>
+<p>But different projects have different requirements. Depending on what you are working on,
+you will only need specific packages for specific projects. You won’t need to install all the libraries and packages for every project. Also, you do not want to install hundreds of packages into your base system Python. It can get messy real quick, and even worse, it can break stuff.</p>
+<p>When you first installed Python, that is known as your base system Python. It’s good to keep it clean and tidy. It is bad practice to install all sorts of libraries and modules into
+your base system Python installation. Rather, you should create <strong>virtual environments</strong>. For each project, you have a different virtual environment and in within those environments you will install the required libraries or packages that you need (and only the ones you need).</p>
+<p>There are so many different ways to work with virtual environments and packages in Python.
+It is actually a little annoying that there is not a a single universal tool. However, if you are interested I highly recommend the following to at least know and learn about. It is not required for the moment or in this course right now to know or even look into these. But I want to just plant these names in the back of your mind because you will most certainly run into them if you stick with coding and Python.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://python-poetry.org/">poetry</a></p>
+<ul>
+<li><p>Relatively new as of writing this and well maintained. A good alternative to pipenv (see below). Makes it really easy to publish your own packages to PiPy.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.anaconda.com/">annaconda</a></p>
+<ul>
+<li><p>Great for data science and many people use it. Although personally, I stick with docker and poetry for my projects at work. A lot of windows user especially like this option because it usually just works and makes Python and Windows play nice together. I would highly recommend using <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a> if you go this route.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://pipenv.pypa.io/en/latest/">pipenv</a></p>
+<ul>
+<li><p>Although very popular, it appears dead in terms of no future development. I would
+personally recommend <a class="reference external" href="https://python-poetry.org/">poetry</a> over pipenv.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.docker.com/">docker</a></p>
+<ul>
+<li><p>Probably overkill if you are just starting and docker is so much more than Python virtual environments. It’s amazing though for setting up all sorts of isolated environments. Look into this in the future.</p></li>
+</ul>
+</li>
+</ul>
+<p>Again, at this moment in time, I don’t suggest you go out and try to learn all the above and use it. Just focus on learning Python and getting good at it. It’s just good to know about the above in the back of your mind and you can look into it down the road. Besides, for the time being we are going to use a simple tool for managing virtual environments that comes with Python 3.3 and above. No need to install anything extra. This way you can learn the basics and how to install packages into virtual environments. Once you know the basics and work on a few different projects, then you can do your own research on the above tools and make your own decision on whether they will be useful.</p>
+<div class="section" id="venv">
+<h2><code class="docutils literal notranslate"><span class="pre">venv</span></code><a class="headerlink" href="#venv" title="Permalink to this headline">¶</a></h2>
+<p>We will be using a tool called <a class="reference external" href="https://docs.python.org/3/tutorial/venv.html">venv</a>
+for creating virtual environments, at least initially. It comes with Python 3
+and is easy to use. You can read about it and how to use it <a class="reference external" href="https://docs.python.org/3/tutorial/venv.html">here</a>. Because of the nature
+of this topic I will not be giving tons of detail here in this book.
+However, I will go into lots of detail in the Udemy <a class="reference external" href="https://www.udemy.com/course/learn-to-code-with-an-introduction-to-python-3/?referralCode=42FB26846F76E2E41EF8">course videos</a> on how to use it
+so checkout the videos and the section that corresponds to this section
+of the book.</p>
+<div class="section" id="basic-usage">
+<h3>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">¶</a></h3>
+<p>You can checkout the <a class="reference external" href="https://docs.python.org/3/tutorial/venv.html">venv documentation</a>
+for complete details as well the Udemy <a class="reference external" href="https://www.udemy.com/course/learn-to-code-with-an-introduction-to-python-3/?referralCode=42FB26846F76E2E41EF8">course videos</a>. This is just
+a quick look up reference guide.</p>
+<p>First open the terminal (mac) or command-prompt (windows) and navigate
+to the directory where you want to create the virtual environment.
+These commands are written with <code class="docutils literal notranslate"><span class="pre">python3</span></code> but you may have to use
+<code class="docutils literal notranslate"><span class="pre">python</span></code>. Use whichever results in Python 3.6 or higher. You can always
+check with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">--version</span></code> or <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">--version</span></code>.</p>
+<p><strong>Create the virtual environment</strong> and replace <code class="docutils literal notranslate"><span class="pre">my-env</span></code> with whatever name you want to use
+for the environment. Type this in the terminal shell or command prompt. Type it from the directory where your project is located.</p>
+<p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">venv</span> <span class="pre">my-env</span></code></p>
+<p><strong>To activate the virtual environment on a mac:</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">my-env/bin/activate</span></code></p>
+<p><strong>To activate the virtual environment on windows:</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">my-env\Scripts\activate.bat</span></code></p>
+<p><strong>Once the environment is activated you can install packages inside the virtual environment.</strong></p>
+<p>Here we will install the requests, numpy, and Jupyter Notebook packages as an example.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">requests</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">numpy</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">notebook</span></code></p>
+<p><strong>To list the installed packages in the virtual environment:</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">freeze</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">list</span></code></p>
+<p>To put the packages in a requirements.txt file you can type
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">freeze</span> <span class="pre">&gt;</span> <span class="pre">requirements.txt</span></code></p>
+<p><strong>Remove a package from the virtual environment:</strong></p>
+<p>While in the activate environment, type
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">uninstall</span> <span class="pre">requests</span></code> to remove the <code class="docutils literal notranslate"><span class="pre">requests</span></code> package for example.</p>
+<p><strong>To exit the virtual environment</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">deactivate</span></code></p>
+<p>As I said, checkout the Udemy <a class="reference external" href="https://www.udemy.com/course/learn-to-code-with-an-introduction-to-python-3/?referralCode=42FB26846F76E2E41EF8">course videos</a> for more details.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/chapter5"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="intro_to_imports.html" title="previous page">The <code class="docutils literal notranslate"><span class="pre">import</span></code> Statement</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Chris Levy<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

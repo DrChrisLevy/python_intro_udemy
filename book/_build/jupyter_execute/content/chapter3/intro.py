@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Chapter 3
+# # Chapter 3: Functions
 # 
 # In this chapter of the course we will learn about
 # functions in Python. Knowing how to use functions and

@@ -18,7 +18,7 @@
   - file: content/chapter2/comparison_operators
   - file: content/chapter2/logical_operators
   - file: content/chapter2/if_elif_else
-  - file: content/chapter2/intro_to_lists
+  - file: content/chapter2/intro_to_lists 
   - file: content/chapter2/intro_to_loops
   - file: content/chapter2/more_basic_operators
   - file: content/chapter2/chapter2_practice_questions
@@ -35,3 +35,8 @@
   - file: content/chapter4/data_structures
   - file: content/chapter4/practice_questions
   - file: content/chapter4/practice_questions_solutions
+
+- file: content/chapter5/intro
+  sections:
+  - file: content/chapter5/intro_to_imports
+  - file: content/chapter5/intro_virtual_envs

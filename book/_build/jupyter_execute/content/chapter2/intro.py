@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Chapter 2
+# # Chapter 2: Control Flow
 # 
 # In this chapter you will be introduced to common tools that can be found
 # in many coding languages. These tools will allow you to implement 

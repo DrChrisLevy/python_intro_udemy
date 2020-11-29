@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Chapter 1
+# # Chapter 1: Intro To Python
 # 
 # In this chapter you will be introduced to the Python 
 # programing language. Here are the main topics you will learn about:
