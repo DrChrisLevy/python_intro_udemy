@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chapter 1: Intro To Python &#8212; Learn to code with an Introduction to Python 3</title>
+    <title>Chapter 5: Virtual Environments, Packages, Pycharm IDE &#8212; Learn to code with an Introduction to Python 3</title>
     
   <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -57,8 +57,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Intro to Interactive Python" href="interactive_python_and_print.html" />
-    <link rel="prev" title="Book Introduction" href="../book_intro.html" />
+    <link rel="next" title="The import Statement" href="intro_to_imports.html" />
+    <link rel="prev" title="Practice Questions (Solutions)" href="../chapter4/practice_questions_solutions.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -99,57 +99,10 @@
  </li>
 </ul>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter1/intro.html">
    Chapter 1: Intro To Python
   </a>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="interactive_python_and_print.html">
-     Intro to Interactive Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="strings_concatenation.html">
-     Strings
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="variables_and_types.html">
-     Variables and Types
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="numerical_data_types.html">
-     Numerical Data Types
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="string_formatting_indexing_slicing.html">
-     More on Strings
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="user_input.html">
-     Getting Input From a User
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="string_float_int_conversion.html">
-     Converting Strings and Floats and Integers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="practice_questions.html">
-     Practice Questions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="practice_questions_solutions.html">
-     Practice Questions (Solutions)
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter2/intro.html">
@@ -166,10 +119,28 @@
    Chapter 4: Data Structures
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter5/intro.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Chapter 5: Virtual Environments, Packages, Pycharm IDE
   </a>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_to_imports.html">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       import
+      </span>
+     </code>
+     Statement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_virtual_envs.html">
+     Intro to Virtual Environments
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -213,7 +184,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/content/chapter1/intro.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/content/chapter5/intro.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -238,7 +209,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter1/intro.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter5/intro.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -262,20 +233,21 @@
         
               <div>
                 
-  <div class="section" id="chapter-1-intro-to-python">
-<h1>Chapter 1: Intro To Python<a class="headerlink" href="#chapter-1-intro-to-python" title="Permalink to this headline">¶</a></h1>
-<p>In this chapter you will be introduced to the Python
-programing language. Here are the main topics you will learn about:</p>
+  <div class="section" id="chapter-5-virtual-environments-packages-pycharm-ide">
+<h1>Chapter 5: Virtual Environments, Packages, Pycharm IDE<a class="headerlink" href="#chapter-5-virtual-environments-packages-pycharm-ide" title="Permalink to this headline">¶</a></h1>
+<p>When you start working on actual projects there are some really important
+tools you are going to need. In this chapter we are going to introduce you to
+some of those tools. For some of these tools there are various options and choices.
+As you progress in your learning you can certainly look into these various options. This chapter
+will be more of a high level introduction to get you started and point you
+in the right direction. We will provide some specific tools to accomplish the goals of this course. We can not possibly cover every single tool because it would be overwhelming and not very useful. In some cases I will provide external links to tools that you can look into on your own.</p>
+<p>Some of the things we will cover in this chapter are:</p>
 <ul class="simple">
-<li><p>interactive Python</p></li>
-<li><p>Jupyter Notebooks</p></li>
-<li><p>print</p></li>
-<li><p>strings</p></li>
-<li><p>variables</p></li>
-<li><p>numerical data types (integers and floats)</p></li>
-<li><p>string formating with f-strings</p></li>
-<li><p>indexing and slicing strings</p></li>
-<li><p>getting input from a user</p></li>
+<li><p>importing libraries in your Python code with import statements</p></li>
+<li><p>creating virtual environments for projects</p></li>
+<li><p>installing packages/libraries into those projects with pip</p></li>
+<li><p>creating your own modules for importing</p></li>
+<li><p>Setting up an integrated development environment (IDE) with the use of the popular IDE, Pycharm</p></li>
 </ul>
 <div class="toctree-wrapper compound">
 </div>
@@ -294,7 +266,7 @@ programing language. Here are the main topics you will learn about:</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content/chapter1"
+            path: "./content/chapter5"
         },
         predefinedOutput: true
     }
@@ -309,8 +281,8 @@ programing language. Here are the main topics you will learn about:</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../book_intro.html" title="previous page">Book Introduction</a>
-    <a class='right-next' id="next-link" href="interactive_python_and_print.html" title="next page">Intro to Interactive Python</a>
+    <a class='left-prev' id="prev-link" href="../chapter4/practice_questions_solutions.html" title="previous page">Practice Questions (Solutions)</a>
+    <a class='right-next' id="next-link" href="intro_to_imports.html" title="next page">The <code class="docutils literal notranslate"><span class="pre">import</span></code> Statement</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
