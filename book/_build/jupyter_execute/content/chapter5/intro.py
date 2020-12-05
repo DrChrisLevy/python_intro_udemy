@@ -34,5 +34,6 @@
 # 
 # intro_to_imports
 # intro_virtual_envs
+# pycharm_ide
 # ```
 # 
