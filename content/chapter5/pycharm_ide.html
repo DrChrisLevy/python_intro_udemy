@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chapter 5: Virtual Environments, Packages, Pycharm IDE &#8212; Learn to code with an Introduction to Python 3</title>
+    <title>Pycharm IDE &#8212; Learn to code with an Introduction to Python 3</title>
     
   <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -57,8 +57,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="The import Statement" href="intro_to_imports.html" />
-    <link rel="prev" title="Practice Questions (Solutions)" href="../chapter4/practice_questions_solutions.html" />
+    <link rel="prev" title="Intro to Virtual Environments" href="intro_virtual_envs.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -120,10 +119,10 @@
   </a>
  </li>
  <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="intro.html">
    Chapter 5: Virtual Environments, Packages, Pycharm IDE
   </a>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="intro_to_imports.html">
      The
@@ -140,8 +139,8 @@
      Intro to Virtual Environments
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="pycharm_ide.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Pycharm IDE
     </a>
    </li>
@@ -189,7 +188,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/content/chapter5/intro.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/content/chapter5/pycharm_ide.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -214,7 +213,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter5/intro.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter5/pycharm_ide.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -238,24 +237,15 @@
         
               <div>
                 
-  <div class="section" id="chapter-5-virtual-environments-packages-pycharm-ide">
-<h1>Chapter 5: Virtual Environments, Packages, Pycharm IDE<a class="headerlink" href="#chapter-5-virtual-environments-packages-pycharm-ide" title="Permalink to this headline">¶</a></h1>
-<p>When you start working on actual projects there are some really important
-tools you are going to need. In this chapter we are going to introduce you to
-some of those tools. For some of these tools there are various options and choices.
-As you progress in your learning you can certainly look into these various options. This chapter
-will be more of a high level introduction to get you started and point you
-in the right direction. We will provide some specific tools to accomplish the goals of this course. We can not possibly cover every single tool because it would be overwhelming and not very useful. In some cases I will provide external links to tools that you can look into on your own.</p>
-<p>Some of the things we will cover in this chapter are:</p>
-<ul class="simple">
-<li><p>importing libraries in your Python code with import statements</p></li>
-<li><p>creating virtual environments for projects</p></li>
-<li><p>installing packages/libraries into those projects with pip</p></li>
-<li><p>creating your own modules for importing</p></li>
-<li><p>Setting up an integrated development environment (IDE) with the use of the popular IDE, Pycharm</p></li>
-</ul>
-<div class="toctree-wrapper compound">
-</div>
+  <div class="section" id="pycharm-ide">
+<h1>Pycharm IDE<a class="headerlink" href="#pycharm-ide" title="Permalink to this headline">¶</a></h1>
+<p>In this section we will be using how to learn Pycharm
+so we can start coding in a proper editor. Jupyter Notebook
+is great for experiments and trying things out but most people end
+up developing code within a proper interactive development environment (IDE).  An IDE is basically a  text editor that includes lots of other specific features to assist with developing code.</p>
+<p>There are many options out there for IDEs and just do a quick Google for <a class="reference external" href="https://www.google.com/search?q=Coding+IDE+options&amp;oq=Coding+IDE+options&amp;aqs=chrome..69i57j69i60.729j0j1&amp;sourceid=chrome&amp;ie=UTF-8">coding IDE options</a>.</p>
+<p>In this course we will use <a class="reference external" href="https://www.jetbrains.com/pycharm/">Pycharm</a>. I’m not going to write out in this book how to install and set it up because there is already so much stuff on the web that you can read to do that. Just checkout the <a class="reference external" href="https://www.jetbrains.com/pycharm/">Pycharm</a> website and their documentation is really good. We will be using
+the <strong>community edition</strong> because it’s free. If you are taking the <a class="reference external" href="https://www.udemy.com/course/learn-to-code-with-an-introduction-to-python-3/?referralCode=42FB26846F76E2E41EF8">Udemy Course</a> that goes along with this book then you can check out the videos there for how to install and set up Pycharm with virtual environments. Also in the videos I will be showing you how to set up simple project structures and creating virtual environments for them and linking the two together in Pycharm. You will also learn more about import statements and how to create your own modules and how to import code from those modules. This material will most likely not be written out in this section of the book because it is not written in Jupyter Notebooks (what this book is built off of). So head over to the <a class="reference external" href="https://www.udemy.com/course/learn-to-code-with-an-introduction-to-python-3/?referralCode=42FB26846F76E2E41EF8">Chapter 5 Udemy course videos</a> to see the specific content for the rest of this chapter.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -286,8 +276,7 @@ in the right direction. We will provide some specific tools to accomplish the go
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../chapter4/practice_questions_solutions.html" title="previous page">Practice Questions (Solutions)</a>
-    <a class='right-next' id="next-link" href="intro_to_imports.html" title="next page">The <code class="docutils literal notranslate"><span class="pre">import</span></code> Statement</a>
+    <a class='left-prev' id="prev-link" href="intro_virtual_envs.html" title="previous page">Intro to Virtual Environments</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
