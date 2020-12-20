@@ -235,6 +235,20 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#downloading-images">
+   Downloading Images
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -350,6 +364,44 @@ Here we import the function <code class="docutils literal notranslate"><span cla
 </div>
 <div class="cell_output docutils container">
 <img alt="../../_images/using_image_udemy_11_0.png" src="../../_images/using_image_udemy_11_0.png" />
+</div>
+</div>
+<div class="section" id="downloading-images">
+<h2>Downloading Images<a class="headerlink" href="#downloading-images" title="Permalink to this headline">¶</a></h2>
+<p>We also wrote a simple function to download some images from the web.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">image.image</span> <span class="kn">import</span> <span class="n">download_images</span>
+<span class="n">image_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://upload.wikimedia.org/wikipedia/commons/1/18/Dog_Breeds.jpg&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;https://static.im-a-puzzle.com/gallery/Animals/Dogs/Dog_in_the_snow.jpg&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;https://upload.wikimedia.org/wikipedia/commons/4/43/Cute_dog.jpg&#39;</span>
+              <span class="p">]</span>
+<span class="c1"># change the folder_path on your machine</span>
+<span class="n">images</span> <span class="o">=</span> <span class="n">download_images</span><span class="p">(</span><span class="n">image_urls</span><span class="p">,</span>
+                         <span class="n">folder_path</span><span class="o">=</span><span class="s1">&#39;/Users/guestadmin/junk/downloaded_images&#39;</span><span class="p">)</span>
+<span class="n">images</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;image_url&#39;: &#39;https://upload.wikimedia.org/wikipedia/commons/1/18/Dog_Breeds.jpg&#39;,
+  &#39;width&#39;: 1100,
+  &#39;height&#39;: 825,
+  &#39;format&#39;: &#39;JPEG&#39;,
+  &#39;file_name&#39;: &#39;/Users/guestadmin/junk/downloaded_images/0.jpg&#39;},
+ {&#39;image_url&#39;: &#39;https://static.im-a-puzzle.com/gallery/Animals/Dogs/Dog_in_the_snow.jpg&#39;,
+  &#39;width&#39;: 1350,
+  &#39;height&#39;: 900,
+  &#39;format&#39;: &#39;JPEG&#39;,
+  &#39;file_name&#39;: &#39;/Users/guestadmin/junk/downloaded_images/1.jpg&#39;},
+ {&#39;image_url&#39;: &#39;https://upload.wikimedia.org/wikipedia/commons/4/43/Cute_dog.jpg&#39;,
+  &#39;width&#39;: 3176,
+  &#39;height&#39;: 2117,
+  &#39;format&#39;: &#39;JPEG&#39;,
+  &#39;file_name&#39;: &#39;/Users/guestadmin/junk/downloaded_images/2.jpg&#39;}]
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
