@@ -78,3 +78,21 @@ img_crop = img.crop((left, upper, right, lower))
 
 img_crop
 
+
+# ## Downloading Images
+# 
+# We also wrote a simple function to download some images from the web.
+
+# In[12]:
+
+
+from image.image import download_images
+image_urls = ['https://upload.wikimedia.org/wikipedia/commons/1/18/Dog_Breeds.jpg',
+              'https://static.im-a-puzzle.com/gallery/Animals/Dogs/Dog_in_the_snow.jpg',
+              'https://upload.wikimedia.org/wikipedia/commons/4/43/Cute_dog.jpg'
+              ]
+# change the folder_path on your machine
+images = download_images(image_urls,
+                         folder_path='/Users/guestadmin/junk/downloaded_images')
+images
+
