@@ -1,0 +1,652 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Questions &#8212; Learn to code with an Introduction to Python 3</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Using Our Image Module" href="using_image_udemy.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo_temp.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Learn to code with an Introduction to Python 3</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../book_intro.html">
+   Book Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter1/intro.html">
+   Chapter 1: Intro To Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter2/intro.html">
+   Chapter 2: Control Flow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter3/intro.html">
+   Chapter 3: Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter4/intro.html">
+   Chapter 4: Data Structures
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="intro.html">
+   Chapter 5: Virtual Environments, Packages, Pycharm IDE
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_to_imports.html">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       import
+      </span>
+     </code>
+     Statement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_virtual_envs.html">
+     Intro to Virtual Environments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pycharm_ide.html">
+     Pycharm IDE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="using_image_udemy.html">
+     Using Our Image Module
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Practice Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/content/chapter5/practice_questions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter5/practice_questions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   1.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   2.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   3.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   4.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   5.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   6.
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="practice-questions">
+<h1>Practice Questions<a class="headerlink" href="#practice-questions" title="Permalink to this headline">¶</a></h1>
+<p>In this chapter we learned how to install external libraries
+and import them into our code. We also learned how to create virtual environments and set up those virtual environments within the Pycharm IDE. The purpose of the these questions is to practice some of these skills and tools.</p>
+<p>In these practice questions we will be installing a library called <a class="reference external" href="https://pandas.pydata.org/">pandas</a> and library called <a class="reference external" href="https://seaborn.pydata.org/">seaborn</a>. These questions are not supposed to teach you how to use these libraries. Instead, the objective is to get the code to run within Pycharm and Jupyter through the use of the virtual environment.
+You may encounter some issues. It is common to run into issues when dealing with packages and their dependencies. If you do so, Google the problems and read and try and find solutions.</p>
+<p>If you get stuck at any point, go back and read this chapter over again. You can also checkout the videos for Chapter 5 in the <a class="reference external" href="https://www.udemy.com/course/learn-to-code-with-an-introduction-to-python-3/?referralCode=42FB26846F76E2E41EF8">Udemy course videos</a> which go into lots of detail on setting up the virtual environment in Pycharm.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="section" id="id1">
+<h2>1.<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Use the terminal/command prompt to create a virtual environment called <code class="docutils literal notranslate"><span class="pre">pandas_demo</span></code> in your <code class="docutils literal notranslate"><span class="pre">.venv</span></code> folder using the <a class="reference external" href="https://docs.python.org/3/library/venv.html">venv</a> tool. Then activate it and install pandas into the virtual environment with the command <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pandas</span></code>. Also install Jupyter Notebook into this virtual environment with the command <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">notebook</span></code>. Finally install seaborn with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">seaborn</span></code>.</p>
+</div>
+<div class="section" id="id2">
+<h2>2.<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>In your <code class="docutils literal notranslate"><span class="pre">my_notebooks</span></code> folder create a folder called <code class="docutils literal notranslate"><span class="pre">pandas_demo</span></code>. Open a new project in Pycharm from the <code class="docutils literal notranslate"><span class="pre">pandas_demo</span></code> folder so that it is the main/root folder in your Pycharm project. Within the <code class="docutils literal notranslate"><span class="pre">pandas_demo</span></code> folder create a file called <code class="docutils literal notranslate"><span class="pre">python_demo.py</span></code>. Your setup should look something like the below screenshot.</p>
+<p><img alt="pandas_demo" src="../../_images/pycharm_screenshot.png" /></p>
+</div>
+<div class="section" id="id3">
+<h2>3.<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Set up the Python interpreter within Pycharm to use the <code class="docutils literal notranslate"><span class="pre">pandas_demo</span></code> virtual environment you created above. If you forget how to do this go back and watch the videos from Chapter 5 <a class="reference external" href="https://www.udemy.com/course/learn-to-code-with-an-introduction-to-python-3/?referralCode=42FB26846F76E2E41EF8">Udemy course videos</a> relative to this question.</p>
+</div>
+<div class="section" id="id4">
+<h2>4.<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>To check that the environment is working within Pycharm execute the following code within the Pycharm Python console.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span> <span class="s1">&#39;col2&#39;</span><span class="p">,</span> <span class="s1">&#39;col3&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">iris</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;iris&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   col1  col2  col3
+0     1     2     3
+1     4     5     6
+
+
+
+   sepal_length  sepal_width  petal_length  petal_width species
+0           5.1          3.5           1.4          0.2  setosa
+1           4.9          3.0           1.4          0.2  setosa
+2           4.7          3.2           1.3          0.2  setosa
+3           4.6          3.1           1.5          0.2  setosa
+4           5.0          3.6           1.4          0.2  setosa
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>5.<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>Within Pycharm, use the editor to add the following code to the file <code class="docutils literal notranslate"><span class="pre">pandas_demo.py</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+
+<span class="k">def</span> <span class="nf">load_data</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;penguins&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">pairs_plot</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">group_count</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col_name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">col_name</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>6.<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>Create a Jupyter Notebook within your <code class="docutils literal notranslate"><span class="pre">my_notebooks</span></code> folder. In that notebook import the functions from the <code class="docutils literal notranslate"><span class="pre">pandas_demo.py</span></code>
+module and run the following code in Jupyter notebook. If you see the generated output then you completed these questions successfully.</p>
+<p>Note that the functions we created in <code class="docutils literal notranslate"><span class="pre">pandas_demo.py</span></code> are a little silly. You would just call those libraries directly in practice. However, the point here is to understand how to import functions that you write within Python modules.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas_demo.pandas_demo</span> <span class="kn">import</span> <span class="n">load_data</span><span class="p">,</span> <span class="n">pairs_plot</span><span class="p">,</span> <span class="n">group_count</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>species</th>
+      <th>island</th>
+      <th>bill_length_mm</th>
+      <th>bill_depth_mm</th>
+      <th>flipper_length_mm</th>
+      <th>body_mass_g</th>
+      <th>sex</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>39.1</td>
+      <td>18.7</td>
+      <td>181.0</td>
+      <td>3750.0</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>39.5</td>
+      <td>17.4</td>
+      <td>186.0</td>
+      <td>3800.0</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>40.3</td>
+      <td>18.0</td>
+      <td>195.0</td>
+      <td>3250.0</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>36.7</td>
+      <td>19.3</td>
+      <td>193.0</td>
+      <td>3450.0</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>39.3</td>
+      <td>20.6</td>
+      <td>190.0</td>
+      <td>3650.0</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>38.9</td>
+      <td>17.8</td>
+      <td>181.0</td>
+      <td>3625.0</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>39.2</td>
+      <td>19.6</td>
+      <td>195.0</td>
+      <td>4675.0</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>34.1</td>
+      <td>18.1</td>
+      <td>193.0</td>
+      <td>3475.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Adelie</td>
+      <td>Torgersen</td>
+      <td>42.0</td>
+      <td>20.2</td>
+      <td>190.0</td>
+      <td>4250.0</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pairs_plot</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x10ff70f60&gt;
+</pre></div>
+</div>
+<img alt="../../_images/practice_questions_12_1.png" src="../../_images/practice_questions_12_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">group_count</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;sex&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>species</th>
+      <th>island</th>
+      <th>bill_length_mm</th>
+      <th>bill_depth_mm</th>
+      <th>flipper_length_mm</th>
+      <th>body_mass_g</th>
+    </tr>
+    <tr>
+      <th>sex</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Female</th>
+      <td>165</td>
+      <td>165</td>
+      <td>165</td>
+      <td>165</td>
+      <td>165</td>
+      <td>165</td>
+    </tr>
+    <tr>
+      <th>Male</th>
+      <td>168</td>
+      <td>168</td>
+      <td>168</td>
+      <td>168</td>
+      <td>168</td>
+      <td>168</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/chapter5"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="using_image_udemy.html" title="previous page">Using Our Image Module</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Chris Levy<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
