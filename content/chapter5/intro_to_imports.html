@@ -159,7 +159,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter6/intro.html">
-   Chapter 6: Truthy Values,
+   Chapter 6: Truthy and Falsy Values,
    <code class="docutils literal notranslate">
     <span class="pre">
      None
@@ -460,7 +460,7 @@ sorts of <a class="reference external" href="https://docs.python.org/3/library/r
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
 </pre></div>
 </div>
 </div>
@@ -473,7 +473,20 @@ sorts of <a class="reference external" href="https://docs.python.org/3/library/r
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
 </pre></div>
 </div>
 </div>
@@ -493,13 +506,19 @@ sorts of <a class="reference external" href="https://docs.python.org/3/library/r
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-<span class="n">x</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[5, 6, 2, 9, 7, 3, 4, 1, 8, 0]
 </pre></div>
 </div>
 </div>
@@ -518,26 +537,7 @@ sorts of <a class="reference external" href="https://docs.python.org/3/library/r
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 4, 2, 3, 1, 6, 8, 5, 9, 7]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 4, 5, 9, 8, 1, 6, 2, 7, 0]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[9, 3, 2, 7, 8, 0, 4, 1, 6, 5]
 </pre></div>
 </div>
 </div>
@@ -550,7 +550,7 @@ sorts of <a class="reference external" href="https://docs.python.org/3/library/r
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[8, 2, 5, 9, 6]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6, 0, 9, 8, 5]
 </pre></div>
 </div>
 </div>
@@ -563,7 +563,7 @@ sorts of <a class="reference external" href="https://docs.python.org/3/library/r
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 0, 9, 5, 8]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 6, 8, 0, 4]
 </pre></div>
 </div>
 </div>
