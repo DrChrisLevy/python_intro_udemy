@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chapter 3: Functions &#8212; Learn to code with an Introduction to Python 3</title>
+    <title>Chapter 6: Truthy Values, None Value, Exception Handling, Reading and Writing Files &#8212; Learn to code with an Introduction to Python 3</title>
     
   <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -57,8 +57,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Intro to Functions" href="intro_to_functions.html" />
-    <link rel="prev" title="Practice Questions (Solutions)" href="../chapter2/chapter2_practice_questions_solutions.html" />
+    <link rel="next" title="Truthy Values" href="truthy_falsy_values.html" />
+    <link rel="prev" title="Practice Questions" href="../chapter5/practice_questions.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -109,42 +109,10 @@
    Chapter 2: Control Flow
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter3/intro.html">
    Chapter 3: Functions
   </a>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="intro_to_functions.html">
-     Intro to Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="intro_to_functions.html#built-in-python-functions">
-     Built-in Python Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="intro_to_functions.html#defining-your-own-functions">
-     Defining your own functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="intro_to_functions.html#examples">
-     Examples
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chapter_3_practice_questions.html">
-     Practice Questions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="chapter_3_practice_questions_solutions.html">
-     Practice Questions (Solutions)
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter4/intro.html">
@@ -156,8 +124,8 @@
    Chapter 5: Virtual Environments, Packages, Pycharm IDE
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter6/intro.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Chapter 6: Truthy Values,
    <code class="docutils literal notranslate">
     <span class="pre">
@@ -166,6 +134,23 @@
    </code>
    Value, Exception Handling, Reading and Writing Files
   </a>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="truthy_falsy_values.html">
+     Truthy Values
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="none_value_type.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       None
+      </span>
+     </code>
+     Value
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -209,7 +194,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/content/chapter3/intro.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/content/chapter6/intro.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -234,7 +219,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter3/intro.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter6/intro.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -258,27 +243,14 @@
         
               <div>
                 
-  <div class="section" id="chapter-3-functions">
-<h1>Chapter 3: Functions<a class="headerlink" href="#chapter-3-functions" title="Permalink to this headline">¶</a></h1>
-<p>In this chapter of the course we will learn about
-functions in Python. Knowing how to use functions and
-create your own function is very important when coding.
-Functions allow you to write modular code, write code that is easier to read,
-and write reusable code. Some of the concepts we will learn in
-this chapter include:</p>
+  <div class="section" id="chapter-6-truthy-values-none-value-exception-handling-reading-and-writing-files">
+<h1>Chapter 6: Truthy Values, <code class="docutils literal notranslate"><span class="pre">None</span></code> Value, Exception Handling, Reading and Writing Files<a class="headerlink" href="#chapter-6-truthy-values-none-value-exception-handling-reading-and-writing-files" title="Permalink to this headline">¶</a></h1>
+<p>In this chapter we will cover several different topics.</p>
 <ul class="simple">
-<li><p>What are functions and why do we use them?</p></li>
-<li><p>Examples of functions that are built into Python.</p></li>
-<li><p>Defining your own functions.</p></li>
-<li><p>Function arguments</p>
-<ul>
-<li><p>positional arguments</p></li>
-<li><p>keyword arguments</p></li>
-<li><p>default arguments</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">return</span></code> statement</p></li>
-<li><p>Local and global scope</p></li>
+<li><p>Truthy values</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">None</span></code> value</p></li>
+<li><p>About different Python errors and how to do exception handling with <code class="docutils literal notranslate"><span class="pre">try</span></code> and <code class="docutils literal notranslate"><span class="pre">Except</span></code></p></li>
+<li><p>How to read data from a file and write data back to a file</p></li>
 </ul>
 <div class="toctree-wrapper compound">
 </div>
@@ -297,7 +269,7 @@ this chapter include:</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content/chapter3"
+            path: "./content/chapter6"
         },
         predefinedOutput: true
     }
@@ -312,8 +284,8 @@ this chapter include:</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../chapter2/chapter2_practice_questions_solutions.html" title="previous page">Practice Questions (Solutions)</a>
-    <a class='right-next' id="next-link" href="intro_to_functions.html" title="next page">Intro to Functions</a>
+    <a class='left-prev' id="prev-link" href="../chapter5/practice_questions.html" title="previous page">Practice Questions</a>
+    <a class='right-next' id="next-link" href="truthy_falsy_values.html" title="next page">Truthy Values</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
