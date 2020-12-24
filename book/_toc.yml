@@ -43,3 +43,8 @@
   - file: content/chapter5/pycharm_ide
   - file: content/chapter5/using_image_udemy
   - file: content/chapter5/practice_questions
+
+- file: content/chapter6/intro
+  sections:
+  - file: content/chapter6/truthy_falsy_values
+  - file: content/chapter6/none_value_type
