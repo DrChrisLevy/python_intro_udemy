@@ -1,0 +1,796 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Errors and Exceptions &#8212; Learn to code with an Introduction to Python 3</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="None Value" href="none_value_type.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo_temp.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Learn to code with an Introduction to Python 3</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../book_intro.html">
+   Book Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter1/intro.html">
+   Chapter 1: Intro To Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter2/intro.html">
+   Chapter 2: Control Flow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter3/intro.html">
+   Chapter 3: Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter4/intro.html">
+   Chapter 4: Data Structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter5/intro.html">
+   Chapter 5: Virtual Environments, Packages, Pycharm IDE
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="intro.html">
+   Chapter 6: Truthy and Falsy Values,
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     None
+    </span>
+   </code>
+   Value, Exception Handling, Reading and Writing Files
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="truthy_falsy_values.html">
+     Truthy and Falsy Values
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="none_value_type.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       None
+      </span>
+     </code>
+     Value
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Errors and Exceptions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/content/chapter6/error_handling.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter6/error_handling.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#syntax-errors">
+   Syntax Errors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exceptions">
+   Exceptions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#handling-exceptions">
+   Handling Exceptions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#examples">
+     Examples
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="section" id="errors-and-exceptions">
+<h1>Errors and Exceptions<a class="headerlink" href="#errors-and-exceptions" title="Permalink to this headline">¶</a></h1>
+<p>In this section we are going to look at common errors in Python, how they can occur, and how to handle them. These are the type of errors that actually make your code break and stop executing.</p>
+<div class="section" id="syntax-errors">
+<h2>Syntax Errors<a class="headerlink" href="#syntax-errors" title="Permalink to this headline">¶</a></h2>
+<p>Syntax errors are quite common when you begin coding in Python.
+Here is an example where we attempt to write a for loop but we forget
+the <code class="docutils literal notranslate"><span class="pre">:</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-2-47dfaf615d55&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<span class="nn">    for i</span> in <span class="ni">range</span><span class="nt">(2)</span>
+                     <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code> is the type of error that is raised and the little arrow <code class="docutils literal notranslate"><span class="pre">^</span></code> is pointing
+to the first place in the code to where the error is detected. To fix it, we can add the <code class="docutils literal notranslate"><span class="pre">:</span></code> after the closing bracket.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<p>There are many types of other errors that can occur in your code
+even if the code has proper syntax. Errors that are detected in the
+code during execution are called <strong>exceptions</strong>.</p>
+<p>For the next example we will use the <em>image</em> module we wrote
+and you will need that virtual environment activated if you
+want to run this code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">image.image</span> <span class="kn">import</span> <span class="n">get_image_content</span>
+<span class="n">image_url</span> <span class="o">=</span> <span class="s1">&#39;https://broken_image_url.jpg&#39;</span>
+<span class="n">image_content</span> <span class="o">=</span> <span class="n">get_image_content</span><span class="p">(</span><span class="n">image_url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">gaierror</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">~/Library/Caches/pypoetry/virtualenvs/teach-python-_R03MHmW-py3.6/lib/python3.6/site-packages/urllib3/connection.py</span> in <span class="ni">_new_conn</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">159</span>             <span class="n">conn</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">create_connection</span><span class="p">(</span>
+<span class="ne">--&gt; </span><span class="mi">160</span>                 <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_dns_host</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">,</span> <span class="o">**</span><span class="n">extra_kw</span>
+<span class="g g-Whitespace">    </span><span class="mi">161</span>             <span class="p">)</span>
+
+<span class="nn">~/Library/Caches/pypoetry/virtualenvs/teach-python-_R03MHmW-py3.6/lib/python3.6/site-packages/urllib3/util/connection.py</span> in <span class="ni">create_connection</span><span class="nt">(address, timeout, source_address, socket_options)</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span> 
+<span class="ne">---&gt; </span><span class="mi">61</span>     <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span>         <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
+
+<span class="nn">/usr/local/opt/python/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py</span> in <span class="ni">getaddrinfo</span><span class="nt">(host, port, family, type, proto, flags)</span>
+<span class="g g-Whitespace">    </span><span class="mi">744</span>     <span class="n">addrlist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="ne">--&gt; </span><span class="mi">745</span>     <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">_socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">flags</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">746</span>         <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
+
+<span class="ne">gaierror</span>: [Errno 8] nodename nor servname provided, or not known
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">NewConnectionError</span><span class="g g-Whitespace">                        </span>Traceback (most recent call last)
+<span class="nn">~/Library/Caches/pypoetry/virtualenvs/teach-python-_R03MHmW-py3.6/lib/python3.6/site-packages/urllib3/connectionpool.py</span> in <span class="ni">urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, **response_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">676</span>                 <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">677</span>                 <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">678</span>             <span class="p">)</span>
+
+<span class="nn">~/Library/Caches/pypoetry/virtualenvs/teach-python-_R03MHmW-py3.6/lib/python3.6/site-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">380</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">381</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_validate_conn</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">382</span>         <span class="k">except</span> <span class="p">(</span><span class="n">SocketTimeout</span><span class="p">,</span> <span class="n">BaseSSLError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="nn">~/Library/Caches/pypoetry/virtualenvs/teach-python-_R03MHmW-py3.6/lib/python3.6/site-packages/urllib3/connectionpool.py</span> in <span class="ni">_validate_conn</span><span class="nt">(self, conn)</span>
+<span class="g g-Whitespace">    </span><span class="mi">977</span>         <span class="k">if</span> <span class="ow">not</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="s2">&quot;sock&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>  <span class="c1"># AppEngine might not have  `.sock`</span>
+<span class="ne">--&gt; </span><span class="mi">978</span>             <span class="n">conn</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">979</span> 
+
+<span class="nn">~/Library/Caches/pypoetry/virtualenvs/teach-python-_R03MHmW-py3.6/lib/python3.6/site-packages/urllib3/connection.py</span> in <span class="ni">connect</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">308</span>         <span class="c1"># Add certificate verification</span>
+<span class="ne">--&gt; </span><span class="mi">309</span>         <span class="n">conn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_conn</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">310</span>         <span class="n">hostname</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span>
+
+<span class="nn">~/Library/Caches/pypoetry/virtualenvs/teach-python-_R03MHmW-py3.6/lib/python3.6/site-packages/urllib3/connection.py</span> in <span class="ni">_new_conn</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">171</span>             <span class="k">raise</span> <span class="n">NewConnectionError</span><span class="p">(</span>
+<span class="ne">--&gt; </span><span class="mi">172</span>                 <span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;Failed to establish a new connection: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">e</span>
+<span class="g g-Whitespace">    </span><span class="mi">173</span>             <span class="p">)</span>
+
+<span class="ne">NewConnectionError</span>: &lt;urllib3.connection.HTTPSConnection object at 0x1058c8a58&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">MaxRetryError</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
+<span class="nn">~/Library/Caches/pypoetry/virtualenvs/teach-python-_R03MHmW-py3.6/lib/python3.6/site-packages/requests/adapters.py</span> in <span class="ni">send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
+<span class="g g-Whitespace">    </span><span class="mi">448</span>                     <span class="n">retries</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_retries</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">449</span>                     <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span>
+<span class="g g-Whitespace">    </span><span class="mi">450</span>                 <span class="p">)</span>
+
+<span class="nn">~/Library/Caches/pypoetry/virtualenvs/teach-python-_R03MHmW-py3.6/lib/python3.6/site-packages/urllib3/connectionpool.py</span> in <span class="ni">urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, **response_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">726</span>             <span class="n">retries</span> <span class="o">=</span> <span class="n">retries</span><span class="o">.</span><span class="n">increment</span><span class="p">(</span>
+<span class="ne">--&gt; </span><span class="mi">727</span>                 <span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">_pool</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">_stacktrace</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">728</span>             <span class="p">)</span>
+
+<span class="nn">~/Library/Caches/pypoetry/virtualenvs/teach-python-_R03MHmW-py3.6/lib/python3.6/site-packages/urllib3/util/retry.py</span> in <span class="ni">increment</span><span class="nt">(self, method, url, response, error, _pool, _stacktrace)</span>
+<span class="g g-Whitespace">    </span><span class="mi">445</span>         <span class="k">if</span> <span class="n">new_retry</span><span class="o">.</span><span class="n">is_exhausted</span><span class="p">():</span>
+<span class="ne">--&gt; </span><span class="mi">446</span>             <span class="k">raise</span> <span class="n">MaxRetryError</span><span class="p">(</span><span class="n">_pool</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">error</span> <span class="ow">or</span> <span class="n">ResponseError</span><span class="p">(</span><span class="n">cause</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">447</span> 
+
+<span class="ne">MaxRetryError</span>: HTTPSConnectionPool(host=&#39;broken_image_url.jpg&#39;, port=443): Max retries exceeded with url: / (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPSConnection object at 0x1058c8a58&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known&#39;,))
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">ConnectionError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">20</span><span class="n">ef88645a59</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">image.image</span> <span class="kn">import</span> <span class="n">get_image_content</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">image_url</span> <span class="o">=</span> <span class="s1">&#39;https://broken_image_url.jpg&#39;</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">image_content</span> <span class="o">=</span> <span class="n">get_image_content</span><span class="p">(</span><span class="n">image_url</span><span class="p">)</span>
+
+<span class="nn">~/python_intro_udemy/notebooks/image/image.py</span> in <span class="ni">get_image_content</span><span class="nt">(image_url)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="k">def</span> <span class="nf">get_image_content</span><span class="p">(</span><span class="n">image_url</span><span class="p">):</span>
+<span class="ne">----&gt; </span><span class="mi">8</span>     <span class="n">image_content</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">image_url</span><span class="p">)</span><span class="o">.</span><span class="n">content</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="k">return</span> <span class="n">image_content</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> 
+
+<span class="nn">~/Library/Caches/pypoetry/virtualenvs/teach-python-_R03MHmW-py3.6/lib/python3.6/site-packages/requests/api.py</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">74</span> 
+<span class="g g-Whitespace">     </span><span class="mi">75</span>     <span class="n">kwargs</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;allow_redirects&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">76</span>     <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">77</span> 
+<span class="g g-Whitespace">     </span><span class="mi">78</span> 
+
+<span class="nn">~/Library/Caches/pypoetry/virtualenvs/teach-python-_R03MHmW-py3.6/lib/python3.6/site-packages/requests/api.py</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span>     <span class="c1"># cases, and look like a memory leak in others.</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span>     <span class="k">with</span> <span class="n">sessions</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">61</span>         <span class="k">return</span> <span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span> 
+<span class="g g-Whitespace">     </span><span class="mi">63</span> 
+
+<span class="nn">~/Library/Caches/pypoetry/virtualenvs/teach-python-_R03MHmW-py3.6/lib/python3.6/site-packages/requests/sessions.py</span> in <span class="ni">request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
+<span class="g g-Whitespace">    </span><span class="mi">540</span>         <span class="p">}</span>
+<span class="g g-Whitespace">    </span><span class="mi">541</span>         <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">542</span>         <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">543</span> 
+<span class="g g-Whitespace">    </span><span class="mi">544</span>         <span class="k">return</span> <span class="n">resp</span>
+
+<span class="nn">~/Library/Caches/pypoetry/virtualenvs/teach-python-_R03MHmW-py3.6/lib/python3.6/site-packages/requests/sessions.py</span> in <span class="ni">send</span><span class="nt">(self, request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">653</span> 
+<span class="g g-Whitespace">    </span><span class="mi">654</span>         <span class="c1"># Send the request</span>
+<span class="ne">--&gt; </span><span class="mi">655</span>         <span class="n">r</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">656</span> 
+<span class="g g-Whitespace">    </span><span class="mi">657</span>         <span class="c1"># Total elapsed time of the request (approximately)</span>
+
+<span class="nn">~/Library/Caches/pypoetry/virtualenvs/teach-python-_R03MHmW-py3.6/lib/python3.6/site-packages/requests/adapters.py</span> in <span class="ni">send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
+<span class="g g-Whitespace">    </span><span class="mi">514</span>                 <span class="k">raise</span> <span class="n">SSLError</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">515</span> 
+<span class="ne">--&gt; </span><span class="mi">516</span>             <span class="k">raise</span> <span class="ne">ConnectionError</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">517</span> 
+<span class="g g-Whitespace">    </span><span class="mi">518</span>         <span class="k">except</span> <span class="n">ClosedPoolError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="ne">ConnectionError</span>: HTTPSConnectionPool(host=&#39;broken_image_url.jpg&#39;, port=443): Max retries exceeded with url: / (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPSConnection object at 0x1058c8a58&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known&#39;,))
+</pre></div>
+</div>
+</div>
+</div>
+<p>The above error is rather long because the <em>requests</em> library actually tries to
+download the image content several times and that is why the error is repeated
+more than once. In this case we get a
+<code class="docutils literal notranslate"><span class="pre">ConnectionError</span></code>, <code class="docutils literal notranslate"><span class="pre">MaxRetryError</span></code>, <code class="docutils literal notranslate"><span class="pre">NewConnectionError</span></code>, <code class="docutils literal notranslate"><span class="pre">gaierror</span></code>. There is part of the error message which shows the context in the code where the exception occurred, in the form of a stack traceback. Here is a screen short of one such part of the stack traceback:</p>
+<p><img alt="image_stack_trace" src="../../_images/image_stack_trace.png" /></p>
+<p>In the above screen shot it tells you where the error happened in the code.
+First it shows you the error occured at line 3 in the Notebook cell,
+<code class="docutils literal notranslate"><span class="pre">image_content</span> <span class="pre">=</span> <span class="pre">get_image_content(image_url)</span></code>. Next it goes a bit deeper and tells
+you the file in which the error occured. In this case it was in the Python file <code class="docutils literal notranslate"><span class="pre">~/python_intro_udemy/notebooks/image/image.py</span></code>. The error occurred in line 8 of the file
+and within the function <code class="docutils literal notranslate"><span class="pre">get_image_content</span></code>. Finally, it goes even further into the <em>requests</em>
+library source code and says there was an error when using the <code class="docutils literal notranslate"><span class="pre">get</span></code> function.</p>
+<p>When errors occur, it is quite normal for the printout to be long because they show the complete path
+of the problem. Lets look at some other simpler and yet very common errors built into Python.</p>
+<p>Whenever we divide by 0 a <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError</span></code> is raised.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">10</span><span class="o">/</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ZeroDivisionError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mf">7e814</span><span class="n">a07d49f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">10</span><span class="o">/</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="ne">ZeroDivisionError</span>: division by zero
+</pre></div>
+</div>
+</div>
+</div>
+<p>Whenever we try and access a key in a dictionary that is not present,
+a <code class="docutils literal notranslate"><span class="pre">KeyError</span></code> is raised.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;chris&#39;</span><span class="p">:</span> <span class="mi">35</span><span class="p">}</span>
+<span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;mike&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">139</span><span class="n">bf41c29c7</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;chris&#39;</span><span class="p">:</span> <span class="mi">35</span><span class="p">}</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;mike&#39;</span><span class="p">]</span>
+
+<span class="ne">KeyError</span>: &#39;mike&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we try and access a variable that is not defined, a <code class="docutils literal notranslate"><span class="pre">NameError</span></code> is raised.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="o">*</span> <span class="n">my_var</span> <span class="o">+</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="n">ae5db3693465</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">my_var</span> <span class="o">+</span> <span class="mi">5</span>
+
+<span class="ne">NameError</span>: name &#39;my_var&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is an example of a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> in which we try and add a string
+and an integer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;10&#39;</span> <span class="o">+</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">4</span><span class="n">ac0513be2aa</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="s1">&#39;10&#39;</span> <span class="o">+</span> <span class="mi">10</span>
+
+<span class="ne">TypeError</span>: must be str, not int
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is an example of a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> in which we attempt to convert
+a string to an integer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;chris&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="mi">5</span><span class="n">f10368e8f39</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;chris&#39;</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: invalid literal for int() with base 10: &#39;chris&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The above exceptions are just several of the many different <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#bltin-exceptions">built-in</a> exceptions
+in Python. It will take time to get use to them and familiar with what they mean.</p>
+</div>
+<div class="section" id="handling-exceptions">
+<h2>Handling Exceptions<a class="headerlink" href="#handling-exceptions" title="Permalink to this headline">¶</a></h2>
+<p>In most cases we want our code to raise Exceptions and have errors occur when something
+goes wrong. This way we can figure out the case that caused the error and potentially change the logic within our code. For example, you may get your code to run successfully for many different cases. But then later on there is an edge case that occurs and the code raises an error. Then you can go back and modify your code to handle that edge case.</p>
+<p>However, in some cases we may want to handle selected exceptions directly. We can do this
+with the <code class="docutils literal notranslate"><span class="pre">try</span></code> statement. Let’s look at an example. Suppose we are reading some data into a list and we are expecting
+that list to be numbers in the form of strings. In the code below we loop over a list of number strings, convert the string to an integer, add one to the integer, and then print the result.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;hello world&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+3
+4
+5
+6
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">5</span><span class="n">ddd0df8d286</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;hello world&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">]:</span>
+<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+
+<span class="ne">ValueError</span>: invalid literal for int() with base 10: &#39;hello world&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The code first fails when we get to the string <code class="docutils literal notranslate"><span class="pre">'hello</span> <span class="pre">world'</span></code> because we can not convert that to an integer and therefore a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> is raised. The code will break and the loop will terminate. In some cases we want to handle such errors, take some action, and let the code continue its execution. For example, in this case we could print a simple message and then continue with the rest of the items in the list.</p>
+<p>To do this, we can use a <code class="docutils literal notranslate"><span class="pre">try</span></code> statement and handle specifically any <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> that gets raised.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;hello world&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">]:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Can not convert &quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">&quot; to integer. Moving onto the next item.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+3
+4
+5
+6
+Can not convert &quot;hello world&quot; to integer. Moving onto the next item.
+8
+9
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">246</span><span class="n">ae3cda140</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;hello world&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">]:</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">3</span>         <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Can not convert &quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">&quot; to integer. Moving onto the next item.&#39;</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: int() argument must be a string, a bytes-like object or a number, not &#39;NoneType&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can see that the code did not error out on the <code class="docutils literal notranslate"><span class="pre">'hello</span> <span class="pre">world'</span></code> item and moved on to the next items. But now there is another type of error, a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>, because we tried to convert <code class="docutils literal notranslate"><span class="pre">None</span></code> to an integer. We can also handle this error too like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;hello world&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">]:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Can not convert &quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">&quot; to integer. Moving onto the next item.&#39;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Can not convert &quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">&quot; to integer. Moving onto the next item.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+3
+4
+5
+6
+Can not convert &quot;hello world&quot; to integer. Moving onto the next item.
+8
+9
+Can not convert &quot;None&quot; to integer. Moving onto the next item.
+11
+</pre></div>
+</div>
+</div>
+</div>
+<p>When handling exceptions it is good to handle very specific errors (<code class="docutils literal notranslate"><span class="pre">ValueError</span></code> or <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> for example) like we did above
+by trying to catch either a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> or <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>. It is possible to catch any generic
+exception with <code class="docutils literal notranslate"><span class="pre">except</span> <span class="pre">Exception</span></code> but it is bad practice to have such a generic exception. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;hello world&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">]:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Can not convert &quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">&quot; to integer. Moving onto the next item.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+3
+4
+5
+6
+Can not convert &quot;hello world&quot; to integer. Moving onto the next item.
+8
+9
+Can not convert &quot;None&quot; to integer. Moving onto the next item.
+11
+</pre></div>
+</div>
+</div>
+</div>
+<p>It’s generally not good to have such a generic exception because it can hide real
+issues that may need to be handled in a different way.</p>
+<p>In genreral, the <code class="docutils literal notranslate"><span class="pre">try</span></code> statement works like this:</p>
+<ul class="simple">
+<li><p>First, you write the the <code class="docutils literal notranslate"><span class="pre">try</span></code> clause which is the block of statements between the <code class="docutils literal notranslate"><span class="pre">try</span></code> and <code class="docutils literal notranslate"><span class="pre">except</span></code> keywords. This code is executed first.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">try_clause_code_block</span>
+<span class="k">except</span> <span class="n">SomeException</span><span class="p">:</span>
+    <span class="n">exception_clause_code_block</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>If no exceptions occur during the execution of the <code class="docutils literal notranslate"><span class="pre">try_clause_code_block</span></code>  then the <code class="docutils literal notranslate"><span class="pre">except</span></code> clause is skipped and execution of the <code class="docutils literal notranslate"><span class="pre">try</span></code> statement is complete.</p></li>
+<li><p>If an exception occurs during execution of the code in the <code class="docutils literal notranslate"><span class="pre">try_clause_code_block</span></code>, the rest of the <code class="docutils literal notranslate"><span class="pre">try</span></code> clause is skipped.</p>
+<ul>
+<li><p>If the error that is raised matches the exception named after the <code class="docutils literal notranslate"><span class="pre">except</span></code> keyword, the <code class="docutils literal notranslate"><span class="pre">exception_clause_code_block</span></code> is executed.</p></li>
+<li><p>If the error raised does not match the exception named after the <code class="docutils literal notranslate"><span class="pre">exception</span></code> keyword then the code <code class="docutils literal notranslate"><span class="pre">exception_clause_code_block</span></code> does not get executed. The exception will be raised.</p></li>
+</ul>
+</li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">try</span></code> statement may have more than one except clause. But only one of the exception blocks can be executed (whichever comes first).</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">try_clause_code_block</span>
+<span class="k">except</span> <span class="n">SomeException1</span><span class="p">:</span>
+    <span class="n">exception_clause_code_block1</span>
+<span class="k">except</span> <span class="n">SomeException2</span><span class="p">:</span>
+    <span class="n">exception_clause_code_block2</span>
+<span class="k">except</span> <span class="n">SomeException3</span><span class="p">:</span>
+    <span class="n">exception_clause_code_block3</span>
+</pre></div>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>Here are some simple examples of exception handling just to get the hang of how it works.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/chapter6"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="none_value_type.html" title="previous page"><code class="docutils literal notranslate"><span class="pre">None</span></code> Value</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Chris Levy<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

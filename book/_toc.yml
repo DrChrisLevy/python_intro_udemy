@@ -48,3 +48,4 @@
   sections:
   - file: content/chapter6/truthy_falsy_values
   - file: content/chapter6/none_value_type
+  - file: content/chapter6/error_handling
