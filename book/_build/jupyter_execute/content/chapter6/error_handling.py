@@ -162,11 +162,24 @@ for x in ['1', '2', '3', '4', '5', 'hello world', '7', '8', None, '10']:
         print(f'Can not convert "{x}" to integer. Moving onto the next item.')
 
 
+# In the above example, since we were printing the same message for each error type,
+# we could write the code more simply like this:
+
+# In[13]:
+
+
+for x in ['1', '2', '3', '4', '5', 'hello world', '7', '8', None, '10']:
+    try:
+        print(int(x) + 1)
+    except (ValueError, TypeError):
+        print(f'Can not convert "{x}" to integer. Moving onto the next item.')
+
+
 # When handling exceptions it is good to handle very specific errors (`ValueError` or `TypeError` for example) like we did above
 # by trying to catch either a `ValueError` or `TypeError`. It is possible to catch any generic
 # exception with `except Exception` but it is bad practice to have such a generic exception. For example:
 
-# In[13]:
+# In[14]:
 
 
 for x in ['1', '2', '3', '4', '5', 'hello world', '7', '8', None, '10']:
@@ -209,17 +222,139 @@ for x in ['1', '2', '3', '4', '5', 'hello world', '7', '8', None, '10']:
 # ```
 # 
 
-# ### Examples
-# Here are some simple examples of exception handling just to get the hang of how it works.
+# ### Raising Exceptions
+# You can raise exceptions to force a specific type of exception to occur.
 
-# In[ ]:
-
-
+# In[15]:
 
 
-
-# In[ ]:
-
+raise ValueError # shorthand for raise ValueError()
 
 
+# In[16]:
+
+
+raise ValueError()
+
+
+# You can add a message to the error.
+
+# In[17]:
+
+
+raise ValueError('oops! Something bad happened!')
+
+
+# If you need to check if an exception was raised but you do not intend to handle it,
+# you can raise it after checking simply like this:
+
+# In[18]:
+
+
+my_dict = {'chris': 35}
+try:
+    print(my_dict['penny'])
+except KeyError:
+    print('Looks like an exception happened')
+    raise # allows you to raise the exception
+
+
+# ### User Defined Exceptions
+# 
+# You can define your own custom exceptions by creating a new `Exception`
+# *class*. You will learn about classes in the next chapter.
+
+# In[19]:
+
+
+class MyCustomException(Exception):
+    pass
+
+
+# In[20]:
+
+
+raise MyCustomException("Oh no!")
+
+
+# ### Optional Clauses
+# You can use the optional `else` and `finally` clause as well.
+# The statements inside the `else` block will be executed only if the code inside the try block does not raise an exception. The code within the `finally` block will be executed regardless.
+
+# In[21]:
+
+
+def divide_two_numbers(number1, number2):
+    try:
+        print(f'Trying to divide {number1} by {number2}.')
+        res = number1 / number2
+    except ZeroDivisionError:
+        print('You can not divide by 0!')
+    else:
+        print(f'The result is {res}')
+    finally:
+        print('Good Bye!')
+        
+
+
+# In[22]:
+
+
+divide_two_numbers(4, 2)
+
+
+# In[23]:
+
+
+divide_two_numbers(4, 0)
+
+
+# In[24]:
+
+
+divide_two_numbers(4, 'chris')
+
+
+# In the last case we tried to divide a number by a string which causes a `TypeError`
+# which we are not handling. The `finally` block finishes and then after the `TypeError` is raised.
+
+# ### Some Examples
+# 
+# #### Example 1
+# ```
+# while True:
+#     try:
+#         num = int(input('please enter an integer: '))
+#         break
+#     except ValueError:
+#         print(f'Oops! Not a valid number!')        
+# ```
+
+# #### Example 2
+
+# In[25]:
+
+
+my_dict = {1: (2, 1), 2: (50, 10), 3: (20, 10),
+           5: (100, 5), 6: (1, 0), 7: ('hello', 'world'), 8: (106, 2)}
+print(my_dict)
+
+
+# In[26]:
+
+
+for i in range(1, 9):
+    try:
+        num1, num2 = my_dict[i]
+        res = num1 / num2
+    except KeyError:
+        print(f'{i} is not a key in the dict!')
+    except ZeroDivisionError:
+        print(f'You can not divide by 0!')
+    except Exception:
+        print(f'Something else went wrong when trying to compute {num1} / {num2}')
+    else:
+        print(f'The result of {num1} / {num2} is {res}')
+    finally:
+        print('Done!\n')
 

@@ -57,6 +57,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="A Quick Intro to Reading and Writing Files" href="reading_writing_files.html" />
     <link rel="prev" title="None Value" href="none_value_type.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -152,6 +153,11 @@
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Errors and Exceptions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="reading_writing_files.html">
+     A Quick Intro to Reading and Writing Files
     </a>
    </li>
   </ul>
@@ -261,9 +267,36 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#examples">
-     Examples
+    <a class="reference internal nav-link" href="#raising-exceptions">
+     Raising Exceptions
     </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#user-defined-exceptions">
+     User Defined Exceptions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#optional-clauses">
+     Optional Clauses
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-examples">
+     Some Examples
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example-1">
+       Example 1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example-2">
+       Example 2
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -385,7 +418,7 @@ want to run this code.</p>
 <span class="ne">--&gt; </span><span class="mi">172</span>                 <span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;Failed to establish a new connection: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">e</span>
 <span class="g g-Whitespace">    </span><span class="mi">173</span>             <span class="p">)</span>
 
-<span class="ne">NewConnectionError</span>: &lt;urllib3.connection.HTTPSConnection object at 0x1058c8a58&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+<span class="ne">NewConnectionError</span>: &lt;urllib3.connection.HTTPSConnection object at 0x10b3c4a20&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
 
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
@@ -405,7 +438,7 @@ want to run this code.</p>
 <span class="ne">--&gt; </span><span class="mi">446</span>             <span class="k">raise</span> <span class="n">MaxRetryError</span><span class="p">(</span><span class="n">_pool</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">error</span> <span class="ow">or</span> <span class="n">ResponseError</span><span class="p">(</span><span class="n">cause</span><span class="p">))</span>
 <span class="g g-Whitespace">    </span><span class="mi">447</span> 
 
-<span class="ne">MaxRetryError</span>: HTTPSConnectionPool(host=&#39;broken_image_url.jpg&#39;, port=443): Max retries exceeded with url: / (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPSConnection object at 0x1058c8a58&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known&#39;,))
+<span class="ne">MaxRetryError</span>: HTTPSConnectionPool(host=&#39;broken_image_url.jpg&#39;, port=443): Max retries exceeded with url: / (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPSConnection object at 0x10b3c4a20&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known&#39;,))
 
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
@@ -457,7 +490,7 @@ want to run this code.</p>
 <span class="g g-Whitespace">    </span><span class="mi">517</span> 
 <span class="g g-Whitespace">    </span><span class="mi">518</span>         <span class="k">except</span> <span class="n">ClosedPoolError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
 
-<span class="ne">ConnectionError</span>: HTTPSConnectionPool(host=&#39;broken_image_url.jpg&#39;, port=443): Max retries exceeded with url: / (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPSConnection object at 0x1058c8a58&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known&#39;,))
+<span class="ne">ConnectionError</span>: HTTPSConnectionPool(host=&#39;broken_image_url.jpg&#39;, port=443): Max retries exceeded with url: / (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPSConnection object at 0x10b3c4a20&gt;: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known&#39;,))
 </pre></div>
 </div>
 </div>
@@ -673,6 +706,33 @@ Can not convert &quot;None&quot; to integer. Moving onto the next item.
 </div>
 </div>
 </div>
+<p>In the above example, since we were printing the same message for each error type,
+we could write the code more simply like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;hello world&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">]:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Can not convert &quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">&quot; to integer. Moving onto the next item.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+3
+4
+5
+6
+Can not convert &quot;hello world&quot; to integer. Moving onto the next item.
+8
+9
+Can not convert &quot;None&quot; to integer. Moving onto the next item.
+11
+</pre></div>
+</div>
+</div>
+</div>
 <p>When handling exceptions it is good to handle very specific errors (<code class="docutils literal notranslate"><span class="pre">ValueError</span></code> or <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> for example) like we did above
 by trying to catch either a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> or <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>. It is possible to catch any generic
 exception with <code class="docutils literal notranslate"><span class="pre">except</span> <span class="pre">Exception</span></code> but it is bad practice to have such a generic exception. For example:</p>
@@ -733,9 +793,280 @@ issues that may need to be handled in a different way.</p>
     <span class="n">exception_clause_code_block3</span>
 </pre></div>
 </div>
-<div class="section" id="examples">
-<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
-<p>Here are some simple examples of exception handling just to get the hang of how it works.</p>
+<div class="section" id="raising-exceptions">
+<h3>Raising Exceptions<a class="headerlink" href="#raising-exceptions" title="Permalink to this headline">¶</a></h3>
+<p>You can raise exceptions to force a specific type of exception to occur.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="ne">ValueError</span> <span class="c1"># shorthand for raise ValueError()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">15</span><span class="o">-</span><span class="mf">33e424</span><span class="n">a0af92</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">raise</span> <span class="ne">ValueError</span> <span class="c1"># shorthand for raise ValueError()</span>
+
+<span class="ne">ValueError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="ne">ValueError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">16</span><span class="o">-</span><span class="mi">4954757</span><span class="n">c312d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">()</span>
+
+<span class="ne">ValueError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can add a message to the error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;oops! Something bad happened!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">17</span><span class="o">-</span><span class="mi">43877</span><span class="n">fe21055</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;oops! Something bad happened!&#39;</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: oops! Something bad happened!
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you need to check if an exception was raised but you do not intend to handle it,
+you can raise it after checking simply like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;chris&#39;</span><span class="p">:</span> <span class="mi">35</span><span class="p">}</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;penny&#39;</span><span class="p">])</span>
+<span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Looks like an exception happened&#39;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="c1"># allows you to raise the exception</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looks like an exception happened
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">18</span><span class="o">-</span><span class="n">fc55d6361fff</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;chris&#39;</span><span class="p">:</span> <span class="mi">35</span><span class="p">}</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">3</span>     <span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;penny&#39;</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Looks like an exception happened&#39;</span><span class="p">)</span>
+
+<span class="ne">KeyError</span>: &#39;penny&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="user-defined-exceptions">
+<h3>User Defined Exceptions<a class="headerlink" href="#user-defined-exceptions" title="Permalink to this headline">¶</a></h3>
+<p>You can define your own custom exceptions by creating a new <code class="docutils literal notranslate"><span class="pre">Exception</span></code>
+<em>class</em>. You will learn about classes in the next chapter.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyCustomException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="n">MyCustomException</span><span class="p">(</span><span class="s2">&quot;Oh no!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">MyCustomException</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">20</span><span class="o">-</span><span class="mi">7338</span><span class="n">bef0278b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">raise</span> <span class="n">MyCustomException</span><span class="p">(</span><span class="s2">&quot;Oh no!&quot;</span><span class="p">)</span>
+
+<span class="ne">MyCustomException</span>: Oh no!
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="optional-clauses">
+<h3>Optional Clauses<a class="headerlink" href="#optional-clauses" title="Permalink to this headline">¶</a></h3>
+<p>You can use the optional <code class="docutils literal notranslate"><span class="pre">else</span></code> and <code class="docutils literal notranslate"><span class="pre">finally</span></code> clause as well.
+The statements inside the <code class="docutils literal notranslate"><span class="pre">else</span></code> block will be executed only if the code inside the try block does not raise an exception. The code within the <code class="docutils literal notranslate"><span class="pre">finally</span></code> block will be executed regardless.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">divide_two_numbers</span><span class="p">(</span><span class="n">number1</span><span class="p">,</span> <span class="n">number2</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Trying to divide </span><span class="si">{</span><span class="n">number1</span><span class="si">}</span><span class="s1"> by </span><span class="si">{</span><span class="n">number2</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">number1</span> <span class="o">/</span> <span class="n">number2</span>
+    <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You can not divide by 0!&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The result is </span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Good Bye!&#39;</span><span class="p">)</span>
+        
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">divide_two_numbers</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Trying to divide 4 by 2.
+The result is 2.0
+Good Bye!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">divide_two_numbers</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Trying to divide 4 by 0.
+You can not divide by 0!
+Good Bye!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">divide_two_numbers</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;chris&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Trying to divide 4 by chris.
+Good Bye!
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">24</span><span class="o">-</span><span class="mi">48</span><span class="n">b07e8d37c2</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">divide_two_numbers</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;chris&#39;</span><span class="p">)</span>
+
+<span class="nn">&lt;ipython-input-21-864d6a65b44e&gt;</span> in <span class="ni">divide_two_numbers</span><span class="nt">(number1, number2)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Trying to divide </span><span class="si">{</span><span class="n">number1</span><span class="si">}</span><span class="s1"> by </span><span class="si">{</span><span class="n">number2</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">4</span>         <span class="n">res</span> <span class="o">=</span> <span class="n">number1</span> <span class="o">/</span> <span class="n">number2</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You can not divide by 0!&#39;</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: unsupported operand type(s) for /: &#39;int&#39; and &#39;str&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the last case we tried to divide a number by a string which causes a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>
+which we are not handling. The <code class="docutils literal notranslate"><span class="pre">finally</span></code> block finishes and then after the <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> is raised.</p>
+</div>
+<div class="section" id="some-examples">
+<h3>Some Examples<a class="headerlink" href="#some-examples" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-1">
+<h4>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;please enter an integer: &#39;</span><span class="p">))</span>
+        <span class="k">break</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Oops! Not a valid number!&#39;</span><span class="p">)</span>        
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-2">
+<h4>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">2</span><span class="p">:</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="mi">3</span><span class="p">:</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+           <span class="mi">5</span><span class="p">:</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="mi">6</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">7</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;world&#39;</span><span class="p">),</span> <span class="mi">8</span><span class="p">:</span> <span class="p">(</span><span class="mi">106</span><span class="p">,</span> <span class="mi">2</span><span class="p">)}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: (2, 1), 2: (50, 10), 3: (20, 10), 5: (100, 5), 6: (1, 0), 7: (&#39;hello&#39;, &#39;world&#39;), 8: (106, 2)}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span> <span class="o">=</span> <span class="n">my_dict</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">/</span> <span class="n">num2</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> is not a key in the dict!&#39;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;You can not divide by 0!&#39;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Something else went wrong when trying to compute </span><span class="si">{</span><span class="n">num1</span><span class="si">}</span><span class="s1"> / </span><span class="si">{</span><span class="n">num2</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The result of </span><span class="si">{</span><span class="n">num1</span><span class="si">}</span><span class="s1"> / </span><span class="si">{</span><span class="n">num2</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done!</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The result of 2 / 1 is 2.0
+Done!
+
+The result of 50 / 10 is 5.0
+Done!
+
+The result of 20 / 10 is 2.0
+Done!
+
+4 is not a key in the dict!
+Done!
+
+The result of 100 / 5 is 20.0
+Done!
+
+You can not divide by 0!
+Done!
+
+Something else went wrong when trying to compute hello / world
+Done!
+
+The result of 106 / 2 is 53.0
+Done!
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -769,6 +1100,7 @@ issues that may need to be handled in a different way.</p>
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="none_value_type.html" title="previous page"><code class="docutils literal notranslate"><span class="pre">None</span></code> Value</a>
+    <a class='right-next' id="next-link" href="reading_writing_files.html" title="next page">A Quick Intro to Reading and Writing Files</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
