@@ -26,5 +26,6 @@
 # none_value_type
 # error_handling
 # reading_writing_files
+# practice_questions
 # ```
 # 
