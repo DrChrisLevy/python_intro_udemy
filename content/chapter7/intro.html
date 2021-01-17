@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pycharm IDE &#8212; Learn to code with an Introduction to Python 3</title>
+    <title>Chapter 7: Intro to Classes &#8212; Learn to code with an Introduction to Python 3</title>
     
   <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -57,8 +57,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Using Our Image Module" href="using_image_udemy.html" />
-    <link rel="prev" title="Intro to Virtual Environments" href="intro_virtual_envs.html" />
+    <link rel="next" title="Intro to Classes" href="intro_classes.html" />
+    <link rel="prev" title="Practice Questions" href="../chapter6/practice_questions.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -119,43 +119,10 @@
    Chapter 4: Data Structures
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="intro.html">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter5/intro.html">
    Chapter 5: Virtual Environments, Packages, Pycharm IDE
   </a>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="intro_to_imports.html">
-     The
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       import
-      </span>
-     </code>
-     Statement
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="intro_virtual_envs.html">
-     Intro to Virtual Environments
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Pycharm IDE
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="using_image_udemy.html">
-     Using Our Image Module
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="practice_questions.html">
-     Practice Questions
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter6/intro.html">
@@ -168,10 +135,17 @@
    Value, Exception Handling, Reading and Writing Files
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter7/intro.html">
-   Intro to Classes
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Chapter 7: Intro to Classes
   </a>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_classes.html">
+     Intro to Classes
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -215,7 +189,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/content/chapter5/pycharm_ide.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/content/chapter7/intro.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -240,7 +214,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter5/pycharm_ide.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter7/intro.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -264,15 +238,23 @@
         
               <div>
                 
-  <div class="section" id="pycharm-ide">
-<h1>Pycharm IDE<a class="headerlink" href="#pycharm-ide" title="Permalink to this headline">¶</a></h1>
-<p>In this section we will be using how to learn Pycharm
-so we can start coding in a proper editor. Jupyter Notebook
-is great for experiments and trying things out but most people end
-up developing code within a proper interactive development environment (IDE).  An IDE is basically a  text editor that includes lots of other specific features to assist with developing code.</p>
-<p>There are many options out there for IDEs and just do a quick Google for <a class="reference external" href="https://www.google.com/search?q=Coding+IDE+options&amp;oq=Coding+IDE+options&amp;aqs=chrome..69i57j69i60.729j0j1&amp;sourceid=chrome&amp;ie=UTF-8">coding IDE options</a>.</p>
-<p>In this course we will use <a class="reference external" href="https://www.jetbrains.com/pycharm/">Pycharm</a>. I’m not going to write out in this book how to install and set it up because there is already so much stuff on the web that you can read to do that. Just checkout the <a class="reference external" href="https://www.jetbrains.com/pycharm/">Pycharm</a> website and their documentation is really good. We will be using
-the <strong>community edition</strong> because it’s free. If you are taking the <a class="reference external" href="https://www.udemy.com/course/learn-to-code-with-an-introduction-to-python-3/?referralCode=42FB26846F76E2E41EF8">Udemy Course</a> that goes along with this book then you can check out the videos there for how to install and set up Pycharm with virtual environments. Also in the videos I will be showing you how to set up simple project structures and creating virtual environments for them and linking the two together in Pycharm. You will also learn more about import statements and how to create your own modules and how to import code from those modules. This material will most likely not be written out in this section of the book because it is not written in Jupyter Notebooks (what this book is built off of). So head over to the <a class="reference external" href="https://www.udemy.com/course/learn-to-code-with-an-introduction-to-python-3/?referralCode=42FB26846F76E2E41EF8">Chapter 5 Udemy course videos</a> to see the specific content for the rest of this chapter.</p>
+  <div class="section" id="chapter-7-intro-to-classes">
+<h1>Chapter 7: Intro to Classes<a class="headerlink" href="#chapter-7-intro-to-classes" title="Permalink to this headline">¶</a></h1>
+<p>In this chapter we will introduce Python classes
+and some concepts from object oriented programming.
+Much like the rest of this book, this chapter is not meant
+to cover all related topics. It will give you the basic knowledge
+and then you can pursue more learning on your own. In this chapter
+we will cover the following topics:</p>
+<ul class="simple">
+<li><p>defining and creating classes</p></li>
+<li><p>instantiate an object from a class</p></li>
+<li><p>instance methods and attributes</p></li>
+<li><p>class methods and attributes</p></li>
+<li><p>subclassing and inheritance</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -288,7 +270,7 @@ the <strong>community edition</strong> because it’s free. If you are taking th
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./content/chapter5"
+            path: "./content/chapter7"
         },
         predefinedOutput: true
     }
@@ -303,8 +285,8 @@ the <strong>community edition</strong> because it’s free. If you are taking th
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="intro_virtual_envs.html" title="previous page">Intro to Virtual Environments</a>
-    <a class='right-next' id="next-link" href="using_image_udemy.html" title="next page">Using Our Image Module</a>
+    <a class='left-prev' id="prev-link" href="../chapter6/practice_questions.html" title="previous page">Practice Questions</a>
+    <a class='right-next' id="next-link" href="intro_classes.html" title="next page">Intro to Classes</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
