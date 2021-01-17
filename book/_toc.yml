@@ -51,3 +51,8 @@
   - file: content/chapter6/error_handling
   - file: content/chapter6/reading_writing_files
   - file: content/chapter6/practice_questions
+  - file: content/chapter6/practice_questions_solutions
+
+- file: content/chapter7/intro
+  sections:
+  - file: content/chapter7/intro_classes

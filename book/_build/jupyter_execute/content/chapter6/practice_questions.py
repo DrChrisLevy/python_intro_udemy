@@ -150,7 +150,7 @@ read_file('some_file.txt')
 # '` and should return `None`. Do this with a `try` and `except` block where you specifically handle
 # the `FileNotFoundError` error.
 
-# In[ ]:
+# In[4]:
 
 
 read_file_improved('some_file.txt')
@@ -158,8 +158,11 @@ read_file_improved('some_file.txt')
 
 # If the file does exist, then the function should have the same behavior as before.
 
-# In[ ]:
+# In[5]:
 
 
 read_file_improved('my_file.txt')
 
+
+# ## 6.
+# Write code that writes some data to a file. 
