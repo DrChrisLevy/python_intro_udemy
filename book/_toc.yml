@@ -56,3 +56,4 @@
 - file: content/chapter7/intro
   sections:
   - file: content/chapter7/intro_classes
+  - file: content/chapter7/class_variables

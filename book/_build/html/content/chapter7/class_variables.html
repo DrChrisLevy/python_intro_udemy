@@ -1,0 +1,1007 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Variables &#8212; Learn to code with an Introduction to Python 3</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Intro to Classes" href="intro_classes.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo_temp.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Learn to code with an Introduction to Python 3</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../book_intro.html">
+   Book Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter1/intro.html">
+   Chapter 1: Intro To Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter2/intro.html">
+   Chapter 2: Control Flow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter3/intro.html">
+   Chapter 3: Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter4/intro.html">
+   Chapter 4: Data Structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter5/intro.html">
+   Chapter 5: Virtual Environments, Packages, Pycharm IDE
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter6/intro.html">
+   Chapter 6: Truthy and Falsy Values,
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     None
+    </span>
+   </code>
+   Value, Exception Handling, Reading and Writing Files
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="intro.html">
+   Chapter 7: Intro to Classes
+  </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="intro_classes.html">
+     Intro to Classes
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Class Variables
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/content/chapter7/class_variables.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/chapter7/class_variables.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-methods">
+   Class Methods
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="class-variables">
+<h1>Class Variables<a class="headerlink" href="#class-variables" title="Permalink to this headline">¶</a></h1>
+<p>In this section we will learn about class variables.
+We saw in the previous section that you can have multiple
+instances of a class. Each of the instances are objects
+which have their own properties or attributes specific
+to that instance. Other times though we want attributes
+that are common to the class and shared by all the instances
+of the class. These are called class variables. Let’s
+look at an example with a <code class="docutils literal notranslate"><span class="pre">TransitBus</span></code> class.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TransitBus</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">identifier</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span> <span class="o">=</span> <span class="n">identifier</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span><span class="o">=</span><span class="mi">0</span>
+    
+    <span class="k">def</span> <span class="nf">add_passengers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span> <span class="o">+=</span> <span class="n">number</span>
+    
+    <span class="k">def</span> <span class="nf">remove_passengers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span> <span class="o">-=</span> <span class="n">number</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bus1</span> <span class="o">=</span> <span class="n">TransitBus</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">bus2</span> <span class="o">=</span> <span class="n">TransitBus</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">bus3</span> <span class="o">=</span> <span class="n">TransitBus</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">bus1</span><span class="o">.</span><span class="n">add_passengers</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">bus2</span><span class="o">.</span><span class="n">add_passengers</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">bus3</span><span class="o">.</span><span class="n">add_passengers</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">bus2</span><span class="o">.</span><span class="n">remove_passengers</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bus2</span><span class="o">.</span><span class="n">identifier</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bus2</span><span class="o">.</span><span class="n">num_passengers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Above we created three instances of the <code class="docutils literal notranslate"><span class="pre">TransitBus</span></code> class. Each
+object is an instance of a bus. Each bus has it’s own identifier
+and has a certain number of passengers. All the buses can add
+and remove passengers with their <code class="docutils literal notranslate"><span class="pre">add_passengers</span></code> and <code class="docutils literal notranslate"><span class="pre">remove_passengers</span></code>
+methods.</p>
+<p>What if we wanted to keep track of the total number of buses in the system
+as well as the total number of passengers? These would be properties specific
+to the <code class="docutils literal notranslate"><span class="pre">TransitBus</span></code> class in general. They are not specific to any particular instance
+or bus. Also, it would be nice if each bus had the ability to get this information.
+This can be achieved with <strong>class variables</strong>. They are variables that are shared
+across all instances of the class. Let’s define two new class variables in the
+<code class="docutils literal notranslate"><span class="pre">TransitBus</span></code> class, <code class="docutils literal notranslate"><span class="pre">total_num_passengers</span></code> and <code class="docutils literal notranslate"><span class="pre">total_num_buses</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TransitBus</span><span class="p">:</span>
+    <span class="n">total_num_passengers</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">total_num_buses</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">identifier</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span> <span class="o">=</span> <span class="n">identifier</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span><span class="o">=</span><span class="mi">0</span>
+    
+    <span class="k">def</span> <span class="nf">add_passengers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span> <span class="o">+=</span> <span class="n">number</span>
+    
+    <span class="k">def</span> <span class="nf">remove_passengers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span> <span class="o">-=</span> <span class="n">number</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>The first thing to note is where in the code <strong>class variables</strong> are defined. They are defined
+outside the <code class="docutils literal notranslate"><span class="pre">__init__</span></code>. To access class variables you do not even need an instance of the class.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_buses</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_passengers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can not do this with <strong>instance variables</strong> such as <code class="docutils literal notranslate"><span class="pre">identifier</span></code> and <code class="docutils literal notranslate"><span class="pre">num_passengers</span></code>.
+Using <code class="docutils literal notranslate"><span class="pre">TransitBus.identifier</span></code> or <code class="docutils literal notranslate"><span class="pre">TransitBus.num_passengers</span></code> would raise an <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code>.
+This is because we need an instance (an actual bus) of the <code class="docutils literal notranslate"><span class="pre">TransitBus</span></code> first to access the instance variables <code class="docutils literal notranslate"><span class="pre">num_passengers</span></code> and <code class="docutils literal notranslate"><span class="pre">identifier</span></code>.</p>
+<p>Let’s create a new bus instance and see how that particular instance can access
+the class variables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bus1 info&#39;</span><span class="p">)</span>
+<span class="n">b1</span> <span class="o">=</span> <span class="n">TransitBus</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">b1</span><span class="o">.</span><span class="n">add_passengers</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">b1</span><span class="o">.</span><span class="n">remove_passengers</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b1</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b1</span><span class="o">.</span><span class="n">num_passengers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bus2 info&#39;</span><span class="p">)</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="n">TransitBus</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">b2</span><span class="o">.</span><span class="n">add_passengers</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">b2</span><span class="o">.</span><span class="n">remove_passengers</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b2</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b2</span><span class="o">.</span><span class="n">num_passengers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bus1 info
+1
+7
+bus2 info
+2
+5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Each instance of a class has access to the class variables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b1</span><span class="o">.</span><span class="n">total_num_buses</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b1</span><span class="o">.</span><span class="n">total_num_passengers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b2</span><span class="o">.</span><span class="n">total_num_buses</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b2</span><span class="o">.</span><span class="n">total_num_passengers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<p>We need to update the <code class="docutils literal notranslate"><span class="pre">TransitBus</span></code> logic so that
+<code class="docutils literal notranslate"><span class="pre">TransitBus.total_num_buses</span></code> and <code class="docutils literal notranslate"><span class="pre">TransitBus.total_num_passengers</span></code>
+are updated each time a new bus is created and each time
+passengers get on or get off the bus. Notice that
+we use the <code class="docutils literal notranslate"><span class="pre">TransitBus</span></code> name to access the class variables.
+For example we used <code class="docutils literal notranslate"><span class="pre">TransitBus.total_num_buses</span></code>. You
+can also simply use <code class="docutils literal notranslate"><span class="pre">self.total_num_buses</span></code>
+to access the class variables too. Sometimes it can be more
+clear to the reader or maintainer of the code
+to use the class name to reference the class variables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TransitBus</span><span class="p">:</span>
+    <span class="n">total_num_passengers</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">total_num_buses</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">identifier</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span> <span class="o">=</span> <span class="n">identifier</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span><span class="o">=</span><span class="mi">0</span>
+        <span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_buses</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">def</span> <span class="nf">add_passengers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span> <span class="o">+=</span> <span class="n">number</span>
+        <span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_passengers</span> <span class="o">+=</span> <span class="n">number</span>
+    
+    <span class="k">def</span> <span class="nf">remove_passengers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span> <span class="o">-=</span> <span class="n">number</span>
+        <span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_passengers</span> <span class="o">-=</span> <span class="n">number</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bus1 info&#39;</span><span class="p">)</span>
+<span class="n">b1</span> <span class="o">=</span> <span class="n">TransitBus</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">b1</span><span class="o">.</span><span class="n">add_passengers</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">b1</span><span class="o">.</span><span class="n">remove_passengers</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b1</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b1</span><span class="o">.</span><span class="n">num_passengers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bus2 info&#39;</span><span class="p">)</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="n">TransitBus</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">b2</span><span class="o">.</span><span class="n">add_passengers</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">b2</span><span class="o">.</span><span class="n">remove_passengers</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b2</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b2</span><span class="o">.</span><span class="n">num_passengers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bus1 info
+1
+7
+bus2 info
+2
+5
+</pre></div>
+</div>
+</div>
+</div>
+<p>After running the above code there should be a total of 2 buses in the system
+as well as 12 total passengers.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_buses</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_passengers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Class variables</strong> have the same value across every instance of the class.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b1</span><span class="o">.</span><span class="n">total_num_buses</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b1</span><span class="o">.</span><span class="n">total_num_passengers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b2</span><span class="o">.</span><span class="n">total_num_buses</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b2</span><span class="o">.</span><span class="n">total_num_passengers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+12
+2
+12
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s create a new bus and see what happens to the totals.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b3</span> <span class="o">=</span> <span class="n">TransitBus</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">b3</span><span class="o">.</span><span class="n">add_passengers</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_buses</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_passengers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>47
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b1</span><span class="o">.</span><span class="n">total_num_buses</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b1</span><span class="o">.</span><span class="n">total_num_passengers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b2</span><span class="o">.</span><span class="n">total_num_buses</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b2</span><span class="o">.</span><span class="n">total_num_passengers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b3</span><span class="o">.</span><span class="n">total_num_buses</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b3</span><span class="o">.</span><span class="n">total_num_passengers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+47
+3
+47
+3
+47
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="class-methods">
+<h2>Class Methods<a class="headerlink" href="#class-methods" title="Permalink to this headline">¶</a></h2>
+<p>Now what if we wanted to create a 100 buses in the system and keep track of them
+all in the system? It would not make much sense to create <code class="docutils literal notranslate"><span class="pre">bus1,</span> <span class="pre">bus2,</span> <span class="pre">...</span> <span class="pre">bus100</span></code> variables.
+Instead, we could just create 100 instances of the <code class="docutils literal notranslate"><span class="pre">TransitBus</span></code> class and keep track of
+the different buses in a class variable. In this case we will keep track of each bus
+in the system within a dictionary. For example, if the transit system had three buses
+in the system this <code class="docutils literal notranslate"><span class="pre">transit_system</span></code> dict could look something like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;1&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;num_passengers&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">},</span> <span class="s1">&#39;2&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;num_passengers&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">},</span> <span class="s1">&#39;3&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;num_passengers&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">}}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;: {&#39;num_passengers&#39;: 5},
+ &#39;2&#39;: {&#39;num_passengers&#39;: 10},
+ &#39;3&#39;: {&#39;num_passengers&#39;: 20}}
+</pre></div>
+</div>
+</div>
+</div>
+<p>So it is a dictionary with the keys as the bus identifiers and the values
+with the information about the bus. Let’s update the logic of the <code class="docutils literal notranslate"><span class="pre">TransitBus</span></code>
+class. We will add a <strong>class method</strong> called <code class="docutils literal notranslate"><span class="pre">update_bus_in_system</span></code>. A <strong>class method</strong>
+is a method that does need any particular instance of the class to be called.
+You use the <code class="docutils literal notranslate"><span class="pre">&#64;classmethod</span></code> decorator and use <code class="docutils literal notranslate"><span class="pre">cls</span></code> instead of <code class="docutils literal notranslate"><span class="pre">self</span></code>. See the code below to see what is going on.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TransitBus</span><span class="p">:</span>
+    <span class="n">total_num_passengers</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">total_num_buses</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">transit_system</span> <span class="o">=</span> <span class="p">{}</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">identifier</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span> <span class="o">=</span> <span class="n">identifier</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span><span class="o">=</span><span class="mi">0</span>
+        <span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_buses</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">TransitBus</span><span class="o">.</span><span class="n">update_bus_in_system</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">update_bus_in_system</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">identifier</span><span class="p">,</span> <span class="n">num_passengers</span><span class="p">):</span>
+        <span class="n">TransitBus</span><span class="o">.</span><span class="n">transit_system</span><span class="p">[</span><span class="n">identifier</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;num_passengers&#39;</span><span class="p">:</span> <span class="n">num_passengers</span><span class="p">}</span>
+    
+    <span class="k">def</span> <span class="nf">add_passengers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span> <span class="o">+=</span> <span class="n">number</span>
+        <span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_passengers</span> <span class="o">+=</span> <span class="n">number</span>
+        <span class="n">TransitBus</span><span class="o">.</span><span class="n">update_bus_in_system</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">remove_passengers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span> <span class="o">-=</span> <span class="n">number</span>
+        <span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_passengers</span> <span class="o">-=</span> <span class="n">number</span>
+        <span class="n">TransitBus</span><span class="o">.</span><span class="n">update_bus_in_system</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_buses</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_passengers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">transit_system</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b1</span> <span class="o">=</span> <span class="n">TransitBus</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="n">TransitBus</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">b3</span> <span class="o">=</span> <span class="n">TransitBus</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">transit_system</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: {&#39;num_passengers&#39;: 0}, 2: {&#39;num_passengers&#39;: 0}, 3: {&#39;num_passengers&#39;: 0}}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b1</span><span class="o">.</span><span class="n">add_passengers</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">b2</span><span class="o">.</span><span class="n">add_passengers</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">b3</span><span class="o">.</span><span class="n">add_passengers</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">transit_system</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: {&#39;num_passengers&#39;: 10},
+ 2: {&#39;num_passengers&#39;: 20},
+ 3: {&#39;num_passengers&#39;: 30}}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b1</span><span class="o">.</span><span class="n">remove_passengers</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">b2</span><span class="o">.</span><span class="n">remove_passengers</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">b3</span><span class="o">.</span><span class="n">remove_passengers</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">transit_system</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: {&#39;num_passengers&#39;: 5},
+ 2: {&#39;num_passengers&#39;: 15},
+ 3: {&#39;num_passengers&#39;: 25}}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b1</span><span class="o">.</span><span class="n">num_passengers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b1</span><span class="o">.</span><span class="n">total_num_buses</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b1</span><span class="o">.</span><span class="n">total_num_passengers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+3
+45
+</pre></div>
+</div>
+</div>
+</div>
+<p>And we can add another 100 buses to the system.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">104</span><span class="p">):</span>
+    <span class="n">bus</span> <span class="o">=</span> <span class="n">TransitBus</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">bus</span><span class="o">.</span><span class="n">add_passengers</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">35</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_buses</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>103
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_passengers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1745
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">transit_system</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: {&#39;num_passengers&#39;: 5},
+ 2: {&#39;num_passengers&#39;: 15},
+ 3: {&#39;num_passengers&#39;: 25},
+ 4: {&#39;num_passengers&#39;: 0},
+ 5: {&#39;num_passengers&#39;: 32},
+ 6: {&#39;num_passengers&#39;: 10},
+ 7: {&#39;num_passengers&#39;: 24},
+ 8: {&#39;num_passengers&#39;: 20},
+ 9: {&#39;num_passengers&#39;: 17},
+ 10: {&#39;num_passengers&#39;: 8},
+ 11: {&#39;num_passengers&#39;: 12},
+ 12: {&#39;num_passengers&#39;: 14},
+ 13: {&#39;num_passengers&#39;: 7},
+ 14: {&#39;num_passengers&#39;: 31},
+ 15: {&#39;num_passengers&#39;: 19},
+ 16: {&#39;num_passengers&#39;: 2},
+ 17: {&#39;num_passengers&#39;: 10},
+ 18: {&#39;num_passengers&#39;: 32},
+ 19: {&#39;num_passengers&#39;: 4},
+ 20: {&#39;num_passengers&#39;: 10},
+ 21: {&#39;num_passengers&#39;: 6},
+ 22: {&#39;num_passengers&#39;: 18},
+ 23: {&#39;num_passengers&#39;: 22},
+ 24: {&#39;num_passengers&#39;: 25},
+ 25: {&#39;num_passengers&#39;: 13},
+ 26: {&#39;num_passengers&#39;: 11},
+ 27: {&#39;num_passengers&#39;: 12},
+ 28: {&#39;num_passengers&#39;: 12},
+ 29: {&#39;num_passengers&#39;: 27},
+ 30: {&#39;num_passengers&#39;: 23},
+ 31: {&#39;num_passengers&#39;: 17},
+ 32: {&#39;num_passengers&#39;: 9},
+ 33: {&#39;num_passengers&#39;: 11},
+ 34: {&#39;num_passengers&#39;: 12},
+ 35: {&#39;num_passengers&#39;: 24},
+ 36: {&#39;num_passengers&#39;: 11},
+ 37: {&#39;num_passengers&#39;: 8},
+ 38: {&#39;num_passengers&#39;: 2},
+ 39: {&#39;num_passengers&#39;: 13},
+ 40: {&#39;num_passengers&#39;: 33},
+ 41: {&#39;num_passengers&#39;: 21},
+ 42: {&#39;num_passengers&#39;: 3},
+ 43: {&#39;num_passengers&#39;: 16},
+ 44: {&#39;num_passengers&#39;: 12},
+ 45: {&#39;num_passengers&#39;: 21},
+ 46: {&#39;num_passengers&#39;: 17},
+ 47: {&#39;num_passengers&#39;: 6},
+ 48: {&#39;num_passengers&#39;: 25},
+ 49: {&#39;num_passengers&#39;: 18},
+ 50: {&#39;num_passengers&#39;: 25},
+ 51: {&#39;num_passengers&#39;: 33},
+ 52: {&#39;num_passengers&#39;: 24},
+ 53: {&#39;num_passengers&#39;: 1},
+ 54: {&#39;num_passengers&#39;: 1},
+ 55: {&#39;num_passengers&#39;: 21},
+ 56: {&#39;num_passengers&#39;: 18},
+ 57: {&#39;num_passengers&#39;: 12},
+ 58: {&#39;num_passengers&#39;: 22},
+ 59: {&#39;num_passengers&#39;: 9},
+ 60: {&#39;num_passengers&#39;: 8},
+ 61: {&#39;num_passengers&#39;: 31},
+ 62: {&#39;num_passengers&#39;: 30},
+ 63: {&#39;num_passengers&#39;: 34},
+ 64: {&#39;num_passengers&#39;: 10},
+ 65: {&#39;num_passengers&#39;: 11},
+ 66: {&#39;num_passengers&#39;: 20},
+ 67: {&#39;num_passengers&#39;: 26},
+ 68: {&#39;num_passengers&#39;: 22},
+ 69: {&#39;num_passengers&#39;: 22},
+ 70: {&#39;num_passengers&#39;: 12},
+ 71: {&#39;num_passengers&#39;: 31},
+ 72: {&#39;num_passengers&#39;: 16},
+ 73: {&#39;num_passengers&#39;: 20},
+ 74: {&#39;num_passengers&#39;: 22},
+ 75: {&#39;num_passengers&#39;: 20},
+ 76: {&#39;num_passengers&#39;: 7},
+ 77: {&#39;num_passengers&#39;: 9},
+ 78: {&#39;num_passengers&#39;: 21},
+ 79: {&#39;num_passengers&#39;: 7},
+ 80: {&#39;num_passengers&#39;: 4},
+ 81: {&#39;num_passengers&#39;: 4},
+ 82: {&#39;num_passengers&#39;: 6},
+ 83: {&#39;num_passengers&#39;: 26},
+ 84: {&#39;num_passengers&#39;: 7},
+ 85: {&#39;num_passengers&#39;: 33},
+ 86: {&#39;num_passengers&#39;: 25},
+ 87: {&#39;num_passengers&#39;: 2},
+ 88: {&#39;num_passengers&#39;: 2},
+ 89: {&#39;num_passengers&#39;: 5},
+ 90: {&#39;num_passengers&#39;: 34},
+ 91: {&#39;num_passengers&#39;: 32},
+ 92: {&#39;num_passengers&#39;: 22},
+ 93: {&#39;num_passengers&#39;: 28},
+ 94: {&#39;num_passengers&#39;: 19},
+ 95: {&#39;num_passengers&#39;: 21},
+ 96: {&#39;num_passengers&#39;: 20},
+ 97: {&#39;num_passengers&#39;: 19},
+ 98: {&#39;num_passengers&#39;: 20},
+ 99: {&#39;num_passengers&#39;: 20},
+ 100: {&#39;num_passengers&#39;: 34},
+ 101: {&#39;num_passengers&#39;: 20},
+ 102: {&#39;num_passengers&#39;: 20},
+ 103: {&#39;num_passengers&#39;: 32}}
+</pre></div>
+</div>
+</div>
+</div>
+<p>The only thing is now you can not access bus <code class="docutils literal notranslate"><span class="pre">103</span></code>, for example, and then add or remove passengers. You need an instance of the bus to do this.</p>
+<p>Although the <code class="docutils literal notranslate"><span class="pre">TransitSystem</span></code> class is another simple example, hopefully it gets you more familiar with the idea of using classes and also the difference between instance variables and methods and class variable and methods. Feel free to play around with the <code class="docutils literal notranslate"><span class="pre">TransitSystem</span></code> class some more on your own and improve it or add new functionality.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/chapter7"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="intro_classes.html" title="previous page">Intro to Classes</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Chris Levy<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
