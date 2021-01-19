@@ -57,3 +57,7 @@
   sections:
   - file: content/chapter7/intro_classes
   - file: content/chapter7/class_variables
+  - file: content/chapter7/inheritance
+  - file: content/chapter7/practice_questions
+
+- file: content/Conclusion/conclusion

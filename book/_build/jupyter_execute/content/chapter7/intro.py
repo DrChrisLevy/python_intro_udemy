@@ -30,5 +30,7 @@
 # 
 # intro_classes
 # class_variables
+# inheritance
+# practice_questions
 # ```
 # 

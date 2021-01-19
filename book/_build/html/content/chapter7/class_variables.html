@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Class Variables &#8212; Learn to code with an Introduction to Python 3</title>
+    <title>Class Variables and Methods &#8212; Learn to code with an Introduction to Python 3</title>
     
   <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -57,6 +57,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Class Inheritance" href="inheritance.html" />
     <link rel="prev" title="Intro to Classes" href="intro_classes.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -146,10 +147,25 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Class Variables
+     Class Variables and Methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="inheritance.html">
+     Class Inheritance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="practice_questions.html">
+     Ideas for Practice
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Conclusion/conclusion.html">
+   Next Steps
+  </a>
  </li>
 </ul>
 
@@ -256,16 +272,16 @@
         
               <div>
                 
-  <div class="section" id="class-variables">
-<h1>Class Variables<a class="headerlink" href="#class-variables" title="Permalink to this headline">¶</a></h1>
-<p>In this section we will learn about class variables.
+  <div class="section" id="class-variables-and-methods">
+<h1>Class Variables and Methods<a class="headerlink" href="#class-variables-and-methods" title="Permalink to this headline">¶</a></h1>
+<p>In this section we will learn about class variables and class methods.
 We saw in the previous section that you can have multiple
 instances of a class. Each of the instances are objects
 which have their own properties or attributes specific
 to that instance. Other times though we want attributes
 that are common to the class and shared by all the instances
-of the class. These are called class variables. Let’s
-look at an example with a <code class="docutils literal notranslate"><span class="pre">TransitBus</span></code> class.</p>
+of the class. These are called class variables and class methods. Let’s
+look at an example with a <code class="docutils literal notranslate"><span class="pre">TransitBus</span></code> class to learn these concepts.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TransitBus</span><span class="p">:</span>
@@ -827,7 +843,7 @@ You use the <code class="docutils literal notranslate"><span class="pre">&#64;cl
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1745
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1748
 </pre></div>
 </div>
 </div>
@@ -842,106 +858,106 @@ You use the <code class="docutils literal notranslate"><span class="pre">&#64;cl
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: {&#39;num_passengers&#39;: 5},
  2: {&#39;num_passengers&#39;: 15},
  3: {&#39;num_passengers&#39;: 25},
- 4: {&#39;num_passengers&#39;: 0},
- 5: {&#39;num_passengers&#39;: 32},
- 6: {&#39;num_passengers&#39;: 10},
- 7: {&#39;num_passengers&#39;: 24},
- 8: {&#39;num_passengers&#39;: 20},
- 9: {&#39;num_passengers&#39;: 17},
- 10: {&#39;num_passengers&#39;: 8},
- 11: {&#39;num_passengers&#39;: 12},
- 12: {&#39;num_passengers&#39;: 14},
- 13: {&#39;num_passengers&#39;: 7},
- 14: {&#39;num_passengers&#39;: 31},
- 15: {&#39;num_passengers&#39;: 19},
- 16: {&#39;num_passengers&#39;: 2},
- 17: {&#39;num_passengers&#39;: 10},
- 18: {&#39;num_passengers&#39;: 32},
- 19: {&#39;num_passengers&#39;: 4},
- 20: {&#39;num_passengers&#39;: 10},
- 21: {&#39;num_passengers&#39;: 6},
- 22: {&#39;num_passengers&#39;: 18},
- 23: {&#39;num_passengers&#39;: 22},
- 24: {&#39;num_passengers&#39;: 25},
- 25: {&#39;num_passengers&#39;: 13},
+ 4: {&#39;num_passengers&#39;: 6},
+ 5: {&#39;num_passengers&#39;: 5},
+ 6: {&#39;num_passengers&#39;: 3},
+ 7: {&#39;num_passengers&#39;: 29},
+ 8: {&#39;num_passengers&#39;: 24},
+ 9: {&#39;num_passengers&#39;: 10},
+ 10: {&#39;num_passengers&#39;: 3},
+ 11: {&#39;num_passengers&#39;: 35},
+ 12: {&#39;num_passengers&#39;: 29},
+ 13: {&#39;num_passengers&#39;: 27},
+ 14: {&#39;num_passengers&#39;: 10},
+ 15: {&#39;num_passengers&#39;: 9},
+ 16: {&#39;num_passengers&#39;: 4},
+ 17: {&#39;num_passengers&#39;: 3},
+ 18: {&#39;num_passengers&#39;: 10},
+ 19: {&#39;num_passengers&#39;: 31},
+ 20: {&#39;num_passengers&#39;: 30},
+ 21: {&#39;num_passengers&#39;: 8},
+ 22: {&#39;num_passengers&#39;: 7},
+ 23: {&#39;num_passengers&#39;: 33},
+ 24: {&#39;num_passengers&#39;: 20},
+ 25: {&#39;num_passengers&#39;: 6},
  26: {&#39;num_passengers&#39;: 11},
- 27: {&#39;num_passengers&#39;: 12},
- 28: {&#39;num_passengers&#39;: 12},
- 29: {&#39;num_passengers&#39;: 27},
- 30: {&#39;num_passengers&#39;: 23},
- 31: {&#39;num_passengers&#39;: 17},
- 32: {&#39;num_passengers&#39;: 9},
- 33: {&#39;num_passengers&#39;: 11},
- 34: {&#39;num_passengers&#39;: 12},
- 35: {&#39;num_passengers&#39;: 24},
- 36: {&#39;num_passengers&#39;: 11},
- 37: {&#39;num_passengers&#39;: 8},
- 38: {&#39;num_passengers&#39;: 2},
- 39: {&#39;num_passengers&#39;: 13},
- 40: {&#39;num_passengers&#39;: 33},
- 41: {&#39;num_passengers&#39;: 21},
- 42: {&#39;num_passengers&#39;: 3},
- 43: {&#39;num_passengers&#39;: 16},
- 44: {&#39;num_passengers&#39;: 12},
- 45: {&#39;num_passengers&#39;: 21},
- 46: {&#39;num_passengers&#39;: 17},
- 47: {&#39;num_passengers&#39;: 6},
- 48: {&#39;num_passengers&#39;: 25},
- 49: {&#39;num_passengers&#39;: 18},
- 50: {&#39;num_passengers&#39;: 25},
- 51: {&#39;num_passengers&#39;: 33},
- 52: {&#39;num_passengers&#39;: 24},
- 53: {&#39;num_passengers&#39;: 1},
- 54: {&#39;num_passengers&#39;: 1},
- 55: {&#39;num_passengers&#39;: 21},
- 56: {&#39;num_passengers&#39;: 18},
+ 27: {&#39;num_passengers&#39;: 30},
+ 28: {&#39;num_passengers&#39;: 6},
+ 29: {&#39;num_passengers&#39;: 6},
+ 30: {&#39;num_passengers&#39;: 15},
+ 31: {&#39;num_passengers&#39;: 18},
+ 32: {&#39;num_passengers&#39;: 27},
+ 33: {&#39;num_passengers&#39;: 25},
+ 34: {&#39;num_passengers&#39;: 20},
+ 35: {&#39;num_passengers&#39;: 1},
+ 36: {&#39;num_passengers&#39;: 25},
+ 37: {&#39;num_passengers&#39;: 19},
+ 38: {&#39;num_passengers&#39;: 8},
+ 39: {&#39;num_passengers&#39;: 30},
+ 40: {&#39;num_passengers&#39;: 26},
+ 41: {&#39;num_passengers&#39;: 28},
+ 42: {&#39;num_passengers&#39;: 10},
+ 43: {&#39;num_passengers&#39;: 22},
+ 44: {&#39;num_passengers&#39;: 31},
+ 45: {&#39;num_passengers&#39;: 2},
+ 46: {&#39;num_passengers&#39;: 32},
+ 47: {&#39;num_passengers&#39;: 3},
+ 48: {&#39;num_passengers&#39;: 1},
+ 49: {&#39;num_passengers&#39;: 30},
+ 50: {&#39;num_passengers&#39;: 24},
+ 51: {&#39;num_passengers&#39;: 11},
+ 52: {&#39;num_passengers&#39;: 9},
+ 53: {&#39;num_passengers&#39;: 8},
+ 54: {&#39;num_passengers&#39;: 19},
+ 55: {&#39;num_passengers&#39;: 4},
+ 56: {&#39;num_passengers&#39;: 31},
  57: {&#39;num_passengers&#39;: 12},
- 58: {&#39;num_passengers&#39;: 22},
- 59: {&#39;num_passengers&#39;: 9},
- 60: {&#39;num_passengers&#39;: 8},
- 61: {&#39;num_passengers&#39;: 31},
- 62: {&#39;num_passengers&#39;: 30},
- 63: {&#39;num_passengers&#39;: 34},
- 64: {&#39;num_passengers&#39;: 10},
- 65: {&#39;num_passengers&#39;: 11},
- 66: {&#39;num_passengers&#39;: 20},
- 67: {&#39;num_passengers&#39;: 26},
- 68: {&#39;num_passengers&#39;: 22},
- 69: {&#39;num_passengers&#39;: 22},
- 70: {&#39;num_passengers&#39;: 12},
- 71: {&#39;num_passengers&#39;: 31},
- 72: {&#39;num_passengers&#39;: 16},
- 73: {&#39;num_passengers&#39;: 20},
- 74: {&#39;num_passengers&#39;: 22},
- 75: {&#39;num_passengers&#39;: 20},
- 76: {&#39;num_passengers&#39;: 7},
- 77: {&#39;num_passengers&#39;: 9},
- 78: {&#39;num_passengers&#39;: 21},
- 79: {&#39;num_passengers&#39;: 7},
+ 58: {&#39;num_passengers&#39;: 35},
+ 59: {&#39;num_passengers&#39;: 14},
+ 60: {&#39;num_passengers&#39;: 35},
+ 61: {&#39;num_passengers&#39;: 25},
+ 62: {&#39;num_passengers&#39;: 3},
+ 63: {&#39;num_passengers&#39;: 31},
+ 64: {&#39;num_passengers&#39;: 3},
+ 65: {&#39;num_passengers&#39;: 22},
+ 66: {&#39;num_passengers&#39;: 33},
+ 67: {&#39;num_passengers&#39;: 25},
+ 68: {&#39;num_passengers&#39;: 26},
+ 69: {&#39;num_passengers&#39;: 26},
+ 70: {&#39;num_passengers&#39;: 17},
+ 71: {&#39;num_passengers&#39;: 18},
+ 72: {&#39;num_passengers&#39;: 34},
+ 73: {&#39;num_passengers&#39;: 33},
+ 74: {&#39;num_passengers&#39;: 5},
+ 75: {&#39;num_passengers&#39;: 15},
+ 76: {&#39;num_passengers&#39;: 20},
+ 77: {&#39;num_passengers&#39;: 1},
+ 78: {&#39;num_passengers&#39;: 20},
+ 79: {&#39;num_passengers&#39;: 27},
  80: {&#39;num_passengers&#39;: 4},
- 81: {&#39;num_passengers&#39;: 4},
- 82: {&#39;num_passengers&#39;: 6},
- 83: {&#39;num_passengers&#39;: 26},
- 84: {&#39;num_passengers&#39;: 7},
- 85: {&#39;num_passengers&#39;: 33},
- 86: {&#39;num_passengers&#39;: 25},
- 87: {&#39;num_passengers&#39;: 2},
- 88: {&#39;num_passengers&#39;: 2},
- 89: {&#39;num_passengers&#39;: 5},
- 90: {&#39;num_passengers&#39;: 34},
- 91: {&#39;num_passengers&#39;: 32},
- 92: {&#39;num_passengers&#39;: 22},
- 93: {&#39;num_passengers&#39;: 28},
- 94: {&#39;num_passengers&#39;: 19},
- 95: {&#39;num_passengers&#39;: 21},
- 96: {&#39;num_passengers&#39;: 20},
- 97: {&#39;num_passengers&#39;: 19},
- 98: {&#39;num_passengers&#39;: 20},
- 99: {&#39;num_passengers&#39;: 20},
- 100: {&#39;num_passengers&#39;: 34},
- 101: {&#39;num_passengers&#39;: 20},
- 102: {&#39;num_passengers&#39;: 20},
- 103: {&#39;num_passengers&#39;: 32}}
+ 81: {&#39;num_passengers&#39;: 14},
+ 82: {&#39;num_passengers&#39;: 1},
+ 83: {&#39;num_passengers&#39;: 34},
+ 84: {&#39;num_passengers&#39;: 33},
+ 85: {&#39;num_passengers&#39;: 31},
+ 86: {&#39;num_passengers&#39;: 2},
+ 87: {&#39;num_passengers&#39;: 17},
+ 88: {&#39;num_passengers&#39;: 5},
+ 89: {&#39;num_passengers&#39;: 35},
+ 90: {&#39;num_passengers&#39;: 7},
+ 91: {&#39;num_passengers&#39;: 0},
+ 92: {&#39;num_passengers&#39;: 5},
+ 93: {&#39;num_passengers&#39;: 22},
+ 94: {&#39;num_passengers&#39;: 10},
+ 95: {&#39;num_passengers&#39;: 5},
+ 96: {&#39;num_passengers&#39;: 13},
+ 97: {&#39;num_passengers&#39;: 13},
+ 98: {&#39;num_passengers&#39;: 30},
+ 99: {&#39;num_passengers&#39;: 23},
+ 100: {&#39;num_passengers&#39;: 9},
+ 101: {&#39;num_passengers&#39;: 10},
+ 102: {&#39;num_passengers&#39;: 22},
+ 103: {&#39;num_passengers&#39;: 4}}
 </pre></div>
 </div>
 </div>
@@ -980,6 +996,7 @@ You use the <code class="docutils literal notranslate"><span class="pre">&#64;cl
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="intro_classes.html" title="previous page">Intro to Classes</a>
+    <a class='right-next' id="next-link" href="inheritance.html" title="next page">Class Inheritance</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Class Variables
+# # Class Variables and Methods
 # 
-# In this section we will learn about class variables.
+# In this section we will learn about class variables and class methods.
 # We saw in the previous section that you can have multiple
 # instances of a class. Each of the instances are objects
 # which have their own properties or attributes specific 
 # to that instance. Other times though we want attributes
 # that are common to the class and shared by all the instances
-# of the class. These are called class variables. Let's
-# look at an example with a `TransitBus` class.
+# of the class. These are called class variables and class methods. Let's
+# look at an example with a `TransitBus` class to learn these concepts.
 # 
 # 
 
