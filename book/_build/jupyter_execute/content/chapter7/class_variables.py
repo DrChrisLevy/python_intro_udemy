@@ -266,14 +266,12 @@ print(b3.total_num_buses)
 print(b3.total_num_passengers)
 
 
-# ## Class Methods
-# 
 # Now what if we wanted to create a 100 buses in the system and keep track of them
 # all in the system? It would not make much sense to create `bus1, bus2, ... bus100` variables.
 # Instead, we could just create 100 instances of the `TransitBus` class and keep track of
 # the different buses in a class variable. In this case we will keep track of each bus
 # in the system within a dictionary. For example, if the transit system had three buses
-# in the system this `transit_system` dict could look something like this:
+# in the system this `transit_system` dictionary could look something like this:
 
 # In[22]:
 
@@ -283,9 +281,7 @@ print(b3.total_num_passengers)
 
 # So it is a dictionary with the keys as the bus identifiers and the values
 # with the information about the bus. Let's update the logic of the `TransitBus`
-# class. We will add a **class method** called `update_bus_in_system`. A **class method**
-# is a method that does need any particular instance of the class to be called.
-# You use the `@classmethod` decorator and use `cls` instead of `self`. See the code below to see what is going on.
+# class by adding this new class variable `transit_system`.
 
 # In[23]:
 
@@ -299,21 +295,20 @@ class TransitBus:
         self.identifier = identifier
         self.num_passengers=0
         TransitBus.total_num_buses += 1
-        TransitBus.update_bus_in_system(self.identifier, 0)
+        self.update_bus_in_system()
     
-    @classmethod
-    def update_bus_in_system(cls, identifier, num_passengers):
-        TransitBus.transit_system[identifier] = {'num_passengers': num_passengers}
+    def update_bus_in_system(self):
+        TransitBus.transit_system[self.identifier] = {'num_passengers': self.num_passengers}
     
     def add_passengers(self, number):
         self.num_passengers += number
         TransitBus.total_num_passengers += number
-        TransitBus.update_bus_in_system(self.identifier, self.num_passengers)
+        self.update_bus_in_system()
     
     def remove_passengers(self, number):
         self.num_passengers -= number
         TransitBus.total_num_passengers -= number
-        TransitBus.update_bus_in_system(self.identifier, self.num_passengers)
+        self.update_bus_in_system()
 
 
 # In[24]:
@@ -384,35 +379,91 @@ print(b1.total_num_buses)
 print(b1.total_num_passengers)
 
 
-# And we can add another 100 buses to the system.
+# ## Class Methods
+# We will add a **class method** called `transit_stats`. A **class method**
+# is a method that does need any particular instance of the class to be called.
+# You use the `@classmethod` decorator and use `cls` instead of `self`. See the code below to see what is going on. We will also add a `reset_system` class method which removes
+# all the buses from the system.
 
 # In[34]:
 
 
-import random
-for i in range(4, 104):
-    bus = TransitBus(identifier=i)
-    bus.add_passengers(random.randint(0,35))
+class TransitBus:
+    total_num_passengers = 0
+    total_num_buses = 0
+    transit_system = {}
+    
+    def __init__(self, identifier):
+        self.identifier = identifier
+        self.num_passengers=0
+        TransitBus.total_num_buses += 1
+        self.update_bus_in_system()
+    
+    def update_bus_in_system(self):
+        TransitBus.transit_system[self.identifier] = {'num_passengers': self.num_passengers}
+    
+    def add_passengers(self, number):
+        self.num_passengers += number
+        TransitBus.total_num_passengers += number
+        self.update_bus_in_system()
+    
+    def remove_passengers(self, number):
+        self.num_passengers -= number
+        TransitBus.total_num_passengers -= number
+        self.update_bus_in_system()
+    
+    @classmethod
+    def transit_stats(cls):
+        avg_person_per_bus = cls.total_num_passengers / cls.total_num_buses
+        num_empty_buses = len([v for (k,v) in cls.transit_system.items() if not v['num_passengers']])
+        return {'total_num_passengers': cls.total_num_passengers,
+               'total_num_buses': cls.total_num_buses,
+               'num_empty_buses': num_empty_buses,
+               'avg_person_per_bus': avg_person_per_bus}
+    
+    @classmethod
+    def reset_system(cls):
+        cls.total_num_passengers = 0
+        cls.total_num_buses = 0
+        cls.transit_system = {}
+        
+    
 
+
+# Lets create 2000 buses in the system where each bus has a random number of
+# people between 0 and 45. Then we will remove a random
+# number of passengers. First we will reset the transit system.
 
 # In[35]:
 
 
-TransitBus.total_num_buses
+TransitBus.reset_system()
 
 
 # In[36]:
 
 
-TransitBus.total_num_passengers
+import random
+for i in range(1, 2001):
+    bus = TransitBus(identifier=i)
+    bus.add_passengers(random.randint(0,45))
+    bus.remove_passengers(random.randint(0, bus.num_passengers))
 
+
+# Here are the first 10 buses in the system.
 
 # In[37]:
 
 
-TransitBus.transit_system
+[(k,v) for k,v in TransitBus.transit_system.items() if k in range(1,11)]
 
 
-# The only thing is now you can not access bus `103`, for example, and then add or remove passengers. You need an instance of the bus to do this. 
-# 
-# Although the `TransitSystem` class is another simple example, hopefully it gets you more familiar with the idea of using classes and also the difference between instance variables and methods and class variable and methods. Feel free to play around with the `TransitSystem` class some more on your own and improve it or add new functionality.
+# And now we can get the transit stats.
+
+# In[38]:
+
+
+TransitBus.transit_stats()
+
+
+# Although the `TransitBus` class is another simple example, hopefully it gets you more familiar with the idea of using classes and also the difference between instance variables and methods and class variable and methods. Feel free to play around with the `TransitBus` class some more on your own and improve it or add new functionality.

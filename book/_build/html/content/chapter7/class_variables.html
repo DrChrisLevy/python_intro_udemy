@@ -164,7 +164,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../Conclusion/conclusion.html">
-   Next Steps
+   Conclusion and Next Steps
   </a>
  </li>
 </ul>
@@ -637,14 +637,12 @@ as well as 12 total passengers.</p>
 </div>
 </div>
 </div>
-<div class="section" id="class-methods">
-<h2>Class Methods<a class="headerlink" href="#class-methods" title="Permalink to this headline">¶</a></h2>
 <p>Now what if we wanted to create a 100 buses in the system and keep track of them
 all in the system? It would not make much sense to create <code class="docutils literal notranslate"><span class="pre">bus1,</span> <span class="pre">bus2,</span> <span class="pre">...</span> <span class="pre">bus100</span></code> variables.
 Instead, we could just create 100 instances of the <code class="docutils literal notranslate"><span class="pre">TransitBus</span></code> class and keep track of
 the different buses in a class variable. In this case we will keep track of each bus
 in the system within a dictionary. For example, if the transit system had three buses
-in the system this <code class="docutils literal notranslate"><span class="pre">transit_system</span></code> dict could look something like this:</p>
+in the system this <code class="docutils literal notranslate"><span class="pre">transit_system</span></code> dictionary could look something like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;1&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;num_passengers&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">},</span> <span class="s1">&#39;2&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;num_passengers&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">},</span> <span class="s1">&#39;3&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;num_passengers&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">}}</span>
@@ -661,9 +659,7 @@ in the system this <code class="docutils literal notranslate"><span class="pre">
 </div>
 <p>So it is a dictionary with the keys as the bus identifiers and the values
 with the information about the bus. Let’s update the logic of the <code class="docutils literal notranslate"><span class="pre">TransitBus</span></code>
-class. We will add a <strong>class method</strong> called <code class="docutils literal notranslate"><span class="pre">update_bus_in_system</span></code>. A <strong>class method</strong>
-is a method that does need any particular instance of the class to be called.
-You use the <code class="docutils literal notranslate"><span class="pre">&#64;classmethod</span></code> decorator and use <code class="docutils literal notranslate"><span class="pre">cls</span></code> instead of <code class="docutils literal notranslate"><span class="pre">self</span></code>. See the code below to see what is going on.</p>
+class by adding this new class variable <code class="docutils literal notranslate"><span class="pre">transit_system</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TransitBus</span><span class="p">:</span>
@@ -675,21 +671,20 @@ You use the <code class="docutils literal notranslate"><span class="pre">&#64;cl
         <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span> <span class="o">=</span> <span class="n">identifier</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span><span class="o">=</span><span class="mi">0</span>
         <span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_buses</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">TransitBus</span><span class="o">.</span><span class="n">update_bus_in_system</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_bus_in_system</span><span class="p">()</span>
     
-    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">update_bus_in_system</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">identifier</span><span class="p">,</span> <span class="n">num_passengers</span><span class="p">):</span>
-        <span class="n">TransitBus</span><span class="o">.</span><span class="n">transit_system</span><span class="p">[</span><span class="n">identifier</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;num_passengers&#39;</span><span class="p">:</span> <span class="n">num_passengers</span><span class="p">}</span>
+    <span class="k">def</span> <span class="nf">update_bus_in_system</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">TransitBus</span><span class="o">.</span><span class="n">transit_system</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;num_passengers&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span><span class="p">}</span>
     
     <span class="k">def</span> <span class="nf">add_passengers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span> <span class="o">+=</span> <span class="n">number</span>
         <span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_passengers</span> <span class="o">+=</span> <span class="n">number</span>
-        <span class="n">TransitBus</span><span class="o">.</span><span class="n">update_bus_in_system</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_bus_in_system</span><span class="p">()</span>
     
     <span class="k">def</span> <span class="nf">remove_passengers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span> <span class="o">-=</span> <span class="n">number</span>
         <span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_passengers</span> <span class="o">-=</span> <span class="n">number</span>
-        <span class="n">TransitBus</span><span class="o">.</span><span class="n">update_bus_in_system</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_bus_in_system</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -813,157 +808,118 @@ You use the <code class="docutils literal notranslate"><span class="pre">&#64;cl
 </div>
 </div>
 </div>
-<p>And we can add another 100 buses to the system.</p>
+<div class="section" id="class-methods">
+<h2>Class Methods<a class="headerlink" href="#class-methods" title="Permalink to this headline">¶</a></h2>
+<p>We will add a <strong>class method</strong> called <code class="docutils literal notranslate"><span class="pre">transit_stats</span></code>. A <strong>class method</strong>
+is a method that does need any particular instance of the class to be called.
+You use the <code class="docutils literal notranslate"><span class="pre">&#64;classmethod</span></code> decorator and use <code class="docutils literal notranslate"><span class="pre">cls</span></code> instead of <code class="docutils literal notranslate"><span class="pre">self</span></code>. See the code below to see what is going on. We will also add a <code class="docutils literal notranslate"><span class="pre">reset_system</span></code> class method which removes
+all the buses from the system.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TransitBus</span><span class="p">:</span>
+    <span class="n">total_num_passengers</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">total_num_buses</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">transit_system</span> <span class="o">=</span> <span class="p">{}</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">identifier</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span> <span class="o">=</span> <span class="n">identifier</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span><span class="o">=</span><span class="mi">0</span>
+        <span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_buses</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_bus_in_system</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">update_bus_in_system</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">TransitBus</span><span class="o">.</span><span class="n">transit_system</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;num_passengers&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span><span class="p">}</span>
+    
+    <span class="k">def</span> <span class="nf">add_passengers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span> <span class="o">+=</span> <span class="n">number</span>
+        <span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_passengers</span> <span class="o">+=</span> <span class="n">number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_bus_in_system</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">remove_passengers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_passengers</span> <span class="o">-=</span> <span class="n">number</span>
+        <span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_passengers</span> <span class="o">-=</span> <span class="n">number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_bus_in_system</span><span class="p">()</span>
+    
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">transit_stats</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="n">avg_person_per_bus</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">total_num_passengers</span> <span class="o">/</span> <span class="bp">cls</span><span class="o">.</span><span class="n">total_num_buses</span>
+        <span class="n">num_empty_buses</span> <span class="o">=</span> <span class="nb">len</span><span class="p">([</span><span class="n">v</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">transit_system</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">v</span><span class="p">[</span><span class="s1">&#39;num_passengers&#39;</span><span class="p">]])</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;total_num_passengers&#39;</span><span class="p">:</span> <span class="bp">cls</span><span class="o">.</span><span class="n">total_num_passengers</span><span class="p">,</span>
+               <span class="s1">&#39;total_num_buses&#39;</span><span class="p">:</span> <span class="bp">cls</span><span class="o">.</span><span class="n">total_num_buses</span><span class="p">,</span>
+               <span class="s1">&#39;num_empty_buses&#39;</span><span class="p">:</span> <span class="n">num_empty_buses</span><span class="p">,</span>
+               <span class="s1">&#39;avg_person_per_bus&#39;</span><span class="p">:</span> <span class="n">avg_person_per_bus</span><span class="p">}</span>
+    
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">reset_system</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">total_num_passengers</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">total_num_buses</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">transit_system</span> <span class="o">=</span> <span class="p">{}</span>
+        
+    
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lets create 2000 buses in the system where each bus has a random number of
+people between 0 and 45. Then we will remove a random
+number of passengers. First we will reset the transit system.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">reset_system</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">104</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2001</span><span class="p">):</span>
     <span class="n">bus</span> <span class="o">=</span> <span class="n">TransitBus</span><span class="p">(</span><span class="n">identifier</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
-    <span class="n">bus</span><span class="o">.</span><span class="n">add_passengers</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">35</span><span class="p">))</span>
+    <span class="n">bus</span><span class="o">.</span><span class="n">add_passengers</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">45</span><span class="p">))</span>
+    <span class="n">bus</span><span class="o">.</span><span class="n">remove_passengers</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">bus</span><span class="o">.</span><span class="n">num_passengers</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Here are the first 10 buses in the system.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_buses</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">TransitBus</span><span class="o">.</span><span class="n">transit_system</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>103
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(1, {&#39;num_passengers&#39;: 23}),
+ (2, {&#39;num_passengers&#39;: 14}),
+ (3, {&#39;num_passengers&#39;: 3}),
+ (4, {&#39;num_passengers&#39;: 2}),
+ (5, {&#39;num_passengers&#39;: 14}),
+ (6, {&#39;num_passengers&#39;: 10}),
+ (7, {&#39;num_passengers&#39;: 18}),
+ (8, {&#39;num_passengers&#39;: 16}),
+ (9, {&#39;num_passengers&#39;: 20}),
+ (10, {&#39;num_passengers&#39;: 3})]
 </pre></div>
 </div>
 </div>
 </div>
+<p>And now we can get the transit stats.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">total_num_passengers</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">transit_stats</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1748
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;total_num_passengers&#39;: 23299,
+ &#39;total_num_buses&#39;: 2000,
+ &#39;num_empty_buses&#39;: 193,
+ &#39;avg_person_per_bus&#39;: 11.6495}
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TransitBus</span><span class="o">.</span><span class="n">transit_system</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{1: {&#39;num_passengers&#39;: 5},
- 2: {&#39;num_passengers&#39;: 15},
- 3: {&#39;num_passengers&#39;: 25},
- 4: {&#39;num_passengers&#39;: 6},
- 5: {&#39;num_passengers&#39;: 5},
- 6: {&#39;num_passengers&#39;: 3},
- 7: {&#39;num_passengers&#39;: 29},
- 8: {&#39;num_passengers&#39;: 24},
- 9: {&#39;num_passengers&#39;: 10},
- 10: {&#39;num_passengers&#39;: 3},
- 11: {&#39;num_passengers&#39;: 35},
- 12: {&#39;num_passengers&#39;: 29},
- 13: {&#39;num_passengers&#39;: 27},
- 14: {&#39;num_passengers&#39;: 10},
- 15: {&#39;num_passengers&#39;: 9},
- 16: {&#39;num_passengers&#39;: 4},
- 17: {&#39;num_passengers&#39;: 3},
- 18: {&#39;num_passengers&#39;: 10},
- 19: {&#39;num_passengers&#39;: 31},
- 20: {&#39;num_passengers&#39;: 30},
- 21: {&#39;num_passengers&#39;: 8},
- 22: {&#39;num_passengers&#39;: 7},
- 23: {&#39;num_passengers&#39;: 33},
- 24: {&#39;num_passengers&#39;: 20},
- 25: {&#39;num_passengers&#39;: 6},
- 26: {&#39;num_passengers&#39;: 11},
- 27: {&#39;num_passengers&#39;: 30},
- 28: {&#39;num_passengers&#39;: 6},
- 29: {&#39;num_passengers&#39;: 6},
- 30: {&#39;num_passengers&#39;: 15},
- 31: {&#39;num_passengers&#39;: 18},
- 32: {&#39;num_passengers&#39;: 27},
- 33: {&#39;num_passengers&#39;: 25},
- 34: {&#39;num_passengers&#39;: 20},
- 35: {&#39;num_passengers&#39;: 1},
- 36: {&#39;num_passengers&#39;: 25},
- 37: {&#39;num_passengers&#39;: 19},
- 38: {&#39;num_passengers&#39;: 8},
- 39: {&#39;num_passengers&#39;: 30},
- 40: {&#39;num_passengers&#39;: 26},
- 41: {&#39;num_passengers&#39;: 28},
- 42: {&#39;num_passengers&#39;: 10},
- 43: {&#39;num_passengers&#39;: 22},
- 44: {&#39;num_passengers&#39;: 31},
- 45: {&#39;num_passengers&#39;: 2},
- 46: {&#39;num_passengers&#39;: 32},
- 47: {&#39;num_passengers&#39;: 3},
- 48: {&#39;num_passengers&#39;: 1},
- 49: {&#39;num_passengers&#39;: 30},
- 50: {&#39;num_passengers&#39;: 24},
- 51: {&#39;num_passengers&#39;: 11},
- 52: {&#39;num_passengers&#39;: 9},
- 53: {&#39;num_passengers&#39;: 8},
- 54: {&#39;num_passengers&#39;: 19},
- 55: {&#39;num_passengers&#39;: 4},
- 56: {&#39;num_passengers&#39;: 31},
- 57: {&#39;num_passengers&#39;: 12},
- 58: {&#39;num_passengers&#39;: 35},
- 59: {&#39;num_passengers&#39;: 14},
- 60: {&#39;num_passengers&#39;: 35},
- 61: {&#39;num_passengers&#39;: 25},
- 62: {&#39;num_passengers&#39;: 3},
- 63: {&#39;num_passengers&#39;: 31},
- 64: {&#39;num_passengers&#39;: 3},
- 65: {&#39;num_passengers&#39;: 22},
- 66: {&#39;num_passengers&#39;: 33},
- 67: {&#39;num_passengers&#39;: 25},
- 68: {&#39;num_passengers&#39;: 26},
- 69: {&#39;num_passengers&#39;: 26},
- 70: {&#39;num_passengers&#39;: 17},
- 71: {&#39;num_passengers&#39;: 18},
- 72: {&#39;num_passengers&#39;: 34},
- 73: {&#39;num_passengers&#39;: 33},
- 74: {&#39;num_passengers&#39;: 5},
- 75: {&#39;num_passengers&#39;: 15},
- 76: {&#39;num_passengers&#39;: 20},
- 77: {&#39;num_passengers&#39;: 1},
- 78: {&#39;num_passengers&#39;: 20},
- 79: {&#39;num_passengers&#39;: 27},
- 80: {&#39;num_passengers&#39;: 4},
- 81: {&#39;num_passengers&#39;: 14},
- 82: {&#39;num_passengers&#39;: 1},
- 83: {&#39;num_passengers&#39;: 34},
- 84: {&#39;num_passengers&#39;: 33},
- 85: {&#39;num_passengers&#39;: 31},
- 86: {&#39;num_passengers&#39;: 2},
- 87: {&#39;num_passengers&#39;: 17},
- 88: {&#39;num_passengers&#39;: 5},
- 89: {&#39;num_passengers&#39;: 35},
- 90: {&#39;num_passengers&#39;: 7},
- 91: {&#39;num_passengers&#39;: 0},
- 92: {&#39;num_passengers&#39;: 5},
- 93: {&#39;num_passengers&#39;: 22},
- 94: {&#39;num_passengers&#39;: 10},
- 95: {&#39;num_passengers&#39;: 5},
- 96: {&#39;num_passengers&#39;: 13},
- 97: {&#39;num_passengers&#39;: 13},
- 98: {&#39;num_passengers&#39;: 30},
- 99: {&#39;num_passengers&#39;: 23},
- 100: {&#39;num_passengers&#39;: 9},
- 101: {&#39;num_passengers&#39;: 10},
- 102: {&#39;num_passengers&#39;: 22},
- 103: {&#39;num_passengers&#39;: 4}}
-</pre></div>
-</div>
-</div>
-</div>
-<p>The only thing is now you can not access bus <code class="docutils literal notranslate"><span class="pre">103</span></code>, for example, and then add or remove passengers. You need an instance of the bus to do this.</p>
-<p>Although the <code class="docutils literal notranslate"><span class="pre">TransitSystem</span></code> class is another simple example, hopefully it gets you more familiar with the idea of using classes and also the difference between instance variables and methods and class variable and methods. Feel free to play around with the <code class="docutils literal notranslate"><span class="pre">TransitSystem</span></code> class some more on your own and improve it or add new functionality.</p>
+<p>Although the <code class="docutils literal notranslate"><span class="pre">TransitBus</span></code> class is another simple example, hopefully it gets you more familiar with the idea of using classes and also the difference between instance variables and methods and class variable and methods. Feel free to play around with the <code class="docutils literal notranslate"><span class="pre">TransitBus</span></code> class some more on your own and improve it or add new functionality.</p>
 </div>
 </div>
 
