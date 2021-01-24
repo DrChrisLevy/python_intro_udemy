@@ -257,6 +257,11 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-variables">
+   Class Variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-methods">
    Class Methods
   </a>
@@ -341,6 +346,8 @@ object is an instance of a bus. Each bus has it’s own identifier
 and has a certain number of passengers. All the buses can add
 and remove passengers with their <code class="docutils literal notranslate"><span class="pre">add_passengers</span></code> and <code class="docutils literal notranslate"><span class="pre">remove_passengers</span></code>
 methods.</p>
+<div class="section" id="class-variables">
+<h2>Class Variables<a class="headerlink" href="#class-variables" title="Permalink to this headline">¶</a></h2>
 <p>What if we wanted to keep track of the total number of buses in the system
 as well as the total number of passengers? These would be properties specific
 to the <code class="docutils literal notranslate"><span class="pre">TransitBus</span></code> class in general. They are not specific to any particular instance
@@ -808,6 +815,7 @@ class by adding this new class variable <code class="docutils literal notranslat
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="class-methods">
 <h2>Class Methods<a class="headerlink" href="#class-methods" title="Permalink to this headline">¶</a></h2>
 <p>We will add a <strong>class method</strong> called <code class="docutils literal notranslate"><span class="pre">transit_stats</span></code>. A <strong>class method</strong>
@@ -889,16 +897,16 @@ number of passengers. First we will reset the transit system.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(1, {&#39;num_passengers&#39;: 11}),
- (2, {&#39;num_passengers&#39;: 9}),
- (3, {&#39;num_passengers&#39;: 2}),
- (4, {&#39;num_passengers&#39;: 5}),
- (5, {&#39;num_passengers&#39;: 1}),
- (6, {&#39;num_passengers&#39;: 0}),
- (7, {&#39;num_passengers&#39;: 20}),
- (8, {&#39;num_passengers&#39;: 3}),
- (9, {&#39;num_passengers&#39;: 31}),
- (10, {&#39;num_passengers&#39;: 4})]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(1, {&#39;num_passengers&#39;: 19}),
+ (2, {&#39;num_passengers&#39;: 16}),
+ (3, {&#39;num_passengers&#39;: 6}),
+ (4, {&#39;num_passengers&#39;: 0}),
+ (5, {&#39;num_passengers&#39;: 31}),
+ (6, {&#39;num_passengers&#39;: 4}),
+ (7, {&#39;num_passengers&#39;: 17}),
+ (8, {&#39;num_passengers&#39;: 2}),
+ (9, {&#39;num_passengers&#39;: 33}),
+ (10, {&#39;num_passengers&#39;: 2})]
 </pre></div>
 </div>
 </div>
@@ -911,10 +919,10 @@ number of passengers. First we will reset the transit system.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;total_num_passengers&#39;: 22300,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;total_num_passengers&#39;: 22057,
  &#39;total_num_buses&#39;: 2000,
- &#39;num_empty_buses&#39;: 186,
- &#39;avg_person_per_bus&#39;: 11.15}
+ &#39;num_empty_buses&#39;: 202,
+ &#39;avg_person_per_bus&#39;: 11.0285}
 </pre></div>
 </div>
 </div>
