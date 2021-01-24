@@ -60,6 +60,8 @@ bus2.num_passengers
 # and remove passengers with their `add_passengers` and `remove_passengers`
 # methods.
 # 
+# ## Class Variables
+# 
 # What if we wanted to keep track of the total number of buses in the system
 # as well as the total number of passengers? These would be properties specific
 # to the `TransitBus` class in general. They are not specific to any particular instance
